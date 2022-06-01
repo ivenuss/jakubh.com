@@ -9,7 +9,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const response = await getTopTracks();
+  const response = await getTopTracks('short_term');
 
   const { items } = await response.json();
 

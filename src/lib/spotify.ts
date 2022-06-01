@@ -2,6 +2,8 @@
   Credits to: https://github.com/leerob/leerob.io
 */
 
+import { URL } from 'url';
+
 const client_id = process.env.SPOTIFY_CLIENT_ID;
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
@@ -37,10 +39,15 @@ export const getNowPlaying = async () => {
   });
 };
 
-export const getTopTracks = async () => {
+export const getTopTracks = async (
+  time_range: 'short_term' | 'medium_term' | 'long_term'
+) => {
   const { access_token } = await getAccessToken();
 
-  return fetch(TOP_TRACKS_ENDPOINT, {
+  const url = new URL(TOP_TRACKS_ENDPOINT);
+  url.searchParams.set('time_range', time_range);
+
+  return fetch(url, {
     headers: {
       Authorization: `Bearer ${access_token}`
     }
