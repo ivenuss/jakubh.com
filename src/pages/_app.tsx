@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import 'tailwindcss/tailwind.css';
+
 import NProgress from 'nprogress';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <ThemeProvider attribute="class">
         <Toaster position="bottom-center" />
         <Component {...pageProps} />
