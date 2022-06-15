@@ -7,22 +7,16 @@ import {
   TwitterIcon
 } from '~/icons';
 import type { IconType } from 'react-icons';
+import { socials } from '~/data/about';
 
 interface ContactInfoProps {}
 
 interface SocialButtonProps {
   link: string;
   title: string;
-  color: string;
-  icon: IconType;
 }
 
-const SocialButton: React.FC<SocialButtonProps> = ({
-  link,
-  title,
-  color,
-  icon: Icon
-}) => {
+const SocialButton: React.FC<SocialButtonProps> = ({ link, title }) => {
   return (
     <a
       href={link}
@@ -48,30 +42,9 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
 
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
-          <SocialButton
-            link={String(process.env.INSTAGRAM_URL)}
-            color="#DD5145"
-            title="Instagram"
-            icon={InstagramIcon}
-          />
-          <SocialButton
-            link={String(process.env.GITHUB_URL)}
-            color="#4078c0"
-            title="GitHub"
-            icon={GithubIcon}
-          />
-          <SocialButton
-            link={String(process.env.LINKEDIN_URL)}
-            color="#0077B5"
-            title="LinkedIn"
-            icon={LinkedinIcon}
-          />
-          <SocialButton
-            link={String(process.env.TWITTER_URL)}
-            color="#1d9bf0"
-            title="Twitter"
-            icon={TwitterIcon}
-          />
+          {socials.map((s) => (
+            <SocialButton link={s.link} title={s.title} />
+          ))}
         </div>
 
         <div>

@@ -10,7 +10,7 @@ interface ProjectThumbnailProps {
 
 const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ project }) => {
   return (
-    <div className="">
+    <div>
       <Link href={`/projects/${project.slug}`}>
         <a>
           <div className="group relative aspect-[4/3] overflow-hidden rounded-xl mb-2.5">

@@ -1,3 +1,11 @@
+import {
+  BehanceIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon
+} from '~/icons';
+
 export const bio = `Hey, my name is Jakub, I live in Czechia and my hobbies are biking, working out, coding and playing video games. I also do graphic design, but only partly. Currently I'm mostly enjoying full stack web dev.`;
 
 export const timeline = [
@@ -25,6 +33,39 @@ export const timeline = [
     year: '2019',
     items: ['introduction  to programming']
   }
+];
+
+export const socials = [
+  /* {
+    title: 'Instagram',
+    color: '#DD5145',
+    icon: InstagramIcon,
+    link: process.env.INSTAGRAM_URL
+  }, */
+  {
+    title: 'GitHub',
+    color: '#4078c0',
+    icon: GithubIcon,
+    link: process.env.GITHUB_URL
+  },
+  {
+    title: 'LinkedIn',
+    color: '#0077B5',
+    icon: LinkedinIcon,
+    link: process.env.LINKEDIN_URL
+  },
+  {
+    title: 'Behance',
+    color: '#053EFF',
+    icon: BehanceIcon,
+    link: process.env.BEHANCE_URL
+  }
+  /*  {
+    title: 'Twitter',
+    color: '#1D9BF0',
+    icon: TwitterIcon,
+    link: process.env.TWITTER_URL
+  } */
 ];
 
 const techStacks = [

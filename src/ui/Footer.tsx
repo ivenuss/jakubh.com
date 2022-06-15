@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  BehanceIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon
-} from '~/icons';
 import CustomLink from './mdx/CustomLink';
+import { socials } from '~/data/about';
 
 interface FooterProps {}
 
@@ -22,33 +16,11 @@ const Footer: React.FC<FooterProps> = ({}) => {
     },
     {
       title: 'Social',
-      items: [
-        {
-          title: 'Instagram',
-          icon: InstagramIcon,
-          path: process.env.INSTAGRAM_URL
-        },
-        {
-          title: 'GitHub',
-          icon: GithubIcon,
-          path: process.env.GITHUB_URL
-        },
-        {
-          title: 'LinkedIn',
-          icon: LinkedinIcon,
-          path: process.env.LINKEDIN_URL
-        },
-        {
-          title: 'Behance',
-          icon: BehanceIcon,
-          path: process.env.BEHANCE_URL
-        },
-        {
-          title: 'Twitter',
-          icon: TwitterIcon,
-          path: process.env.TWITTER_URL
-        }
-      ]
+      items: socials.map(({ title, icon, link: path }) => ({
+        title,
+        icon,
+        path
+      }))
     },
     {
       title: 'My Work',
@@ -68,8 +40,6 @@ const Footer: React.FC<FooterProps> = ({}) => {
               {section.title}
             </span>
             {section.items.map((item: any, i) => {
-              if (!item.path) return;
-
               const Icon = item.icon;
 
               return (

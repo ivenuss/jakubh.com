@@ -80,6 +80,14 @@ body {
 
 /* Prose */
 
+/* Prose - Code */
+
+.prose code {
+  @apply text-gray-800 dark:text-primary-100 px-2 py-0.5 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-primary-700;
+}
+
+/* Prose - Anchor */
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -111,7 +119,7 @@ body {
   @apply m-0;
 }
 
-.prose > :first-child {
+/* .prose > :first-child {
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
-}
+} */

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { format } from 'date-fns';
 import { GithubIcon, ExternalLinkIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';
 
@@ -12,10 +13,22 @@ const linkButtonCn =
 
 export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   return (
-    <header className="w-full">
-      <h1 className="mb-4 text-3xl md:text-2xl font-bold text-black dark:text-primary-100">
-        {project.title}
-      </h1>
+    <header className="w-full mb-6">
+      <div className="flex items-center mb-4">
+        <div className="relative w-12 h-12 mr-4 ">
+          <Image layout="fill" src={project.icon} className="rounded-lg" />
+        </div>
+
+        <div>
+          <h1 className="text-3xl md:text-2xl font-bold text-black dark:text-primary-100">
+            {project.title}
+          </h1>
+
+          <div className="text-sm dark:text-primary-300">
+            <div> {format(new Date(project.publishedAt), 'MMMM d, yyyy')}</div>
+          </div>
+        </div>
+      </div>
 
       <div className="relative w-full h-48 mb-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-primary-800">
         <Image

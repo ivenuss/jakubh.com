@@ -51,12 +51,6 @@ module.exports = {
             'h2,h3,h4': {
               'scroll-margin-top': spacing[32]
             },
-            a: {
-              color: theme('colors.secondary-accent'),
-              '&:hover': {
-                color: theme('colors.secondary-accent-hover')
-              }
-            },
             strong: theme('colors.primary.100'),
             thead: {
               borderBottomColor: theme('colors.secondary.200')
@@ -66,14 +60,7 @@ module.exports = {
         dark: {
           css: {
             color: theme('colors.primary.200'),
-            a: {
-              color: theme('colors.secondary-accent'),
-              '&:hover': {
-                color: theme('colors.secondary-accent-hover')
-              }
-            },
-            'h1,h2,h3,h4': {
-              color: theme('colors.primary.100'),
+            'h2,h3,h4': {
               'scroll-margin-top': spacing[32]
             },
             thead: {

@@ -1,17 +1,12 @@
 import React from 'react';
 import NowPlaying from './NowPlaying';
-import {
-  BehanceIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon
-} from '~/icons';
+import { socials } from '~/data/about';
 import type { IconType } from 'react-icons';
 
 interface NavTopBannerProps {}
 
 interface SocialIconProps {
+  title: string;
   icon: IconType;
   path?: string;
 }
@@ -22,27 +17,16 @@ const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
       <NowPlaying />
 
       <ul className="flex flex-none ml-auto gap-3">
-        {process.env.INSTAGRAM_URL && (
-          <SocialIcon icon={InstagramIcon} path={process.env.INSTAGRAM_URL} />
-        )}
-        {process.env.GITHUB_URL && (
-          <SocialIcon icon={GithubIcon} path={process.env.GITHUB_URL} />
-        )}
-        {process.env.LINKEDIN_URL && (
-          <SocialIcon icon={LinkedinIcon} path={process.env.LINKEDIN_URL} />
-        )}
-        {process.env.BEHANCE_URL && (
-          <SocialIcon icon={BehanceIcon} path={process.env.BEHANCE_URL} />
-        )}
-        {process.env.TWITTER_URL && (
-          <SocialIcon icon={TwitterIcon} path={process.env.TWITTER_URL} />
-        )}
+        {socials.map((s) => (
+          <SocialIcon title={s.title} icon={s.icon} path={s.link} />
+        ))}
       </ul>
     </div>
   );
 };
 
 export const SocialIcon: React.FC<SocialIconProps> = ({
+  title,
   icon: Icon,
   path = '#'
 }) => {
@@ -50,7 +34,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({
     <li>
       <a
         href={path}
-        aria-label="Social Link"
+        aria-label={title}
         rel="noreferrer noopener"
         target="_blank"
       >
