@@ -2,6 +2,7 @@
 import {
   ComputedFields,
   defineDocumentType,
+  LocalDocument,
   makeSource
 } from 'contentlayer/source-files';
 
@@ -10,10 +11,21 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrism from 'rehype-prism-plus';
 
+const getSlug = (doc: LocalDocument) =>
+  doc._raw.sourceFileName.replace(/\.mdx$/, '');
+
 const computedFields: ComputedFields = {
   slug: {
     type: 'string',
-    resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, '')
+    resolve: getSlug
+  },
+  icon: {
+    type: 'string',
+    resolve: (doc) => `/static/images/projects/${getSlug(doc)}/icon.png`
+  },
+  image: {
+    type: 'string',
+    resolve: (doc) => `/static/images/projects/${getSlug(doc)}/thumbnail.png`
   }
 };
 
@@ -24,8 +36,6 @@ const Project = defineDocumentType(() => ({
   fields: {
     title: { type: 'string', required: true },
     publishedAt: { type: 'string', required: true },
-    image: { type: 'string', required: true },
-    icon: { type: 'string', required: true },
     description: { type: 'string', required: true },
     stack: { type: 'list', of: { type: 'string' } },
     preview: { type: 'string' },
