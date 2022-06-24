@@ -23,7 +23,7 @@ const Bio: React.FC = () => {
             objectFit="cover"
             alt="Profile Photo"
             className="rounded-full bg-gray-100 dark:bg-primary-700"
-            src="/static/images/avatar2.jpg"
+            src="/static/images/profile_pic.jpg"
           />
         </div>
       </div>

@@ -4,6 +4,7 @@ import Nav from './Nav';
 import NavTopBanner from './NavTopBanner';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import { Toaster } from './Toaster';
 
 const DynamicFooter = dynamic(() => import('./Footer'));
 
