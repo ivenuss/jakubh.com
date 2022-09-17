@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
+import type { ImageType } from '~/pages/gallery';
 
 interface ImageModalProps {
-  images: string[];
+  images: ImageType[];
   index: number;
   onIndexChange: (i: number | null) => void;
 }
@@ -36,22 +37,24 @@ const ImageModal: React.FC<ImageModalProps> = ({
     };
   }, [index]);
 
+  const currentImage = images[index];
+
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0 z-20">
-      <div className="relative w-full h-screen z-[60]">
-        <div className="absolute w-full top-10 bottom-10">
+      <div className="relative w-screen h-screen z-[60]">
+        <div className="absolute top-8 bottom-8 right-0 left-0">
           <Image
-            layout="fill"
-            objectFit="contain"
-            className="z-50"
-            src={images[index]}
+            width={currentImage.width}
+            height={currentImage.height}
+            src={currentImage.src}
+            alt="Fullscreen image preview"
+            className="w-full h-full object-contain mx-auto z-[50]"
           />
         </div>
 
         <div className="absolute top-10 left-10 text-white z-[60]">
           {index + 1}/{images.length}
         </div>
-
         <button
           onClick={() => onIndexChange(null)}
           className="absolute top-10 right-10 text-white z-[60]"

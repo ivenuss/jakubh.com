@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Image from 'next/future/image';
 
 interface ImagePreviewProps {
   index: string;
@@ -24,7 +24,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
   left,
   top,
   margin,
-  onOpen,
+  onOpen
 }: any) => {
   const [isLoading, setLoading] = useState(true);
 
@@ -32,12 +32,12 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
     <div
       className="relative m-0.5 cursor-pointer"
       style={{
-        position: "absolute",
+        position: 'absolute',
         left,
         top,
         margin,
         height: photo.height,
-        width: photo.width,
+        width: photo.width
       }}
       onClick={onOpen}
     >
@@ -45,9 +45,9 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
         layout="responsive"
         onLoadingComplete={() => setLoading(false)}
         className={`bg-secondary-800 dark:bg-primary-800 duration-700 ease-in-out ${
-          isLoading ? "scale-105 blur-sm" : "scale-100 blur-0"
+          isLoading ? 'scale-105 blur-sm' : 'scale-100 blur-0'
         }`}
-        alt={photo.alt || "Gallery Image"}
+        alt={photo.alt || 'Gallery Image'}
         priority={true}
         {...photo}
       />

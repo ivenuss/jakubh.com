@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import { Toaster } from '~/ui/Toaster';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {

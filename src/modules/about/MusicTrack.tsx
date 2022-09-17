@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { PlayIcon, PauseIcon } from '~/icons';
 
 interface MusicTrackProps {
@@ -27,15 +27,13 @@ const MusicTrack: React.FC<MusicTrackProps> = ({
         {String('0' + order).slice(-2)}
       </div>
 
-      <div className="relative h-12 w-12 flex-none">
-        <Image
-          draggable={false}
-          layout="fill"
-          className="bg-primary-800 rounded-md"
-          alt="Thumbnail"
-          src={thumbnailUrl}
-        />
-      </div>
+      <Image
+        width={64}
+        height={64}
+        alt="Track cover"
+        className="h-12 w-12 flex-none bg-gray-100 dark:bg-primary-800 rounded-md"
+        src={thumbnailUrl}
+      />
 
       <div className="ml-4 mr-2">
         <div className="font-medium text-base text-black dark:text-primary-100">

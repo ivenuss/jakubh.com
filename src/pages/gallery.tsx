@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { supabaseClient } from '~/lib/supabase';
 import type { GetServerSidePropsContext, NextPage } from 'next';
 
-type Image = {
+export type ImageType = {
   id: number;
   createdAt: Date;
   width: number;
@@ -14,7 +14,7 @@ type Image = {
   src: string;
 };
 
-const GalleryPage: NextPage<{ images: Image[] }> = ({ images }) => {
+const GalleryPage: NextPage<{ images: ImageType[] }> = ({ images }) => {
   const [index, setIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const GalleryPage: NextPage<{ images: Image[] }> = ({ images }) => {
 
       {index != null && (
         <ImageModal
-          images={images.map((img) => img.src)}
+          images={images}
           index={index}
           onIndexChange={(i) => setIndex(i)}
         />

@@ -1,6 +1,6 @@
 import React from 'react';
+import Image from 'next/future/image';
 import CzechFlag from '/public/static/images/cz.svg';
-import Image from 'next/image';
 
 const Bio: React.FC = () => {
   return (
@@ -17,15 +17,13 @@ const Bio: React.FC = () => {
           but only partly. Currently I'm mostly enjoying full stack web dev.
         </p>
 
-        <div className="relative flex-none h-24 w-24">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            alt="Profile Photo"
-            className="rounded-full bg-gray-100 dark:bg-primary-700"
-            src="/static/images/profile_pic.jpg"
-          />
-        </div>
+        <Image
+          width={120}
+          height={120}
+          alt="Profile picture"
+          className="w-24 h-24 lex-none rounded-full bg-gray-100 dark:bg-primary-700"
+          src="/static/images/profile_pic.jpg"
+        />
       </div>
     </section>
   );

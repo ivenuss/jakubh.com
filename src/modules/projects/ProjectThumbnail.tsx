@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import { format } from 'date-fns';
 import type { Project } from 'contentlayer/generated';
@@ -12,29 +12,26 @@ const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ project }) => {
   return (
     <div>
       <Link href={`/projects/${project.slug}`}>
-        <a>
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-xl mb-2.5">
-            <Image
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl transition-transform duration-300 bg-gray-100 dark:bg-primary-800 group-hover:scale-105"
-              alt={project.title}
-              src={project.image}
-            />
-            <div className="absolute top-0 left-0 w-full h-full transition-colors hover:bg-black hover:bg-opacity-20" />
-          </div>
+        <a className="block group relative aspect-[4/3] rounded-xl mb-2.5 overflow-hidden">
+          <Image
+            width={1280}
+            height={720}
+            alt={project.title}
+            src={project.image}
+            className="w-full h-full object-cover z-10 bg-gray-100 dark:bg-primary-800 transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute top-0 left-0 w-full h-full z-0 transition-colors group-hover:bg-black group-hover:bg-opacity-20" />
         </a>
       </Link>
       <div className="flex items-center justify-between font-medium text-gray-600 dark:text-primary-200">
         <div className="flex items-center">
-          <div className="relative w-6 h-6 mr-3">
-            <Image
-              layout="fill"
-              className="rounded-full bg-gray-100 dark:bg-primary-700"
-              alt={project.title}
-              src={project.icon}
-            />
-          </div>
+          <Image
+            width={84}
+            height={84}
+            alt={project.title}
+            src={project.icon}
+            className="w-6 h-6 mr-3 rounded-full bg-gray-100 dark:bg-primary-800"
+          />
 
           <h3>
             <Link href={`/projects/${project.slug}`}>

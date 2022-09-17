@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import { ArrowUpRightIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';
@@ -12,17 +12,17 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
   return (
     <div className="flex gap-3 sm:gap-6 flex-col sm:flex-row sm:group-even:flex-row-reverse">
       <Link href={`/projects/${project.slug}`}>
-        <a className="flex-none relative object-center rounded-lg overflow-hidden h-52 sm:w-5/12">
+        <a className="rounded-lg overflow-hidden">
           <Image
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg transition-transform bg-gray-100 dark:bg-primary-800 hover:scale-105"
+            width={1280}
+            height={720}
             alt={project.title}
             src={project.image}
+            className="aspect-[2/1] md:aspect-[5/3] object-cover object-center transition-transform bg-gray-100 dark:bg-primary-800 hover:scale-105"
           />
         </a>
       </Link>
-      <div>
+      <div className="flex-none w-6/12">
         <h4 className="text-black dark:text-primary-100 font-medium text-lg mb-2">
           {project.title}
         </h4>

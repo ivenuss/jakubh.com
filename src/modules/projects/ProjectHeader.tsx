@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { format } from 'date-fns';
 import { GithubIcon, ExternalLinkIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';
@@ -15,9 +15,13 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   return (
     <header className="w-full mb-6">
       <div className="flex items-center mb-4">
-        <div className="relative w-12 h-12 mr-4 ">
-          <Image layout="fill" src={project.icon} className="rounded-lg" />
-        </div>
+        <Image
+          width={84}
+          height={84}
+          alt={project.title}
+          src={project.icon}
+          className="w-12 h-12 rounded-lg mr-4 bg-gray-100 dark:bg-primary-800"
+        />
 
         <div>
           <h1 className="text-3xl md:text-2xl font-bold text-black dark:text-primary-100">
@@ -30,15 +34,13 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         </div>
       </div>
 
-      <div className="relative w-full h-48 mb-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-primary-800">
-        <Image
-          layout="fill"
-          objectFit="cover"
-          draggable="false"
-          alt={project.title}
-          src={project.image}
-        />
-      </div>
+      <Image
+        width={1280}
+        height={720}
+        alt={project.title}
+        src={project.image}
+        className="w-full h-48 mb-3 rounded-lg object-cover bg-gray-100 dark:bg-primary-800"
+      />
 
       {project.stack && (
         <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
