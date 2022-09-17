@@ -1,6 +1,6 @@
 import React from 'react';
 import NowPlaying from './NowPlaying';
-import { socials } from '~/data/about';
+import { socialMedias } from '~/lib/constants';
 import type { IconType } from 'react-icons';
 
 interface NavTopBannerProps {}
@@ -8,7 +8,7 @@ interface NavTopBannerProps {}
 interface SocialIconProps {
   title: string;
   icon: IconType;
-  path?: string;
+  link: string;
 }
 
 const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
@@ -17,8 +17,8 @@ const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
       <NowPlaying />
 
       <ul className="flex flex-none ml-auto gap-3">
-        {socials.map((s, i) => (
-          <SocialIcon key={i} title={s.title} icon={s.icon} path={s.link} />
+        {socialMedias.map((s, i) => (
+          <SocialIcon key={i} title={s.title} icon={s.icon} link={s.link} />
         ))}
       </ul>
     </div>
@@ -28,12 +28,12 @@ const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
 export const SocialIcon: React.FC<SocialIconProps> = ({
   title,
   icon: Icon,
-  path = '#'
+  link = '#'
 }) => {
   return (
     <li>
       <a
-        href={path}
+        href={link}
         aria-label={title}
         rel="noreferrer noopener"
         target="_blank"

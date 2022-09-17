@@ -1,4 +1,5 @@
 import React from 'react';
+import { techStack } from '~/lib/constants';
 
 interface SkillSectionProps {
   title: string;
@@ -32,32 +33,9 @@ export const Skills: React.FC = ({}) => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 gap-y-2">
-        <SkillSection
-          title="Design"
-          items={['UI/UX Design', 'Graphic Design', 'Design Systems']}
-        />
-        <SkillSection
-          title="Development"
-          items={['Linux (basics)', 'JavaScript', 'TypeScript', 'PHP']}
-        />
-        <SkillSection
-          title="Frontend"
-          items={['React', 'Next.js', 'CSS', 'Tailwind CSS']}
-        />
-        <SkillSection
-          title="Backend"
-          items={['Node.js', 'NestJS', 'GraphQL', 'Socket.io']}
-        />
-        <SkillSection
-          title="Tools"
-          items={[
-            'Figma',
-            'Visual Studio Code',
-            'Adobe Photoshop',
-            'Adobe Illustrator',
-            'Adobe InDesign'
-          ]}
-        />
+        {Object.entries(techStack).map(([title, items]) => (
+          <SkillSection key={title} title={title} items={items} />
+        ))}
       </div>
     </section>
   );

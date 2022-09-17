@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomLink from './mdx/CustomLink';
-import { socials } from '~/data/about';
+import { socialMedias } from '~/lib/constants';
 
 interface FooterProps {}
 
@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
     },
     {
       title: 'Social',
-      items: socials.map(({ title, icon, link: path }) => ({
+      items: socialMedias.map(({ title, icon, link: path }) => ({
         title,
         icon,
         path
@@ -48,10 +48,8 @@ const Footer: React.FC<FooterProps> = ({}) => {
                   href={item.path}
                   className="flex gap-1.5 items-center text-black dark:text-primary-100 mb-2 hover:underline"
                 >
-                  <>
-                    {item.icon && <Icon className="text-lg mr-1" />}
-                    <span>{item.title}</span>
-                  </>
+                  {item.icon && <Icon className="text-lg mr-1" />}
+                  <span>{item.title}</span>
                 </CustomLink>
               );
             })}

@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  ArrowUpRightIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon
-} from '~/icons';
-import type { IconType } from 'react-icons';
-import { socials } from '~/data/about';
+import { ArrowUpRightIcon } from '~/icons';
+import { socialMedias } from '~/lib/constants';
 
 interface ContactInfoProps {}
 
@@ -42,7 +35,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
 
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
-          {socials.map((s) => (
+          {socialMedias.map((s) => (
             <SocialButton link={s.link} title={s.title} />
           ))}
         </div>
