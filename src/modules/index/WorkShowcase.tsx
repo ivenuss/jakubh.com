@@ -15,7 +15,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
     <section>
       <div className="w-full max-w-screen-xs mx-auto px-6 mb-12">
         <h3 className="text-black dark:text-primary-100 font-medium text-2xl mb-2.5">
-          My Latest projects
+          My latest projects
         </h3>
 
         <div className="flex gap-3">

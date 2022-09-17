@@ -44,7 +44,7 @@ const Container: React.FC<ContainerProps> = ({
         <meta property="og:image" content={meta.image} />
         <meta property="og:image:alt" content="JakubH Banner" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@jakubhabrcetl" />
+        <meta name="twitter:site" content="@ijakubh" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
