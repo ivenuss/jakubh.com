@@ -3,13 +3,18 @@ import ImageModal from '~/modules/gallery/ImageModal';
 import ImagePreview from '~/modules/gallery/ImagePreview';
 import Gallery from 'react-photo-gallery-next';
 import { useCallback, useEffect, useState } from 'react';
-import type { NextPage } from 'next';
+import { supabaseClient } from '~/lib/supabase';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 
-const images: any[] = [
-  // { width: 1920, height: 1080, src: 'url.com' }
-];
+type Image = {
+  id: number;
+  createdAt: Date;
+  width: number;
+  height: number;
+  src: string;
+};
 
-const Hello: NextPage = () => {
+const GalleryPage: NextPage<{ images: Image[] }> = ({ images }) => {
   const [index, setIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -60,4 +65,17 @@ const Hello: NextPage = () => {
   );
 };
 
-export default Hello;
+export default GalleryPage;
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const { data } = await supabaseClient.from('images').select('*');
+
+  ctx.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=43200, stale-while-revalidate=21600'
+  );
+
+  return {
+    props: { images: data }
+  };
+}

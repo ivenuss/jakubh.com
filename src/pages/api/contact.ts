@@ -51,8 +51,7 @@ export default async function handler(
     });
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'smtp.gmail.com',
+      host: 'smtp.seznam.cz',
       port: 465,
       secure: true,
 
@@ -64,7 +63,7 @@ export default async function handler(
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'jhabrcetl@seznam.cz',
+      to: process.env.EMAIL,
       subject: process.env.EMAIL_USER,
       attachments: [
         /* {

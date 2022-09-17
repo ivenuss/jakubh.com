@@ -49,7 +49,7 @@ const Nav: React.FC<NavProps> = ({}) => {
           <NavItem title="Home" path="/" />
           <NavItem title="About" path="/about" />
           <NavItem title="Projects" path="/projects" />
-          <NavItem title="Gallery" path="/gallery" />
+          {/* <NavItem title="Gallery" path="/gallery" /> */}
           <NavItem title="Contact" path="/contact" />
         </ul>
       )}

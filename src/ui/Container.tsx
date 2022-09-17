@@ -30,7 +30,7 @@ const Container: React.FC<ContainerProps> = ({
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />

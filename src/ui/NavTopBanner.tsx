@@ -17,8 +17,8 @@ const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
       <NowPlaying />
 
       <ul className="flex flex-none ml-auto gap-3">
-        {socials.map((s) => (
-          <SocialIcon title={s.title} icon={s.icon} path={s.link} />
+        {socials.map((s, i) => (
+          <SocialIcon key={i} title={s.title} icon={s.icon} path={s.link} />
         ))}
       </ul>
     </div>
