@@ -40,14 +40,11 @@ const ContactForm: React.FC = () => {
 
     toast.promise(promise, {
       loading: 'Loading',
-      success: (data) => data.message,
+      success: (data) => {
+        setForm({ fullname: '', email: '', message: '' });
+        return data.message;
+      },
       error: (data) => data.message
-    });
-
-    setForm({
-      fullname: '',
-      email: '',
-      message: ''
     });
   };
 

@@ -35,8 +35,8 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
 
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
-          {socialMedias.map((s) => (
-            <SocialButton link={s.link} title={s.title} />
+          {socialMedias.map((s, i) => (
+            <SocialButton key={i} link={s.link} title={s.title} />
           ))}
         </div>
 
