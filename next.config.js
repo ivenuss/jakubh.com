@@ -19,7 +19,6 @@ module.exports = withContentlayer({
   env: {
     SITE_URL: 'https://jakubh.com',
     EMAIL: 'hello@jakubh.com',
-    INSTAGRAM_URL: undefined,
     BEHANCE_URL: 'https://www.behance.net/jakubhabrcetl',
     GITHUB_URL: 'https://github.com/ivenuss',
     LINKEDIN_URL: 'https://www.linkedin.com/in/jakubhabrcetl',
