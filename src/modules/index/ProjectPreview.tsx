@@ -31,7 +31,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
         </p>
         <Link href={`/projects/${project.slug}`}>
           <a className="flex items-center gap-2 text-secondary-accent hover:text-secondary-accent-hover hover:underline">
-            Read more about the project <ArrowUpRightIcon />
+            Read more <ArrowUpRightIcon />
           </a>
         </Link>
       </div>
