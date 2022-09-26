@@ -2,11 +2,11 @@ import React from 'react';
 import Image, { ImageProps } from 'next/future/image';
 
 interface CustomLinkProps extends ImageProps {
-  hasLink?: boolean;
+  haslink?: boolean;
 }
 
 const CustomImage: React.FC<CustomLinkProps> = (props) => {
-  if (props.hasLink)
+  if (props.haslink)
     return (
       <a
         target="_blank"
