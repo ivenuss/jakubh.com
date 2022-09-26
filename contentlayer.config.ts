@@ -26,6 +26,10 @@ const computedFields: ComputedFields = {
   image: {
     type: 'string',
     resolve: (doc) => `/static/images/projects/${getSlug(doc)}/thumbnail.png`
+  },
+  previewImage: {
+    type: 'string',
+    resolve: (doc) => `/static/images/projects/${getSlug(doc)}/preview.png`
   }
 };
 

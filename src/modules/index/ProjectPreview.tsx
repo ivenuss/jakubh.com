@@ -14,6 +14,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
       <Link href={`/projects/${project.slug}`}>
         <a className="rounded-lg overflow-hidden">
           <Image
+            priority
             width={1280}
             height={720}
             alt={project.title}
