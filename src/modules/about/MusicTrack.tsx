@@ -22,7 +22,7 @@ const MusicTrack: React.FC<MusicTrackProps> = ({
   onToggle
 }) => {
   return (
-    <div className="flex items-center">
+    <div className="max-w-full flex flex-row items-center">
       <div className="text-sm hidden sm:grid flex-none place-content-center w-5 mr-6 text-gray-500 dark:text-primary-300">
         {String('0' + order).slice(-2)}
       </div>
@@ -31,21 +31,22 @@ const MusicTrack: React.FC<MusicTrackProps> = ({
         width={64}
         height={64}
         alt="Track cover"
-        className="h-12 w-12 flex-none bg-gray-100 dark:bg-primary-800 rounded-md"
+        className="h-12 w-12 flex-none rounded-md overflow-hidden bg-gray-100 dark:bg-primary-800"
         src={thumbnailUrl}
       />
 
-      <div className="ml-4 mr-2">
-        <div className="font-medium text-base text-black dark:text-primary-100">
+      <div className="w-full mx-4 overflow-hidden">
+        <div className="font-medium text-sm md:text-base truncate mb-0.5 text-black dark:text-primary-100">
           {title}
         </div>
-        <div className="-mt-1 text-sm text-gray-600 dark:text-primary-200">
+        <div className="-mt-1 text-sm truncate text-gray-600 dark:text-primary-200">
           {artist}
         </div>
       </div>
 
       {audioUrl ? (
         <button
+          type="button"
           onClick={onToggle}
           className="ml-auto text-gray-800 dark:text-primary-100 hover:scale-105"
           aria-label={isPlaying ? 'Pause Button' : 'Play Button'}

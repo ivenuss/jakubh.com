@@ -9,7 +9,7 @@ const Bio: React.FC = () => {
         Short Bio
       </h2>
 
-      <div className="flex gap-5">
+      <div className="flex flex-row gap-5">
         <p className="text-gray-600 dark:text-primary-300">
           Hey, my name is Jakub. I live in Czechia{' '}
           <CzechFlag className="inline-block h-4" /> and my hobbies are biking,
@@ -21,7 +21,7 @@ const Bio: React.FC = () => {
           width={120}
           height={120}
           alt="Profile picture"
-          className="w-24 h-24 lex-none rounded-full bg-gray-100 dark:bg-primary-700"
+          className="w-16 h-16 md:w-24 md:h-24 lex-none rounded-full bg-gray-100 dark:bg-primary-700"
           src="/static/images/profile_pic.jpg"
         />
       </div>

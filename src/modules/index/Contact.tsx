@@ -8,7 +8,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
   return (
     <div className="w-full max-w-screen-xs mx-auto px-6 mb-12">
       <h3 className="text-black dark:text-primary-100 font-medium text-2xl mb-2.5">
-        Sounds interesting?
+        Did i catch your attention?
       </h3>
 
       <div className="mb-5 text-gray-600 dark:text-primary-300">
@@ -25,7 +25,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
 
         <a
           href={`mailto:${process.env.EMAIL}`}
-          className="text-lg font-medium text-gray-700 dark:text-primary-200 hover:underline"
+          className="text-base upp xs:text-lg font-medium text-gray-700 dark:text-primary-200 hover:underline"
         >
           {process.env.EMAIL}
         </a>

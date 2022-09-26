@@ -23,7 +23,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
           />
         </a>
       </Link>
-      <div className="flex-none w-6/12">
+      <div className="flex-none sm:w-6/12">
         <h4 className="text-black dark:text-primary-100 font-medium text-lg mb-2">
           {project.title}
         </h4>

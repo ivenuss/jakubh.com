@@ -14,7 +14,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, items }) => {
       </h3>
       <ul className="text-gray-600 dark:text-primary-200">
         {items.map((text, i) => (
-          <li key={i} className="mb-2.5">
+          <li key={i} className="mb-1.5 md:mb-2.5">
             {text}
           </li>
         ))}

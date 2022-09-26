@@ -14,11 +14,7 @@ const TopTracks: React.FC = () => {
     id: number | null;
     isPlaying: boolean;
     audio: HTMLAudioElement | null;
-  }>({
-    id: null,
-    isPlaying: false,
-    audio: null
-  });
+  }>({ id: null, isPlaying: false, audio: null });
 
   // Stop audio if route is changed
   Router.events.on('routeChangeComplete', () => {

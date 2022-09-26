@@ -18,13 +18,13 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           My latest projects
         </h3>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <div className="text-gray-600 dark:text-primary-300">
             I've made a lot of projects and this is a small selection of some
             that I found interesting.
           </div>
           <Link href="/projects">
-            <a className="flex flex-none self-end items-center gap-2 text-secondary-accent hover:text-secondary-accent-hover hover:underline">
+            <a className="flex flex-none md:self-end items-center gap-2 text-secondary-accent hover:text-secondary-accent-hover hover:underline">
               All projects <ArrowUpRightIcon className="text-xl" />
             </a>
           </Link>
