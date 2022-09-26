@@ -14,7 +14,7 @@ const CustomImage: React.FC<CustomLinkProps> = (props) => {
         rel="noopener noreferrer"
         href={String(props.src)}
       >
-        <Image {...props} />
+        <Image alt="" {...props} />
       </a>
     );
 
