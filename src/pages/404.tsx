@@ -10,7 +10,7 @@ const NotFound: NextPage = () => {
         description: "This page doesn't seem to exist."
       }}
     >
-      <div className="flex flex-col max-w-screen-xs mx-auto px-6 mt-4">
+      <div className="flex flex-col items-center text-center max-w-screen-xs mx-auto px-6 mt-4">
         <h1 className="font-mono font-medium text-2xl mb-2">404 not found</h1>
 
         <p className="text-primary-200 mb-4">
@@ -19,7 +19,7 @@ const NotFound: NextPage = () => {
         </p>
 
         <Link href="/">
-          <a className="self-start text-secondary-accent hover:text-secondary-accent-hover hover:underline">
+          <a className="text-secondary-accent hover:text-secondary-accent-hover hover:underline">
             Take me home...
           </a>
         </Link>
