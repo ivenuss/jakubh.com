@@ -4,6 +4,7 @@ import fetcher from '~/lib/fetcher';
 import MusicTrack from './MusicTrack';
 import Router from 'next/router';
 import { TopTracks } from '~/types/types';
+import { PREVIEW_TRACK_COUNT } from '~/lib/constants';
 
 const TopTracks: React.FC = () => {
   const { data } = useSWR<TopTracks>('/api/top-tracks', fetcher);
@@ -69,21 +70,22 @@ const TopTracks: React.FC = () => {
 
       <div className="flex flex-col gap-4">
         {topTracks &&
-          topTracks.map((track, i) => {
-            if (!collapsed && i >= 3) return null;
-            return (
-              <MusicTrack
-                key={i}
-                order={i + 1}
-                artist={track.artist}
-                title={track.title}
-                audioUrl={track.audioUrl}
-                thumbnailUrl={track.images[2].url}
-                onToggle={() => handleToggleMusic(i, track.audioUrl)}
-                isPlaying={currentTrack.id === i && currentTrack.isPlaying}
-              />
-            );
-          })}
+          topTracks
+            .map((track, i) => {
+              return (
+                <MusicTrack
+                  key={i}
+                  order={i + 1}
+                  artist={track.artist}
+                  title={track.title}
+                  audioUrl={track.audioUrl}
+                  thumbnailUrl={track.images[2].url}
+                  onToggle={() => handleToggleMusic(i, track.audioUrl)}
+                  isPlaying={currentTrack.id === i && currentTrack.isPlaying}
+                />
+              );
+            })
+            .slice(0, collapsed ? topTracks.length : PREVIEW_TRACK_COUNT)}
       </div>
 
       <button

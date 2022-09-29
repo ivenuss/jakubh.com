@@ -1,5 +1,7 @@
 import { BehanceIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '~/icons';
 
+export const PREVIEW_TRACK_COUNT = 3;
+
 export const progressTimeline = {
   '2022': ["we'll see 👀"],
   '2021': [
