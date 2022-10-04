@@ -6,7 +6,7 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 
 interface NavProps {}
 
-interface NavItemProps {
+interface NavLinkProps {
   title: string;
   path: string;
 }
@@ -29,10 +29,10 @@ const Nav: React.FC<NavProps> = ({}) => {
         <ThemeSwitcher />
 
         <ul className="hidden md:flex items-center ml-auto">
-          <NavItem title="Home" path="/" />
-          <NavItem title="About" path="/about" />
-          <NavItem title="Projects" path="/projects" />
-          <NavItem title="Contact" path="/contact" />
+          <NavLink title="Home" path="/" />
+          <NavLink title="About" path="/about" />
+          <NavLink title="Projects" path="/projects" />
+          <NavLink title="Contact" path="/contact" />
         </ul>
 
         <button
@@ -46,18 +46,17 @@ const Nav: React.FC<NavProps> = ({}) => {
 
       {open && (
         <ul className="flex md:hidden items-center flex-col max-w-screen-xs mx-auto mb-6 px-6">
-          <NavItem title="Home" path="/" />
-          <NavItem title="About" path="/about" />
-          <NavItem title="Projects" path="/projects" />
-          {/* <NavItem title="Gallery" path="/gallery" /> */}
-          <NavItem title="Contact" path="/contact" />
+          <NavLink title="Home" path="/" />
+          <NavLink title="About" path="/about" />
+          <NavLink title="Projects" path="/projects" />
+          <NavLink title="Contact" path="/contact" />
         </ul>
       )}
     </nav>
   );
 };
 
-export const NavItem: React.FC<NavItemProps> = ({ title, path }) => {
+export const NavLink: React.FC<NavLinkProps> = ({ title, path }) => {
   const router = useRouter();
   const isActive = router.asPath === path;
 
