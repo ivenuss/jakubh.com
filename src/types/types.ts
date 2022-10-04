@@ -23,6 +23,26 @@ export type TopTracks = {
   tracks: TopTrack[];
 };
 
+export type Album = {
+  id: number;
+  createdAt: Date;
+  slug: string;
+  name?: string | null;
+  thumbnailSrc: string | null;
+  bannerSrc: string | null;
+  description?: string | null;
+  images?: AlbumImage[];
+};
+
+export type AlbumImage = {
+  id: number;
+  createdAt: Date;
+  albumId: number;
+  description?: string | null;
+  name?: string | null;
+  imageSrc: string;
+};
+
 export type OgImage = {
   url: string;
   width: string;
