@@ -26,7 +26,10 @@ import {
   HiOutlineExternalLink as ExternalLinkIcon,
   HiOutlineMail as MailIcon
 } from 'react-icons/hi';
-import { MdOutlineCircle as OutlineCircle } from 'react-icons/md';
+import {
+  MdOutlineCircle as OutlineCircle,
+  MdOutlineHideImage as HideImage
+} from 'react-icons/md';
 import { BsInfo as InfoIcon } from 'react-icons/bs';
 import { BiImages as ImagesIcon } from 'react-icons/bi';
 
@@ -53,5 +56,6 @@ export {
   MailIcon,
   ArrowUpRightIcon,
   ImagesIcon,
-  BehanceIcon
+  BehanceIcon,
+  HideImage 
 };

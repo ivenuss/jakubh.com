@@ -7,6 +7,7 @@ import type { ParsedUrlQuery } from 'querystring';
 // Components
 import CustomLink from '~/ui/mdx/CustomLink';
 import CustomImage from '~/ui/mdx/CustomImage';
+import UrlPreview from '~/ui/mdx/UrlPreview';
 
 export default function ProjectPage(
   project: Project & { nextProject?: Project }
@@ -15,7 +16,9 @@ export default function ProjectPage(
 
   return (
     <ProjectLayout project={project}>
-      <MDXComponent components={{ a: CustomLink, Image: CustomImage }} />
+      <MDXComponent
+        components={{ a: CustomLink, Image: CustomImage, UrlPreview }}
+      />
     </ProjectLayout>
   );
 }

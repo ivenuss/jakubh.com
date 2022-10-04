@@ -23,63 +23,41 @@ export type TopTracks = {
   tracks: TopTrack[];
 };
 
-export type CloudinaryImage = {
-  asset_id: string;
-  public_id: string;
-  format: string;
-  version: number;
-  resource_type: string;
-  type: string;
-  created_at: Date;
-  bytes: number;
-  width: number;
-  height: number;
+export type OgImage = {
   url: string;
-  secure_url: string;
-};
-
-export type Album = {
-  id: number;
-  createdAt: Date;
-  slug: string;
-  name?: string | null;
-  thumbnailSrc: string | null;
-  bannerSrc: string | null;
-  description?: string | null;
-  images?: AlbumImage[];
-};
-
-export type AlbumImage = {
-  id: number;
-  createdAt: Date;
-  albumId: number;
-  description?: string | null;
-  name?: string | null;
-  imageSrc: string;
-};
-
-export type GooglePhoto = {
-  id: string;
-  description: string;
-  productUrl: string;
-  baseUrl: string;
-  mimeType: string;
-  mediaMetadata: PhotoMediaMetadata;
-  filename: string;
-};
-
-export type PhotoMediaMetadata = {
-  creationTime: Date;
   width: string;
   height: string;
-  photo: Object;
+  type: string;
 };
 
-export type GooglePhotos = {
-  error?: string;
-  photos?: GooglePhoto[];
-  parameters: {
-    albumId: string;
-    pageSize: number;
-  };
+export type TwitterImage = {
+  url: string;
+  width: string;
+  height: string;
+  alt?: any;
+};
+
+export type OgUrlResponse = {
+  author: string;
+  ogUrl: string;
+  ogLocale: string;
+  ogType: string;
+  ogSiteName: string;
+  ogDescription: string;
+  ogTitle: string;
+  dcLanguage: string;
+  dcSubject: string;
+  dcDescription: string;
+  dcTitle: string;
+  twitterCard: string;
+  twitterSite: string;
+  twitterTitle: string;
+  twitterDescription: string;
+  alIosUrl: string;
+  ogImage?: OgImage;
+  twitterImage?: TwitterImage;
+  favicon: string;
+  charset: string;
+  requestUrl: string;
+  success: boolean;
 };
