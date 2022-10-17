@@ -15,7 +15,7 @@ const Nav: React.FC<NavProps> = ({}) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full sticky mb-2 top-0 bg-white bg-opacity-75 dark:bg-primary-900 dark:bg-opacity-75 backdrop-saturate-150 backdrop-blur-xl z-10">
+    <nav className="w-full sticky mb-2 top-0 bg-gray-100 bg-opacity-75 dark:bg-primary-900 dark:bg-opacity-75 backdrop-saturate-150 backdrop-blur-xl z-10">
       <div className="flex max-w-screen-xs mx-auto py-5 px-6">
         <Link href="/">
           <a className="flex items-center mr-3.5">

@@ -108,7 +108,7 @@ class MyDocument extends Document {
 
           <script async src="https://cdn.splitbee.io/sb.js" />
         </Head>
-        <body className="bg-white dark:bg-primary-900">
+        <body className="bg-gray-100 dark:bg-primary-900">
           <Main />
           <NextScript />
         </body>

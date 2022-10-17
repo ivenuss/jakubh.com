@@ -21,7 +21,7 @@ const ProgressTimeline: React.FC = ({}) => {
                 {lines.map((line, i) => (
                   <li
                     key={i}
-                    className="text-sm md:text-base text-gray-600 dark:text-primary-200 before:absolute before:-ml-4 before:content-['-'] before:text-gray-500 dark:before:text-accent"
+                    className="text-sm md:text-base text-gray-600 dark:text-primary-200 before:absolute before:-ml-4 before:content-['-'] before:text-gray-600 dark:before:text-accent"
                   >
                     {line}
                   </li>

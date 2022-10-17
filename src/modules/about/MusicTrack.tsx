@@ -23,7 +23,7 @@ const MusicTrack: React.FC<MusicTrackProps> = ({
 }) => {
   return (
     <div className="max-w-full flex flex-row items-center">
-      <div className="text-sm hidden sm:grid flex-none place-content-center w-5 mr-6 text-gray-500 dark:text-primary-300">
+      <div className="text-sm hidden sm:grid flex-none place-content-center w-5 mr-6 text-gray-600 dark:text-primary-300">
         {String('0' + order).slice(-2)}
       </div>
 
