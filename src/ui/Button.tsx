@@ -4,6 +4,7 @@ import React, {
   ReactNode
 } from 'react';
 import Spinner from './Spinner';
+import clsx from 'clsx';
 
 const sizeClassnames = {
   large: 'py-3.5 px-12 text-base rounded-lg',
@@ -46,15 +47,17 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       disabled={disabled || loading}
-      className={`flex focus:outline-none ${sizeClassnames[size]} ${
-        transition ? `transition duration-200 ease-in-out` : ``
-      } ${
-        colorClassnames[color]
-      } font-bold flex items-center justify-center ${className}`}
+      className={clsx(
+        'flex font-bold items-center justify-center focus:outline-none',
+        sizeClassnames[size],
+        colorClassnames[color],
+        { 'transition duration-200 ease-in-out': transition },
+        className
+      )}
       {...props}
     >
       <span className={loading ? 'opacity-0' : `flex items-center`}>
-        {icon ? <span className={`mr-2 items-center`}>{icon}</span> : null}
+        {icon ? <span className="mr-2 items-center">{icon}</span> : null}
         {children}
       </span>
       {loading ? (

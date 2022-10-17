@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 interface SpinnerProps {
   color?: string;
@@ -15,8 +16,8 @@ const Spinner: React.FC<SpinnerProps> = ({
         fill="none"
         r="14"
         strokeWidth="4"
-        className={`opacity-20 ${color}`}
-      ></circle>
+        className={clsx('opacity-20', color)}
+      />
       <circle
         cx="16"
         cy="16"
@@ -28,7 +29,7 @@ const Spinner: React.FC<SpinnerProps> = ({
           strokeDasharray: 80,
           strokeDashoffset: 60
         }}
-      ></circle>
+      />
     </svg>
   );
 };

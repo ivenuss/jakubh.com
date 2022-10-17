@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import clsx from 'clsx';
 import { ExternalLinkIcon, GithubOutlineIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';
 
@@ -63,7 +64,10 @@ export const ProjectLink: React.FC<ProjectLinkProps> = ({
   return (
     <Link href={href}>
       <a
-        className={`flex items-center text-secondary-200 dark:text-primary-200 hover:text-secondary-accent hover:underline ${className}`}
+        className={clsx(
+          'flex items-center text-secondary-200 dark:text-primary-200 hover:text-secondary-accent hover:underline',
+          className
+        )}
         {...props}
       >
         {children}

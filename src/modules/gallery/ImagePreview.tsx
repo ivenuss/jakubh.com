@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/future/image';
+import clsx from 'clsx';
 
 interface ImagePreviewProps {
   index: string;
@@ -44,9 +45,10 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
       <Image
         layout="responsive"
         onLoadingComplete={() => setLoading(false)}
-        className={`bg-secondary-800 dark:bg-primary-800 duration-700 ease-in-out ${
+        className={clsx(
+          'bg-secondary-800 dark:bg-primary-800 duration-700 ease-in-out',
           isLoading ? 'scale-105 blur-sm' : 'scale-100 blur-0'
-        }`}
+        )}
         alt={photo.alt || 'Gallery Image'}
         priority={true}
         {...photo}

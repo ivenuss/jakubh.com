@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import clsx from 'clsx';
 import { useRouter } from 'next/dist/client/router';
 import { CloseIcon, MenuIcon } from '~/icons';
 import { ThemeSwitcher } from './ThemeSwitcher';
@@ -64,11 +65,12 @@ export const NavLink: React.FC<NavLinkProps> = ({ title, path }) => {
     <li className="w-full py-4 border-b md:border-none border-primary-600 md:w-auto md:p-0 md:ml-5">
       <Link href={path}>
         <a
-          className={`font-medium transition-colors duration-200 ${
+          className={clsx(
+            'font-medium transition-colors duration-200',
             isActive
               ? 'text-secondary-accent hover:text-secondary-accent-hover'
               : 'text-gray-700 dark:text-primary-100 hover:text-secondary-accent dark:hover:text-secondary-accent'
-          }`}
+          )}
         >
           {title}
         </a>

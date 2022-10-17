@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import clsx from 'clsx';
 
 export interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
   textarea?: boolean;
@@ -13,16 +14,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       ? `bg-transparent`
       : `bg-gray-200 dark:bg-primary-700`;
     const ring = error ? `ring-2 ring-red-500` : '';
-    const cn = `w-full py-2 px-4 rounded-md text-black dark:text-primary-100 placeholder-gray-600 dark:placeholder-secondary-300 dark:placeholder-primary-300 focus:outline-none ${bg} ${ring} ${className} `;
+    const inputCn = `w-full py-2 px-4 rounded-md text-black dark:text-primary-100 placeholder-gray-600 dark:placeholder-secondary-300 dark:placeholder-primary-300 focus:outline-none ${bg} ${ring} ${className} `;
 
     return textarea ? (
       <textarea
-        ref={ref as any}
-        className={`${cn} border-none`}
+        ref={ref}
+        className={clsx(inputCn, 'border-none')}
         {...(props as any)}
       />
     ) : (
-      <input ref={ref} className={cn} {...props} />
+      <input ref={ref} className={inputCn} {...props} />
     );
   }
 );

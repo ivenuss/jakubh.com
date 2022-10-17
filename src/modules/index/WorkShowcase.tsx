@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ProjectPreview from './ProjectPreview';
+import clsx from 'clsx';
 import { ArrowUpRightIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';
 
@@ -58,23 +59,26 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
               ) : (
                 <div className="hidden sm:block my-3 mx-[9.5rem] ">
                   <div
-                    className={`flex w-1/2 ${
-                      isOdd ? 'flex-row-reverse ml-auto ' : 'mr-auto'
-                    }`}
+                    className={clsx(
+                      'flex w-1/2',
+                      isOdd ? 'flex-row-reverse ml-auto' : 'mr-auto'
+                    )}
                   >
                     <div
-                      className={`flex-1 h-4 border-b-2 border-gray-400 dark:border-primary-600 ${
+                      className={clsx(
+                        'flex-1 h-4 border-b-2 border-gray-400 dark:border-primary-600',
                         isOdd
                           ? 'border-r-2 rounded-br-2xl'
                           : 'border-l-2 rounded-bl-2xl'
-                      }`}
+                      )}
                     />
                     <div
-                      className={`w-4 h-4 border-t-2 mt-[0.875rem] border-gray-400 dark:border-primary-600 ${
+                      className={clsx(
+                        'w-4 h-4 border-t-2 mt-[0.875rem] border-gray-400 dark:border-primary-600',
                         Boolean(i % 2)
                           ? 'border-l-2 rounded-tl-2xl'
                           : 'border-r-2 rounded-tr-2xl'
-                      }`}
+                      )}
                     />
                   </div>
                 </div>
