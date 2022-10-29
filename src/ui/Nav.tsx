@@ -18,13 +18,11 @@ const Nav: React.FC<NavProps> = ({}) => {
   return (
     <nav className="w-full sticky mb-2 top-0 bg-gray-100 bg-opacity-75 dark:bg-primary-900 dark:bg-opacity-75 backdrop-saturate-150 backdrop-blur-xl z-10">
       <div className="flex max-w-screen-xs mx-auto py-5 px-6">
-        <Link href="/">
-          <a className="flex items-center mr-3.5">
-            <div className="text-black dark:text-primary-100 text-xl">
-              <span className="font-bold">Jakub</span>
-              <span>H</span>
-            </div>
-          </a>
+        <Link href="/" className="flex items-center mr-3.5">
+          <div className="text-black dark:text-primary-100 text-xl">
+            <span className="font-bold">Jakub</span>
+            <span>H</span>
+          </div>
         </Link>
 
         <ThemeSwitcher />
@@ -63,17 +61,16 @@ export const NavLink: React.FC<NavLinkProps> = ({ title, path }) => {
 
   return (
     <li className="w-full py-4 border-b md:border-none border-primary-600 md:w-auto md:p-0 md:ml-5">
-      <Link href={path}>
-        <a
-          className={clsx(
-            'font-medium transition-colors duration-200',
-            isActive
-              ? 'text-secondary-accent hover:text-secondary-accent-hover'
-              : 'text-gray-700 dark:text-primary-100 hover:text-secondary-accent dark:hover:text-secondary-accent'
-          )}
-        >
-          {title}
-        </a>
+      <Link
+        href={path}
+        className={clsx(
+          'font-medium transition-colors duration-200',
+          isActive
+            ? 'text-secondary-accent hover:text-secondary-accent-hover'
+            : 'text-gray-700 dark:text-primary-100 hover:text-secondary-accent dark:hover:text-secondary-accent'
+        )}
+      >
+        {title}
       </Link>
     </li>
   );

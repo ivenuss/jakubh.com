@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import type { ImageType } from '~/pages/gallery';
 
 interface ImageModalProps {

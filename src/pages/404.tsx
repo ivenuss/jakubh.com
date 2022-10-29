@@ -18,10 +18,11 @@ const NotFound: NextPage = () => {
           yet.
         </p>
 
-        <Link href="/">
-          <a className="text-secondary-accent hover:text-secondary-accent-hover hover:underline">
-            Take me home...
-          </a>
+        <Link
+          href="/"
+          className="text-secondary-accent hover:text-secondary-accent-hover hover:underline"
+        >
+          Take me home...
         </Link>
       </div>
     </Container>

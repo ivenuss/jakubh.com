@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { format } from 'date-fns';
 import { GithubIcon, ExternalLinkIcon } from '~/icons';
 import type { Project } from 'contentlayer/generated';

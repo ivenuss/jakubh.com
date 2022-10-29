@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import CzechFlag from '/public/static/images/cz.svg';
 
 const Bio: React.FC = () => {

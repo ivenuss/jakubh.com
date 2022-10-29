@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import Button from '~/ui/Button';
 
 interface ContactProps {}
@@ -18,9 +18,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
 
       <div className="flex items-center gap-8">
         <Link href="/contact">
-          <a>
-            <Button>Get in Touch</Button>
-          </a>
+          <Button>Get in Touch</Button>
         </Link>
 
         <a

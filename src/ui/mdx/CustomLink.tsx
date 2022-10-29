@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 interface CustomLinkProps
   extends React.DetailedHTMLProps<
@@ -9,11 +9,11 @@ interface CustomLinkProps
 
 const CustomLink: React.FC<CustomLinkProps> = (props) => {
   const href = props?.href;
-  const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
+      <Link href={href} legacyBehavior>
         <a {...props}>{props.children}</a>
       </Link>
     );

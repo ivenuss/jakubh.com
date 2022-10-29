@@ -24,10 +24,11 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
             I've made a lot of projects and this is a small selection of some
             that I found interesting.
           </div>
-          <Link href="/projects">
-            <a className="flex flex-none md:self-end items-center gap-2 text-secondary-accent hover:text-secondary-accent-hover hover:underline">
-              All projects <ArrowUpRightIcon className="text-xl" />
-            </a>
+          <Link
+            href="/projects"
+            className="flex flex-none md:self-end items-center gap-2 text-secondary-accent hover:text-secondary-accent-hover hover:underline"
+          >
+            All projects <ArrowUpRightIcon className="text-xl" />
           </Link>
         </div>
       </div>
@@ -87,13 +88,11 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           );
         })}
 
-        <Link href="/projects">
-          <a
-            href={`mailto:${process.env.EMAIL}`}
-            className="mx-auto text-sm py-2 px-6 font-medium rounded-md transition-all text-black bg-gray-300 dark:text-white dark:bg-primary-600 hover:brightness-110"
-          >
-            I want to see all!
-          </a>
+        <Link
+          href="/projects"
+          className="mx-auto text-sm py-2 px-6 font-medium rounded-md transition-all text-black bg-gray-300 dark:text-white dark:bg-primary-600 hover:brightness-110"
+        >
+          I want to see all!
         </Link>
       </div>
     </section>

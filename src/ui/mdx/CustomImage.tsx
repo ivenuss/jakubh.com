@@ -1,5 +1,5 @@
 import React from 'react';
-import Image, { ImageProps } from 'next/future/image';
+import Image, { ImageProps } from 'next/image';
 
 interface CustomLinkProps extends ImageProps {
   haslink?: boolean;

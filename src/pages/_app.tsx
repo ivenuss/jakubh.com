@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import 'tailwindcss/tailwind.css';
 
 import NProgress from 'nprogress';
 import Head from 'next/head';

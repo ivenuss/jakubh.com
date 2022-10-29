@@ -26,11 +26,12 @@ const Header: React.FC<HeaderProps> = ({ album }) => {
           <ImagesIcon />
         </div>
 
-        <Link href="/gallery">
-          <a className="ml-auto flex items-center hover:underline">
-            <ArrowLeftIcon className="mr-2" />
-            <span>Go back</span>
-          </a>
+        <Link
+          href="/gallery"
+          className="ml-auto flex items-center hover:underline"
+        >
+          <ArrowLeftIcon className="mr-2" />
+          <span>Go back</span>
         </Link>
       </div>
 

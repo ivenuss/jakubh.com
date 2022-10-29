@@ -62,16 +62,15 @@ export const ProjectLink: React.FC<ProjectLinkProps> = ({
   ...props
 }) => {
   return (
-    <Link href={href}>
-      <a
-        className={clsx(
-          'flex items-center text-secondary-200 dark:text-primary-200 hover:text-secondary-accent hover:underline',
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </a>
+    <Link
+      href={href}
+      className={clsx(
+        'flex items-center text-secondary-200 dark:text-primary-200 hover:text-secondary-accent hover:underline',
+        className
+      )}
+      {...props}
+    >
+      {children}
     </Link>
   );
 };
