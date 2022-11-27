@@ -4,3 +4,7 @@
 node_modules
 .vercel
 .env
+
+# Next sitemap
+robots.txt
+sitemap*.xml

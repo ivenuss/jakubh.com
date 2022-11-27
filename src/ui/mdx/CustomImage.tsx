@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import Image, { ImageProps } from 'next/image';
 
@@ -14,7 +15,7 @@ const CustomImage: React.FC<CustomLinkProps> = (props) => {
         rel="noopener noreferrer"
         href={String(props.src)}
       >
-        <Image alt="" className="rounded-md" {...props} />
+        <Image className="rounded-md" {...props} />
       </a>
     );
 
