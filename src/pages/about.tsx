@@ -4,6 +4,7 @@ import Container from '~/ui/Container';
 import ProgressTimeline from '~/modules/about/ProgressTimeline';
 import dynamic from 'next/dynamic';
 import PageHeading from '~/ui/PageHeading';
+import WorkExperience from '~/modules/about/WorkExperience';
 import type { NextPage } from 'next';
 
 const DynamicTopTracks = dynamic(() => import('~/modules/about/TopTracks'));
@@ -22,6 +23,7 @@ const About: NextPage = () => {
         <div className="flex flex-col gap-12 mt-6">
           <Bio />
           <Skills />
+          <WorkExperience />
           <ProgressTimeline />
           <DynamicTopTracks />
         </div>
