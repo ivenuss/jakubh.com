@@ -57,5 +57,5 @@ export {
   ArrowUpRightIcon,
   ImagesIcon,
   BehanceIcon,
-  HideImage 
+  HideImage
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface TechnologyTagProps {
   title: string;
@@ -7,7 +7,7 @@ interface TechnologyTagProps {
 
 export const TechnologyTag: React.FC<TechnologyTagProps> = ({
   title,
-  color,
+  color
 }) => {
   return (
     <div className="flex items-center px-2.5 py-0.5 rounded text-sm bg-secondary-800 text-black dark:bg-primary-700 dark:text-primary-100">
