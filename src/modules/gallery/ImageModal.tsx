@@ -17,6 +17,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
     () => onIndexChange(index === 0 ? images.length - 1 : index - 1),
     [index, images.length, onIndexChange]
   );
+
   const handleNext = useCallback(
     () => onIndexChange(index === images.length - 1 ? 0 : index + 1),
     [index, images.length, onIndexChange]
@@ -38,7 +39,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
     return () => {
       document.removeEventListener('keydown', handleKeyPress, false);
     };
-  }, [index, handlePrev, handleNext, onIndexChange]);
+  }, [handlePrev, handleNext, onIndexChange]);
 
   const currentImage = images[index];
 
