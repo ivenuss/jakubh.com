@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import type { ImageType } from '~/pages/gallery';
 
@@ -13,11 +13,15 @@ const ImageModal: React.FC<ImageModalProps> = ({
   index,
   onIndexChange
 }) => {
-  const handlePrev = () =>
-    onIndexChange(index === 0 ? images.length - 1 : index - 1);
+  const handlePrev = useCallback(
+    () => onIndexChange(index === 0 ? images.length - 1 : index - 1),
+    [index, images.length, onIndexChange]
+  );
 
-  const handleNext = () =>
-    onIndexChange(index === images.length - 1 ? 0 : index + 1);
+  const handleNext = useCallback(
+    () => onIndexChange(index === images.length - 1 ? 0 : index + 1),
+    [index, images.length, onIndexChange]
+  );
 
   useEffect(() => {
     const handleKeyPress = (e: any) => {
@@ -35,7 +39,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
     return () => {
       document.removeEventListener('keydown', handleKeyPress, false);
     };
-  }, [index, handlePrev, handleNext, onIndexChange]);
+  }, [handlePrev, handleNext, onIndexChange]);
 
   const currentImage = images[index];
 
