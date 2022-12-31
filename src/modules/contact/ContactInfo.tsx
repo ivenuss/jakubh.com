@@ -2,34 +2,10 @@ import React from 'react';
 import { ArrowUpRightIcon } from '~/icons';
 import { socialMedias } from '~/lib/constants';
 
-interface ContactInfoProps {}
-
-interface SocialButtonProps {
-  link: string;
-  title: string;
-}
-
-const SocialButton: React.FC<SocialButtonProps> = ({ link, title }) => {
-  return (
-    <a
-      href={link}
-      rel="noreferrer noopener"
-      target="_blank"
-      className="group flex items-center mb-3 text-secondary-accent hover:underline hover:text-secondary-accent-hover"
-    >
-      {title}
-
-      <span className="ml-1">
-        <ArrowUpRightIcon className="text-lg" />
-      </span>
-    </a>
-  );
-};
-
-const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
+const ContactInfo: React.FC = () => {
   return (
     <section className="mb-8">
-      <h2 className="font-medium text-black dark:text-primary-100 text-xl mb-3">
+      <h2 className="mb-3 text-xl font-medium text-black dark:text-primary-100">
         Social
       </h2>
 
@@ -43,7 +19,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
         <div>
           <a
             href={`mailto:${process.env.EMAIL}`}
-            className="text-sm py-2 px-6 rounded-md transition-all text-black bg-gray-300 dark:text-white dark:bg-primary-600 hover:brightness-110"
+            className="rounded-md bg-gray-300 py-2 px-6 text-sm text-black transition-all hover:brightness-110 dark:bg-primary-600 dark:text-white"
           >
             Email me
           </a>
@@ -54,3 +30,25 @@ const ContactInfo: React.FC<ContactInfoProps> = ({}) => {
 };
 
 export default ContactInfo;
+
+interface SocialButtonProps {
+  link: string;
+  title: string;
+}
+
+const SocialButton: React.FC<SocialButtonProps> = ({ link, title }) => {
+  return (
+    <a
+      href={link}
+      rel="noreferrer noopener"
+      target="_blank"
+      className="group mb-3 flex items-center text-secondary-accent hover:text-secondary-accent-hover hover:underline"
+    >
+      {title}
+
+      <span className="ml-1">
+        <ArrowUpRightIcon className="text-lg" />
+      </span>
+    </a>
+  );
+};

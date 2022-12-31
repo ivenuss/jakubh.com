@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section>
-      <h2 className="font-medium text-black dark:text-primary-100 text-xl mb-3">
+      <h2 className="mb-3 text-xl font-medium text-black dark:text-primary-100">
         Get in touch
       </h2>
 
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
           loading={loading}
           type="submit"
           value="Submit"
-          className="w-full md:w-7/12 md:ml-auto"
+          className="w-full md:ml-auto md:w-7/12"
         >
           Submit
         </Button>

@@ -10,10 +10,10 @@ interface ProjectPreviewProps {
 
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
   return (
-    <div className="flex gap-3 sm:gap-6 flex-col sm:flex-row sm:group-even:flex-row-reverse">
+    <div className="flex flex-col gap-3 sm:flex-row sm:gap-6 sm:group-even:flex-row-reverse">
       <Link
         href={`/projects/${project.slug}`}
-        className="rounded-lg overflow-hidden"
+        className="overflow-hidden rounded-lg"
       >
         <Image
           priority
@@ -21,14 +21,14 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
           height={720}
           alt={project.title}
           src={project.image}
-          className="aspect-[2/1] md:aspect-[5/3] object-cover object-center transition-transform bg-gray-100 dark:bg-primary-800 hover:scale-105"
+          className="aspect-[2/1] bg-gray-100 object-cover object-center transition-transform hover:scale-105 dark:bg-primary-800 md:aspect-[5/3]"
         />
       </Link>
       <div className="flex-none sm:w-6/12">
-        <h4 className="text-black dark:text-primary-100 font-medium text-lg mb-2">
+        <h4 className="mb-2 text-lg font-medium text-black dark:text-primary-100">
           {project.title}
         </h4>
-        <p className="text-sm sm:text-base text-gray-600 dark:text-primary-300 line-clamp-3 mb-2">
+        <p className="mb-2 text-sm text-gray-600 line-clamp-3 dark:text-primary-300 sm:text-base">
           {project.description}
         </p>
         <Link

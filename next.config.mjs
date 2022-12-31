@@ -1,9 +1,9 @@
-const { withContentlayer } = require('next-contentlayer');
+import { withContentlayer } from 'next-contentlayer';
 
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = withContentlayer({
+const config = withContentlayer({
   reactStrictMode: true,
   images: {
     domains: [
@@ -33,3 +33,4 @@ module.exports = withContentlayer({
     return config;
   }
 });
+export default config;

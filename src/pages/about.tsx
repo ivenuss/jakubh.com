@@ -17,10 +17,10 @@ const About: NextPage = () => {
         description: 'Who am I & what do I do? Come and get to know me better.'
       }}
     >
-      <div className="w-full max-w-screen-xs mx-auto px-6">
+      <div className="mx-auto w-full max-w-screen-xs px-6">
         <PageHeading title="About Me" />
 
-        <div className="flex flex-col gap-12 mt-6">
+        <div className="mt-6 flex flex-col gap-12">
           <Bio />
           <Skills />
           <WorkExperience />

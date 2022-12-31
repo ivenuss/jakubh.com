@@ -10,10 +10,10 @@ const NotFound: NextPage = () => {
         description: "This page doesn't seem to exist."
       }}
     >
-      <div className="flex flex-col items-center text-center max-w-screen-xs mx-auto px-6 mt-4">
-        <h1 className="font-mono font-medium text-2xl mb-2">404 not found</h1>
+      <div className="mx-auto mt-4 flex max-w-screen-xs flex-col items-center px-6 text-center">
+        <h1 className="mb-2 font-mono text-2xl font-medium">404 not found</h1>
 
-        <p className="text-primary-200 mb-4">
+        <p className="mb-4 text-primary-200">
           Looks like you&apos;ve discovered a new page I don&apos;t know about
           yet.
         </p>

@@ -13,16 +13,16 @@ const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ project }) => {
     <div>
       <Link
         href={`/projects/${project.slug}`}
-        className="block group relative aspect-[4/3] rounded-xl mb-2.5 overflow-hidden"
+        className="group relative mb-2.5 block aspect-[4/3] overflow-hidden rounded-xl"
       >
         <Image
           width={1280}
           height={720}
           alt={project.title}
           src={project.image}
-          className="w-full h-full object-cover z-10 bg-gray-100 dark:bg-primary-800 transition-transform duration-300 group-hover:scale-105"
+          className="z-10 h-full w-full bg-gray-100 object-cover transition-transform duration-300 group-hover:scale-105 dark:bg-primary-800"
         />
-        <div className="absolute top-0 left-0 w-full h-full z-0 transition-colors group-hover:bg-black group-hover:bg-opacity-20" />
+        <div className="absolute top-0 left-0 z-0 h-full w-full transition-colors group-hover:bg-black group-hover:bg-opacity-20" />
       </Link>
       <div className="flex items-center justify-between font-medium text-gray-600 dark:text-primary-200">
         <div className="flex items-center">
@@ -31,7 +31,7 @@ const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ project }) => {
             height={84}
             alt={project.title}
             src={project.icon}
-            className="w-6 h-6 mr-3 rounded-full bg-gray-100 dark:bg-primary-800"
+            className="mr-3 h-6 w-6 rounded-full bg-gray-100 dark:bg-primary-800"
           />
 
           <h3>

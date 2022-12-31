@@ -13,17 +13,17 @@ const ProjectFooter: React.FC<ProjectFooterProps> = ({ project }) => {
     : '/projects';
 
   return (
-    <footer className="w-full flex mt-8 pt-8 border-t border-secondary-700 dark:border-primary-700">
+    <footer className="border-secondary-700 mt-8 flex w-full border-t pt-8 dark:border-primary-700">
       <Link
         href="/projects"
-        className="text-base md:text-lg text-secondary-300 hover:text-secondary-300 dark:text-primary-300 dark:hover:text-primary-200"
+        className="text-secondary-300 hover:text-secondary-300 text-base dark:text-primary-300 dark:hover:text-primary-200 md:text-lg"
       >
         Back
       </Link>
       <Link
         href={nextHref}
         title={project.nextProject?.title || 'No project found'}
-        className="flex items-center ml-auto text-base md:text-lg text-secondary-accent hover:text-secondary-accent-hover"
+        className="ml-auto flex items-center text-base text-secondary-accent hover:text-secondary-accent-hover md:text-lg"
       >
         Next Project <ArrowRightIcon className="ml-3" />
       </Link>

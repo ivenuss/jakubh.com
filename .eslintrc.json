@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    // General
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "padding-line-between-statements": "error",
+
+    // React
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+
+    // TypeScript
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      { "allowSingleExtends": true }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "destructuredArrayIgnorePattern": "_^", "argsIgnorePattern": "^_" }
+    ]
+  }
+}

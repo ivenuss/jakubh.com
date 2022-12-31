@@ -36,24 +36,24 @@ export const socialMedias = [
     title: 'GitHub',
     color: '#4078c0',
     icon: GithubIcon,
-    link: process.env.GITHUB_URL
+    link: process.env.GITHUB_URL ?? '#'
   },
   {
     title: 'LinkedIn',
     color: '#0077B5',
     icon: LinkedinIcon,
-    link: process.env.LINKEDIN_URL
+    link: process.env.LINKEDIN_URL ?? '#'
   },
   {
     title: 'Behance',
     color: '#053EFF',
     icon: BehanceIcon,
-    link: process.env.BEHANCE_URL
+    link: process.env.BEHANCE_URL ?? '#'
   },
   {
     title: 'Twitter',
     color: '#1D9BF0',
     icon: TwitterIcon,
-    link: process.env.TWITTER_URL
+    link: process.env.TWITTER_URL ?? '#'
   }
 ];

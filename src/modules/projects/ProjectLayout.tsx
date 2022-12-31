@@ -6,7 +6,7 @@ import type { Project } from 'contentlayer/generated';
 
 interface ProjectLayoutProps {
   project: Project & { nextProject?: Project };
-  children: any;
+  children: React.ReactNode;
 }
 
 const ProjectLayout: React.FC<ProjectLayoutProps> = ({ children, project }) => {
@@ -18,10 +18,10 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({ children, project }) => {
       }}
     >
       <div className="mx-auto max-w-screen-xs px-6">
-        <article className="flex flex-col items-start justify-center w-full mx-auto mb-16">
+        <article className="mx-auto mb-16 flex w-full flex-col items-start justify-center">
           <ProjectHeader project={project} />
 
-          <div className="w-full max-w-none prose prose-slate dark:prose-dark prose-a:text-secondary-accent hover:prose-a:text-secondary-accent-hover prose-headings:text-black dark:prose-headings:text-primary-100 prose-code:font-normal prose-code:before:content-none prose-code:after:content-none prose-code:text-black prose-pre:bg-gray-200 prose-code:bg-gray-200 dark:prose-code:text-primary-100 dark:prose-pre:bg-primary-700 dark:prose-code:bg-primary-700">
+          <div className="prose prose-slate w-full max-w-none prose-headings:text-black prose-a:text-secondary-accent hover:prose-a:text-secondary-accent-hover prose-code:bg-gray-200 prose-code:font-normal prose-code:text-black prose-code:before:content-none prose-code:after:content-none prose-pre:bg-gray-200 dark:prose-dark dark:prose-headings:text-primary-100 dark:prose-code:bg-primary-700 dark:prose-code:text-primary-100 dark:prose-pre:bg-primary-700">
             {children}
           </div>
 

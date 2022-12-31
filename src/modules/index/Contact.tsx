@@ -2,12 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import Button from '~/ui/Button';
 
-interface ContactProps {}
-
-const Contact: React.FC<ContactProps> = ({}) => {
+const Contact: React.FC = () => {
   return (
-    <div className="w-full max-w-screen-xs mx-auto px-6 mb-12">
-      <h3 className="text-black dark:text-primary-100 font-medium text-2xl mb-2.5">
+    <div className="mx-auto mb-12 w-full max-w-screen-xs px-6">
+      <h3 className="mb-2.5 text-2xl font-medium text-black dark:text-primary-100">
         Did I catch your attention?
       </h3>
 
@@ -23,7 +21,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
 
         <a
           href={`mailto:${process.env.EMAIL}`}
-          className="text-base upp xs:text-lg font-medium text-gray-700 dark:text-primary-200 hover:underline"
+          className="upp text-base font-medium text-gray-700 hover:underline dark:text-primary-200 xs:text-lg"
         >
           {process.env.EMAIL}
         </a>

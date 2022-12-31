@@ -16,7 +16,7 @@ export const ExperienceRow: React.FC<ExperienceRowPros> = ({
   startDate,
   endDate
 }) => (
-  <div className="flex items-center space-x-4 group">
+  <div className="group flex items-center space-x-4">
     <div>
       <a
         target="_blank"
@@ -28,7 +28,7 @@ export const ExperienceRow: React.FC<ExperienceRowPros> = ({
       </a>
       <span> · {employmentType}</span>
     </div>
-    <div className="flex-1 border-t border-primary-300 border-dashed shrink dark:border-primary-600" />
+    <div className="flex-1 shrink border-t border-dashed border-primary-300 dark:border-primary-600" />
     <div className="mr-6 font-medium text-primary-100">{title}</div>
     <div className="text-sm text-primary-200">
       <span>{format(new Date(startDate), 'MMM yyyy')}</span>
