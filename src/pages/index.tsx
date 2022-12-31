@@ -14,11 +14,11 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
   return (
     <Container
       meta={{
-        title: 'Jakub Habrcetl / Web developer & designer'
+        title: 'Jakub Habrcetl / Web developer & designer - test'
       }}
     >
       <div className="flex flex-col gap-20">
-        <Header />
+             <Header />
         <ProjectShowcase projects={projects} />
         <Contact />
       </div>
@@ -30,10 +30,10 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
-    props: {
-      projects: allProjects
-        .slice(0, 3)
-        .sort(
+              props: {
+       projects: allProjects
+                      .slice(0, 3)
+         .sort(
           (a, b) =>
             new Date(b.publishedAt).getTime() -
             new Date(a.publishedAt).getTime()
