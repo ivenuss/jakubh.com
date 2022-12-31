@@ -5,21 +5,19 @@ import { useRouter } from 'next/dist/client/router';
 import { CloseIcon, MenuIcon } from '~/icons';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-interface NavProps {}
-
 interface NavLinkProps {
   title: string;
   path: string;
 }
 
-const Nav: React.FC<NavProps> = ({}) => {
+const Nav: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full sticky mb-2 top-0 bg-gray-100 bg-opacity-75 dark:bg-primary-900 dark:bg-opacity-75 backdrop-saturate-150 backdrop-blur-xl z-10">
-      <div className="flex max-w-screen-xs mx-auto py-5 px-6">
-        <Link href="/" className="flex items-center mr-3.5">
-          <div className="text-black dark:text-primary-100 text-xl">
+    <nav className="sticky top-0 z-10 mb-2 w-full bg-gray-100 bg-opacity-75 backdrop-blur-xl backdrop-saturate-150 dark:bg-primary-900 dark:bg-opacity-75">
+      <div className="mx-auto flex max-w-screen-xs py-5 px-6">
+        <Link href="/" className="mr-3.5 flex items-center">
+          <div className="text-xl text-black dark:text-primary-100">
             <span className="font-bold">Jakub</span>
             <span>H</span>
           </div>
@@ -27,7 +25,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 
         <ThemeSwitcher />
 
-        <ul className="hidden md:flex items-center ml-auto">
+        <ul className="ml-auto hidden items-center md:flex">
           <NavLink title="Home" path="/" />
           <NavLink title="About" path="/about" />
           <NavLink title="Projects" path="/projects" />
@@ -36,7 +34,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 
         <button
           aria-label="Menu Button"
-          className="md:hidden ml-auto text-xl"
+          className="ml-auto text-xl md:hidden"
           onClick={() => setOpen(!open)}
         >
           {open ? <CloseIcon /> : <MenuIcon />}
@@ -44,7 +42,7 @@ const Nav: React.FC<NavProps> = ({}) => {
       </div>
 
       {open && (
-        <ul className="flex md:hidden items-center flex-col max-w-screen-xs mx-auto mb-6 px-6">
+        <ul className="mx-auto mb-6 flex max-w-screen-xs flex-col items-center px-6 md:hidden">
           <NavLink title="Home" path="/" />
           <NavLink title="About" path="/about" />
           <NavLink title="Projects" path="/projects" />
@@ -60,14 +58,14 @@ export const NavLink: React.FC<NavLinkProps> = ({ title, path }) => {
   const isActive = router.asPath === path;
 
   return (
-    <li className="w-full py-4 border-b md:border-none border-primary-600 md:w-auto md:p-0 md:ml-5">
+    <li className="w-full border-b border-primary-600 py-4 md:ml-5 md:w-auto md:border-none md:p-0">
       <Link
         href={path}
         className={clsx(
           'font-medium transition-colors duration-200',
           isActive
             ? 'text-secondary-accent hover:text-secondary-accent-hover'
-            : 'text-gray-700 dark:text-primary-100 hover:text-secondary-accent dark:hover:text-secondary-accent'
+            : 'text-gray-700 hover:text-secondary-accent dark:text-primary-100 dark:hover:text-secondary-accent'
         )}
       >
         {title}

@@ -9,7 +9,7 @@ interface SkillSectionProps {
 const SkillSection: React.FC<SkillSectionProps> = ({ title, items }) => {
   return (
     <section>
-      <h3 className="font-medium text-lg text-black dark:text-primary-100 mb-3">
+      <h3 className="mb-3 text-lg font-medium text-black dark:text-primary-100">
         {title}
       </h3>
       <ul className="text-gray-600 dark:text-primary-200">
@@ -23,16 +23,16 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, items }) => {
   );
 };
 
-export const Skills: React.FC = ({}) => {
+export const Skills: React.FC = () => {
   return (
     <section>
       <div className="mb-3">
-        <h2 className="font-medium text-black dark:text-primary-100 text-xl mb-3">
+        <h2 className="mb-3 text-xl font-medium text-black dark:text-primary-100">
           Skills
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 gap-y-2">
+      <div className="grid grid-cols-2 gap-6 gap-y-2 sm:grid-cols-3">
         {Object.entries(techStack).map(([title, items]) => (
           <SkillSection key={title} title={title} items={items} />
         ))}

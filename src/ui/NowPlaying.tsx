@@ -1,12 +1,10 @@
 import React from 'react';
 import useSWR from 'swr';
 import fetcher from '~/lib/fetcher';
-import { NowPlayingSong } from '~/types/types';
 import { SpotifyIcon } from '~/icons';
+import type { NowPlayingSong } from '~/types';
 
-interface NowPlayingProps {}
-
-const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
+const NowPlaying: React.FC = () => {
   const { data } = useSWR<NowPlayingSong>(`/api/now-playing`, fetcher);
   const currentSong = data;
 
@@ -14,15 +12,15 @@ const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
     <>
       <SpotifyIcon
         title="Spotify"
-        className="flex-none text-lg mr-2"
+        className="mr-2 flex-none text-lg"
         style={{ color: '#1ed760' }}
       />
 
-      <div className="text-sm flex-none mr-1 text-black dark:text-primary-100">
+      <div className="mr-1 flex-none text-sm text-black dark:text-primary-100">
         Listening to
       </div>
 
-      <div className="text-sm pr-3 overflow-hidden text-black dark:text-primary-100">
+      <div className="overflow-hidden pr-3 text-sm text-black dark:text-primary-100">
         <div className="truncate font-medium">
           {currentSong?.isPlaying ? (
             <>
@@ -30,7 +28,7 @@ const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={currentSong.songUrl}
-                className="truncate mr-3 hover:underline"
+                className="mr-3 truncate hover:underline"
               >
                 {currentSong.title}
               </a>

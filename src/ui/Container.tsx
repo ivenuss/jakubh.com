@@ -4,14 +4,21 @@ import Nav from './Nav';
 import NavTopBanner from './NavTopBanner';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { Toaster } from './Toaster';
 import { PageTransition } from './PageTransition';
 
 const DynamicFooter = dynamic(() => import('./Footer'));
 
+interface Meta {
+  title: string;
+  description: string;
+  image: string;
+  type: string;
+  date: string;
+}
+
 interface ContainerProps {
-  meta?: any;
-  children: any;
+  meta?: Partial<Meta>;
+  children: React.ReactNode;
 }
 
 const Container: React.FC<ContainerProps> = ({
@@ -31,7 +38,7 @@ const Container: React.FC<ContainerProps> = ({
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -59,7 +66,7 @@ const Container: React.FC<ContainerProps> = ({
 
       <Nav />
 
-      <div className="mb-auto">
+      <div className="relative mb-auto">
         <main className="mx-auto w-full">
           <PageTransition>{children}</PageTransition>
         </main>

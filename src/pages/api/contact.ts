@@ -78,7 +78,7 @@ export default async function handler(
       html: htmlToSend
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error) => {
       if (error) {
         return res.status(500).json({ error });
       } else {

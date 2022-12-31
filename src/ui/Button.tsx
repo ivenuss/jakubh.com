@@ -1,7 +1,7 @@
 import React, {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  ReactNode
+  type ButtonHTMLAttributes,
+  type DetailedHTMLProps,
+  type ReactNode
 } from 'react';
 import Spinner from './Spinner';
 import clsx from 'clsx';
@@ -48,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       disabled={disabled || loading}
       className={clsx(
-        'flex font-bold items-center justify-center focus:outline-none',
+        'flex items-center justify-center font-bold focus:outline-none',
         sizeClassnames[size],
         colorClassnames[color],
         { 'transition duration-200 ease-in-out': transition },
@@ -61,7 +61,7 @@ const Button: React.FC<ButtonProps> = ({
         {children}
       </span>
       {loading ? (
-        <span className="absolute h-6 mx-auto">
+        <span className="absolute mx-auto h-6">
           <Spinner color="stroke-secondary-300 dark:stroke-primary-300" />
         </span>
       ) : null}

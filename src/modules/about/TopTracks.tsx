@@ -3,7 +3,7 @@ import useSWR from 'swr';
 import fetcher from '~/lib/fetcher';
 import MusicTrack from './MusicTrack';
 import Router from 'next/router';
-import { TopTracks } from '~/types/types';
+import { TopTracks } from '~/types';
 import { PREVIEW_TRACK_COUNT } from '~/lib/constants';
 
 const TopTracks: React.FC = () => {
@@ -63,8 +63,8 @@ const TopTracks: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col mb-6">
-      <h2 className="font-medium text-black dark:text-primary-100 text-xl mb-3">
+    <section className="mb-6 flex flex-col">
+      <h2 className="mb-3 text-xl font-medium text-black dark:text-primary-100">
         Top 10 Tracks I listen To
       </h2>
 
@@ -79,7 +79,7 @@ const TopTracks: React.FC = () => {
                   artist={track.artist}
                   title={track.title}
                   audioUrl={track.audioUrl}
-                  thumbnailUrl={track.images[2].url}
+                  thumbnailUrl={track.images[2]?.url ?? ''}
                   onToggle={() => handleToggleMusic(i, track.audioUrl)}
                   isPlaying={currentTrack.id === i && currentTrack.isPlaying}
                 />
@@ -90,7 +90,7 @@ const TopTracks: React.FC = () => {
 
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="mx-auto mt-2 p-2 self-start text-secondary-accent hover:text-secondary-accent-hover font-medium"
+        className="mx-auto mt-2 self-start p-2 font-medium text-secondary-accent hover:text-secondary-accent-hover"
       >
         {collapsed ? 'See Less' : 'See All'}
       </button>

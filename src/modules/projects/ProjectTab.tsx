@@ -16,13 +16,13 @@ interface ProjectLinkProps extends React.ComponentPropsWithoutRef<'a'> {
 
 const ProjectTab: React.FC<ProjectTabProps> = ({ project }) => {
   return (
-    <div className="flex items-center mt-1 pb-6 border-b last:border-none border-secondary-700 dark:border-primary-700">
+    <div className="border-secondary-700 mt-1 flex items-center border-b pb-6 last:border-none dark:border-primary-700">
       <div className="mt-3 w-full overflow-hidden">
-        <h2 className="flex items-center text-2xl md:text-3xl font-bold mb-1.5 md:mb-2">
+        <h2 className="mb-1.5 flex items-center text-2xl font-bold md:mb-2 md:text-3xl">
           <span className="truncate text-black dark:text-primary-100">
             {project.title}
           </span>
-          <code className="flex-none ml-4 text-xs font-normal text-accent">
+          <code className="ml-4 flex-none text-xs font-normal text-accent">
             {new Date(project.publishedAt).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'short',
@@ -31,17 +31,17 @@ const ProjectTab: React.FC<ProjectTabProps> = ({ project }) => {
           </code>
         </h2>
 
-        <p className="text-base text-secondary-300 dark:text-primary-300 line-clamp-3 mb-3">
+        <p className="text-secondary-300 mb-3 text-base line-clamp-3 dark:text-primary-300">
           {project.description}
         </p>
 
         <footer className="flex gap-5 text-sm md:text-base">
           <ProjectLink href="#" target="_blank" rel="noopener noreferrer">
-            <GithubOutlineIcon className="text-base md:text-lg mr-2" /> Source
+            <GithubOutlineIcon className="mr-2 text-base md:text-lg" /> Source
             Code
           </ProjectLink>
           <ProjectLink href="#" target="_blank" rel="noopener noreferrer">
-            <ExternalLinkIcon className="text-base md:text-xl mr-2" /> Visit
+            <ExternalLinkIcon className="mr-2 text-base md:text-xl" /> Visit
           </ProjectLink>
           <ProjectLink
             href={`/project/${project.slug}`}
@@ -65,7 +65,7 @@ export const ProjectLink: React.FC<ProjectLinkProps> = ({
     <Link
       href={href}
       className={clsx(
-        'flex items-center text-secondary-200 dark:text-primary-200 hover:text-secondary-accent hover:underline',
+        'text-secondary-200 flex items-center hover:text-secondary-accent hover:underline dark:text-primary-200',
         className
       )}
       {...props}

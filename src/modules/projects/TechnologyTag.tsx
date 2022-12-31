@@ -10,9 +10,9 @@ export const TechnologyTag: React.FC<TechnologyTagProps> = ({
   color
 }) => {
   return (
-    <div className="flex items-center px-2.5 py-0.5 rounded text-sm bg-secondary-800 text-black dark:bg-primary-700 dark:text-primary-100">
+    <div className="bg-secondary-800 flex items-center rounded px-2.5 py-0.5 text-sm text-black dark:bg-primary-700 dark:text-primary-100">
       <div
-        className="w-3 h-3 mr-2 rounded-full"
+        className="mr-2 h-3 w-3 rounded-full"
         style={{ backgroundColor: color }}
       />
       {title}

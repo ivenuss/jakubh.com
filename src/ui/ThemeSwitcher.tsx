@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-interface ThemeSwitcherProps {}
-
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
+export const ThemeSwitcher: React.FC = () => {
   const [mounted, setMounted] = useState(false);
 
   const { theme, resolvedTheme, setTheme } = useTheme();
@@ -18,11 +16,11 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
       type="button"
       aria-label="Theme toggler"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="text-gray-600 dark:text-primary-200 hover:bg-gray-100 dark:hover:bg-primary-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-primary-600 rounded-lg text-sm p-2"
+      className="rounded-lg p-2 text-sm text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-primary-200 dark:hover:bg-primary-700 dark:focus:ring-primary-600"
     >
       {theme === 'dark' ? (
         <svg
-          className="w-5 h-5"
+          className="h-5 w-5"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +33,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5"
+          className="h-5 w-5"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

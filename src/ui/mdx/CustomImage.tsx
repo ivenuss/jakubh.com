@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import Image, { ImageProps } from 'next/image';
+import Image, { type ImageProps } from 'next/image';
 
 interface CustomLinkProps extends ImageProps {
   haslink?: boolean;

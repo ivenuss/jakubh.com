@@ -3,22 +3,25 @@ import NowPlaying from './NowPlaying';
 import { socialMedias } from '~/lib/constants';
 import type { IconType } from 'react-icons';
 
-interface NavTopBannerProps {}
-
 interface SocialIconProps {
   title: string;
   icon: IconType;
   link: string;
 }
 
-const NavTopBanner: React.FC<NavTopBannerProps> = ({}) => {
+const NavTopBanner: React.FC = () => {
   return (
-    <div className="flex items-center mx-auto w-full max-w-screen-xs px-6 py-1 mt-3">
+    <div className="mx-auto mt-3 flex w-full max-w-screen-xs items-center px-6 py-1">
       <NowPlaying />
 
-      <ul className="flex flex-none ml-auto gap-3">
-        {socialMedias.map((s, i) => (
-          <SocialIcon key={i} title={s.title} icon={s.icon} link={s.link} />
+      <ul className="ml-auto flex flex-none gap-3">
+        {socialMedias.map((social, i) => (
+          <SocialIcon
+            key={i}
+            title={social.title}
+            icon={social.icon}
+            link={social.link}
+          />
         ))}
       </ul>
     </div>
@@ -38,7 +41,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({
         rel="noreferrer noopener"
         target="_blank"
       >
-        <Icon className="text-xl transition-colors text-gray-600 hover:text-gray-800 dark:text-primary-200 dark:hover:text-primary-100" />
+        <Icon className="text-xl text-gray-600 transition-colors hover:text-gray-800 dark:text-primary-200 dark:hover:text-primary-100" />
       </a>
     </li>
   );

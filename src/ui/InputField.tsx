@@ -24,15 +24,15 @@ const InputField: React.FC<InputFieldProps> = ({
   ...props
 }) => {
   return (
-    <div className={clsx('h-full w-full block', className)}>
+    <div className={clsx('block h-full w-full', className)}>
       {label ? (
-        <div className="flex mb-2 text-secondary-200 dark:text-primary-200">
+        <div className="text-secondary-200 mb-2 flex dark:text-primary-200">
           {label}
         </div>
       ) : null}
       <Input textarea={textarea} {...props} />
       {errorMsg ? (
-        <div className="flex mt-1 text-sm text-red-500">{errorMsg}</div>
+        <div className="mt-1 flex text-sm text-red-500">{errorMsg}</div>
       ) : null}
     </div>
   );

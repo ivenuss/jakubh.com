@@ -9,7 +9,7 @@ const Spinner: React.FC<SpinnerProps> = ({
   color = 'stroke-secondary-accent'
 }) => {
   return (
-    <svg className="animate-spin w-full h-full" viewBox="0 0 32 32">
+    <svg className="h-full w-full animate-spin" viewBox="0 0 32 32">
       <circle
         cx="16"
         cy="16"

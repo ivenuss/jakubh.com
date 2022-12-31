@@ -13,18 +13,18 @@ const linkButtonCn =
 
 export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
   return (
-    <header className="w-full mb-6">
-      <div className="flex items-center mb-4">
+    <header className="mb-6 w-full">
+      <div className="mb-4 flex items-center">
         <Image
           width={84}
           height={84}
           alt={project.title}
           src={project.icon}
-          className="w-12 h-12 rounded-lg mr-4 bg-gray-100 dark:bg-primary-800"
+          className="mr-4 h-12 w-12 rounded-lg bg-gray-100 dark:bg-primary-800"
         />
 
         <div>
-          <h1 className="text-3xl md:text-2xl font-bold text-black dark:text-primary-100">
+          <h1 className="text-3xl font-bold text-black dark:text-primary-100 md:text-2xl">
             {project.title}
           </h1>
 
@@ -39,15 +39,15 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         height={720}
         alt={project.title}
         src={project.image}
-        className="w-full h-48 mb-3 rounded-lg object-cover bg-gray-100 dark:bg-primary-800"
+        className="mb-3 h-48 w-full rounded-lg bg-gray-100 object-cover dark:bg-primary-800"
       />
 
       {project.stack && (
-        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
+        <div className="mb-4 flex flex-wrap gap-x-3 gap-y-1">
           {project.stack?.map((item, i) => (
             <span
               key={i}
-              className="uppercase font-medium text-sm text-gray-600 dark:text-primary-200"
+              className="text-sm font-medium uppercase text-gray-600 dark:text-primary-200"
             >
               {item}
             </span>
@@ -55,7 +55,7 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({ project }) => {
         </div>
       )}
 
-      <div className="flex flex-col md:flex-row gap-3 w-full">
+      <div className="flex w-full flex-col gap-3 md:flex-row">
         {project.owner && project.repo ? (
           <a
             rel="noreferrer noopener"

@@ -15,14 +15,14 @@ const Projects = ({
           'I can turn your idea into a fully working project. Here are some examples.'
       }}
     >
-      <div className="max-w-screen-xs mx-auto px-6 mb-16">
+      <div className="mx-auto mb-16 max-w-screen-xs px-6">
         <PageHeading
           title="My Projects"
           description="I've made a lot of projects and this is a small selection of some that I found interesting."
         />
       </div>
 
-      <div className="max-w-4xl px-6 mx-auto">
+      <div className="mx-auto max-w-4xl px-6">
         <div className="grid grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] gap-9">
           {projects.map((project) => (
             <ProjectThumbnail key={project._id} project={project} />

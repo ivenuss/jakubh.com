@@ -28,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       projects: allProjects

@@ -18,9 +18,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
     return textarea ? (
       <textarea
-        ref={ref}
+        ref={ref as React.ForwardedRef<HTMLTextAreaElement>}
         className={clsx(inputCn, 'border-none')}
-        {...(props as any)}
+        {...(props as React.ComponentPropsWithoutRef<'textarea'>)}
       />
     ) : (
       <input ref={ref} className={inputCn} {...props} />
