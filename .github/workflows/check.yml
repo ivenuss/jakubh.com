@@ -10,9 +10,6 @@ jobs:
   eslint:
     name: ESLint
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      security-events: write
     steps:
       - uses: actions/checkout@v3
 
@@ -30,10 +27,10 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: prettier
-        continue-on-error: true
+        if: always()
 
       - name: Run ESLint
         uses: borales/actions-yarn@v4
         with:
           cmd: lint
-        continue-on-error: true
+        if: always()

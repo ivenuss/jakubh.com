@@ -2,13 +2,19 @@ import '../styles/globals.css';
 
 import NProgress from 'nprogress';
 import Head from 'next/head';
+import { Inter } from '@next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Toaster } from '~/ui/Toaster';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
+const inter = Inter({ subsets: ['latin'] });
+
+export default function MyApp({
+  Component,
+  pageProps: { ...pageProps }
+}: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -36,12 +42,12 @@ function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <ThemeProvider attribute="class">
-        <Toaster position="bottom-center" />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <div className={inter.className}>
+        <ThemeProvider attribute="class">
+          <Toaster position="bottom-center" />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </div>
     </>
   );
 }
-
-export default MyApp;
