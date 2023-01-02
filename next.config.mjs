@@ -6,7 +6,9 @@ import { withContentlayer } from 'next-contentlayer';
 const config = withContentlayer({
   reactStrictMode: true,
   images: {
-    domains: []
+    domains: [
+      'i.scdn.co' // Spotify
+    ]
   },
   experimental: {
     fontLoaders: [

@@ -9,9 +9,11 @@ const WorkExperience: React.FC = () => (
 
     <ExperienceRow
       companyName="Seznam.cz"
+      companySite="https://o.seznam.cz/"
       employmentType="Full-time"
       title="UI Developer"
       startDate="11-14-2022"
+      endDate="12-31-2022"
     />
   </div>
 );
