@@ -32,7 +32,7 @@ export const Skills: React.FC = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 gap-y-2 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-6 gap-y-3 sm:grid-cols-3">
         {Object.entries(techStack).map(([title, items]) => (
           <SkillSection key={title} title={title} items={items} />
         ))}

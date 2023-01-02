@@ -3,7 +3,14 @@ import { BehanceIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '~/icons';
 export const PREVIEW_TRACK_COUNT = 3;
 
 export const progressTimeline = {
-  '2022': ["we'll see 👀"],
+  '2023': ["we'll see"],
+  '2022': [
+    'basic understanding about unit testing (Jest, React Testing Lib)',
+    'got my first job at Seznam.cz',
+    'better understanding about CI/CD workflow',
+    'have learnt new technology called tRPC',
+    'improved my Git & TypeScript skills'
+  ],
   '2021': [
     'have learnt new BE technologies such as Nest, GraphQL and ORM (Prisma + TypeORM) and basic Linux stuff',
     'have learnt FE technologies such as Next.js, Redux',
@@ -14,12 +21,18 @@ export const progressTimeline = {
     'made some simple projects with React library',
     'introduction to frontend web dev (HTML, CSS) & made my first website'
   ],
-  '2019': ['introduction  to programming']
+  '2019': ['introduction to programming']
 };
 
 export const techStack = {
-  Design: ['UI/UX Design', 'Graphic Design', 'Design Systems'],
-  Development: ['Linux (basics)', 'JavaScript', 'TypeScript', 'PHP'],
+  Design: ['UI/UX Design', 'Graphic Design', 'Design System', 'StoryBook'],
+  Development: [
+    'Jest',
+    'Git, GitLab, GitHub',
+    'Linux (basics)',
+    'JavaScript',
+    'TypeScript'
+  ],
   Frontend: ['React', 'Next.js', 'CSS', 'Tailwind CSS'],
   Backend: ['Node.js', 'NestJS', 'GraphQL', 'Socket.io'],
   Tools: [
