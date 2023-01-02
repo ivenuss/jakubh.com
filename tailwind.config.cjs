@@ -22,7 +22,7 @@ module.exports = {
         'secondary-accent-hover': '#879eed'
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans]
+        sans: ['Inter', ...fontFamily.sans]
       },
       screens: {
         xs: '580px',

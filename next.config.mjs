@@ -6,14 +6,11 @@ import { withContentlayer } from 'next-contentlayer';
 const config = withContentlayer({
   reactStrictMode: true,
   images: {
-    domains: [
-      'i.scdn.co',
-      'res.cloudinary.com',
-      'images.squarespace-cdn.com',
-      'lh3.googleusercontent.com',
-      'smvgwa.sn.files.1drv.com',
-      'dropbox.com',
-      'cdn.discordapp.com'
+    domains: []
+  },
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } }
     ]
   },
   env: {
@@ -33,4 +30,5 @@ const config = withContentlayer({
     return config;
   }
 });
+
 export default config;

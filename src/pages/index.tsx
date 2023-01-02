@@ -14,7 +14,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
   return (
     <Container
       meta={{
-        title: 'Jakub Habrcetl / Web developer & designer'
+        title: "Jakub Habrcetl / Web developer & designer"
       }}
     >
       <div className="flex flex-col gap-20">
