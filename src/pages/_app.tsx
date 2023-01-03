@@ -9,7 +9,10 @@ import { useEffect } from 'react';
 import { Toaster } from '~/ui/Toaster';
 import type { AppProps } from 'next/app';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700']
+});
 
 export default function MyApp({
   Component,

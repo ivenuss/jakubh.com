@@ -20,6 +20,7 @@ const Nav: React.FC = () => {
           <div className="text-xl text-black dark:text-primary-100">
             <span className="font-bold">Jakub</span>
             <span>H</span>
+            <span className="ml-1.5">🚀</span>
           </div>
         </Link>
 

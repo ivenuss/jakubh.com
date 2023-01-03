@@ -1,4 +1,8 @@
 import {
+  FaArrowDown as ArrowDownIcon,
+  FaPalette as PaletteIcon,
+  FaDesktop as DesktopIcon,
+  FaRuler as RulerIcon,
   FaInstagram as InstagramIcon,
   FaTwitter as TwitterIcon,
   FaGithub as GithubIcon,
@@ -6,7 +10,12 @@ import {
   FaLinkedinIn as LinkedinIcon,
   FaDiscord as DiscordIcon,
   FaSpotify as SpotifyIcon,
-  FaArrowDown as ArrowDownIcon
+  FaReact as ReactIcon,
+  FaHtml5 as HtmlIcon,
+  FaCss3 as CssIcon,
+  FaLinux as LinuxIcon,
+  FaNodeJs as NodeJsIcon,
+  FaFigma as FigmaIcon
 } from 'react-icons/fa';
 import {
   FiMenu as MenuIcon,
@@ -31,15 +40,40 @@ import {
   MdOutlineHideImage as HideImage
 } from 'react-icons/md';
 import { BsInfo as InfoIcon } from 'react-icons/bs';
-import { BiImages as ImagesIcon } from 'react-icons/bi';
+import {
+  BiImages as ImagesIcon,
+  BiGitCommit as GitCommitIcon
+} from 'react-icons/bi';
+import {
+  SiTailwindcss as TailwindCssIcon,
+  SiJest as JestIcon,
+  SiJavascript as JavaScriptIcon,
+  SiTypescript as TypeScriptIcon,
+  SiNestjs as NestjsIcon,
+  SiGraphql as GraphQLIcon,
+  SiSocketdotio as SocketIoIcon,
+  SiVisualstudio as VSCodeIcon,
+  SiAdobephotoshop as PhotoshopIcon,
+  SiAdobeillustrator as IllustratorIcon,
+  SiAdobeindesign as IndesignIcon,
+  SiStorybook as StorybookIcon
+} from 'react-icons/si';
 
 export {
   InstagramIcon,
+  PaletteIcon,
+  DesktopIcon,
+  RulerIcon,
   TwitterIcon,
   GithubIcon,
   LinkedinIcon,
   DiscordIcon,
   SpotifyIcon,
+  ReactIcon,
+  HtmlIcon,
+  CssIcon,
+  LinuxIcon,
+  NodeJsIcon,
   MenuIcon,
   ArrowDownIcon,
   PlayIcon,
@@ -57,5 +91,19 @@ export {
   ArrowUpRightIcon,
   ImagesIcon,
   BehanceIcon,
-  HideImage
+  HideImage,
+  TailwindCssIcon,
+  JestIcon,
+  GitCommitIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  NestjsIcon,
+  GraphQLIcon,
+  SocketIoIcon,
+  VSCodeIcon,
+  FigmaIcon,
+  PhotoshopIcon,
+  IllustratorIcon,
+  IndesignIcon,
+  StorybookIcon
 };

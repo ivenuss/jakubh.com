@@ -13,7 +13,7 @@ const ProgressTimeline: React.FC = () => {
           .sort(([aYear], [bYear]) => parseInt(bYear) - parseInt(aYear))
           .map(([year, lines]) => (
             <div key={year} className="mb-6 flex">
-              <strong className="mr-8 text-xl font-bold text-black dark:text-primary-100 md:mr-12 md:text-2xl">
+              <strong className="mr-8 text-lg font-bold text-black dark:text-primary-100 md:mr-12 md:text-2xl">
                 {year}
               </strong>
 
