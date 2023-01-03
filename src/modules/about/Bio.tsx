@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import CzechFlag from '/public/static/images/cz.svg';
+import CzechFlag from '~/assets/cz.svg';
 
 const Bio: React.FC = () => {
   return (

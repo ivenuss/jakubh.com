@@ -10,6 +10,12 @@ interface ExperienceRowPros {
   endDate?: string;
 }
 
+/**
+ *  Adds `s` at the end of the string
+ */
+const pluralize = (count: number, noun: string, suffix = 's') =>
+  `${noun}${count !== 1 ? suffix : ''}`;
+
 export const formatDuration = (start: Date, end: Date) => {
   const duration = intervalToDuration({ start, end });
 
@@ -17,8 +23,12 @@ export const formatDuration = (start: Date, end: Date) => {
     .reduce<string[]>((result, [duration, value]) => {
       if (value <= 0) return result;
 
-      if (duration === 'years') result.push(`${value} yr`);
-      if (duration === 'months') result.push(`${value} mos`);
+      let string = '';
+
+      if (duration === 'years') string = `${value} yr`;
+      if (duration === 'months') string = `${value} mo`;
+
+      if (string) result.push(pluralize(value, string));
 
       return result;
     }, [])

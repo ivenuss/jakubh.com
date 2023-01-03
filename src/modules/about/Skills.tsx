@@ -1,9 +1,9 @@
 import React from 'react';
-import { techStack } from '~/lib/constants';
+import { techStack, type StackItem } from '~/lib/constants';
 
 interface SkillSectionProps {
   title: string;
-  items: string[];
+  items: StackItem[];
 }
 
 const SkillSection: React.FC<SkillSectionProps> = ({ title, items }) => {
@@ -12,10 +12,11 @@ const SkillSection: React.FC<SkillSectionProps> = ({ title, items }) => {
       <h3 className="mb-3 text-lg font-medium text-black dark:text-primary-100">
         {title}
       </h3>
-      <ul className="text-gray-600 dark:text-primary-200">
-        {items.map((text, i) => (
-          <li key={i} className="mb-1.5 md:mb-2.5">
-            {text}
+      <ul className="text-gray-700 dark:text-primary-200">
+        {items.map(([text, Icon], i) => (
+          <li key={i} className="mb-1.5 flex items-center gap-2 md:mb-2.5">
+            {Icon && <Icon className="text-lg" />}
+            <span>{text}</span>
           </li>
         ))}
       </ul>

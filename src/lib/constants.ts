@@ -1,4 +1,5 @@
-import { BehanceIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '~/icons';
+import * as Icon from '~/icons';
+import type { IconType } from 'react-icons';
 
 export const PREVIEW_TRACK_COUNT = 3;
 
@@ -24,23 +25,41 @@ export const progressTimeline = {
   '2019': ['introduction to programming']
 };
 
-export const techStack = {
-  Design: ['UI/UX Design', 'Graphic Design', 'Design System', 'StoryBook'],
-  Development: [
-    'Jest',
-    'Git, GitLab, GitHub',
-    'Linux (basics)',
-    'JavaScript',
-    'TypeScript'
+export type StackItem = [string, IconType?];
+
+export const techStack: Record<string, StackItem[]> = {
+  Design: [
+    ['UI/UX Design', Icon.DesktopIcon],
+    ['Graphic Design', Icon.PaletteIcon],
+    ['Design System', Icon.RulerIcon],
+    ['StoryBook', Icon.StorybookIcon]
   ],
-  Frontend: ['React', 'Next.js', 'CSS', 'Tailwind CSS'],
-  Backend: ['Node.js', 'NestJS', 'GraphQL', 'Socket.io'],
+  Development: [
+    ['Jest', Icon.JestIcon],
+    ['Git, GitLab, GitHub', Icon.GitCommitIcon],
+    ['Linux (basics)', Icon.LinuxIcon],
+    ['JavaScript', Icon.JavaScriptIcon],
+    ['TypeScript', Icon.TypeScriptIcon]
+  ],
+  Frontend: [
+    ['React', Icon.ReactIcon],
+    ['Next.js', Icon.ReactIcon],
+    ['HTML', Icon.HtmlIcon],
+    ['CSS', Icon.CssIcon],
+    ['Tailwind CSS', Icon.TailwindCssIcon]
+  ],
+  Backend: [
+    ['Node.js', Icon.NodeJsIcon],
+    ['NestJS', Icon.NestjsIcon],
+    ['GraphQL', Icon.GraphQLIcon],
+    ['Socket.io', Icon.SocketIoIcon]
+  ],
   Tools: [
-    'Figma',
-    'Visual Studio Code',
-    'Adobe Photoshop',
-    'Adobe Illustrator',
-    'Adobe InDesign'
+    ['Figma', Icon.FigmaIcon],
+    ['VSC', Icon.VSCodeIcon],
+    ['Photoshop', Icon.PhotoshopIcon],
+    ['Illustrator', Icon.IllustratorIcon],
+    ['InDesign', Icon.IndesignIcon]
   ]
 };
 
@@ -48,25 +67,25 @@ export const socialMedias = [
   {
     title: 'GitHub',
     color: '#4078c0',
-    icon: GithubIcon,
+    icon: Icon.GithubIcon,
     link: process.env.GITHUB_URL ?? '#'
   },
   {
     title: 'LinkedIn',
     color: '#0077B5',
-    icon: LinkedinIcon,
+    icon: Icon.LinkedinIcon,
     link: process.env.LINKEDIN_URL ?? '#'
   },
   {
     title: 'Behance',
     color: '#053EFF',
-    icon: BehanceIcon,
+    icon: Icon.BehanceIcon,
     link: process.env.BEHANCE_URL ?? '#'
   },
   {
     title: 'Twitter',
     color: '#1D9BF0',
-    icon: TwitterIcon,
+    icon: Icon.TwitterIcon,
     link: process.env.TWITTER_URL ?? '#'
   }
 ];
