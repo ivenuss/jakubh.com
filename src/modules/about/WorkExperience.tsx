@@ -1,4 +1,5 @@
 import React from 'react';
+import { workExperiences } from '~/lib/constants';
 import { ExperienceRow } from './ExperienceRow';
 
 const WorkExperience: React.FC = () => (
@@ -7,14 +8,11 @@ const WorkExperience: React.FC = () => (
       Work Experience
     </h3>
 
-    <ExperienceRow
-      companyName="Seznam.cz"
-      companySite="https://o.seznam.cz/"
-      employmentType="Full-time"
-      title="UI Developer"
-      startDate="11-14-2022"
-      endDate="12-31-2022"
-    />
+    <div className="flex flex-col gap-1.5">
+      {workExperiences.map((experience, i) => (
+        <ExperienceRow key={i} {...experience} />
+      ))}
+    </div>
   </div>
 );
 
