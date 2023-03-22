@@ -25,6 +25,25 @@ export const progressTimeline = {
   '2019': ['introduction to programming']
 };
 
+export const workExperiences = [
+  {
+    companyName: 'CDN77',
+    companySite: 'https://www.cdn77.com/',
+    employmentType: 'Full-time',
+    title: 'Frontend Developer',
+    startDate: '02-15-2023',
+    endDate: undefined
+  },
+  {
+    companyName: 'Seznam.cz',
+    companySite: 'https://o.seznam.cz/',
+    employmentType: 'Full-time',
+    title: 'UI Developer',
+    startDate: '11-14-2022',
+    endDate: '12-31-2022'
+  }
+];
+
 export type StackItem = [string, IconType?];
 
 export const techStack: Record<string, StackItem[]> = {
