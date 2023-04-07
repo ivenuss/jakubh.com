@@ -23,6 +23,9 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter', ...fontFamily.sans]
 			},
+			fontWeight: {
+				bold: '600'
+			},
 			screens: {
 				xs: '580px',
 				sm: '620px',
@@ -46,5 +49,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };

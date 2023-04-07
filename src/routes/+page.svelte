@@ -1,1 +1,11 @@
-<h1 class="text-3xl font-bold underline">I'm Jakub, a web developer and designer.</h1>
+<script lang="ts">
+	import Contact from './Contact.svelte';
+	import Hero from './Hero.svelte';
+	import Projects from './Projects.svelte';
+</script>
+
+<div class="flex flex-col gap-16">
+	<Hero />
+	<Projects />
+	<Contact />
+</div>

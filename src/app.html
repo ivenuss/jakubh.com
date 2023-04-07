@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body
+		data-sveltekit-preload-data="hover"
+		class="bg-white text-neutral-800 before:pointer-events-none before:absolute before:inset-0 before:h-full before:w-full before:bg-[url('/grid.svg')] before:bg-repeat before:opacity-30 before:invert before:content-[''] dark:bg-black dark:text-zinc-50 dark:before:invert-0"
+	>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
