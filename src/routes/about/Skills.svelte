@@ -6,9 +6,7 @@
 
 <section>
 	<div class="mb-3">
-		<Headline level="1" class="mb-3 text-xl font-medium text-black dark:text-primary-100">
-			Skills
-		</Headline>
+		<Headline level="2" class="mb-3">Skills</Headline>
 	</div>
 
 	<div class="flex flex-col gap-6">

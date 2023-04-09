@@ -28,6 +28,8 @@ import TwitterIcon from '$lib/components/svg/icons/twitter.svg?component';
 import GitHubIcon from '$lib/components/svg/icons/github.svg?component';
 import BehanceIcon from '$lib/components/svg/icons/behance.svg?component';
 
+export const SITE_URL = 'https://jakubh.com';
+
 export const PREVIEW_TRACK_COUNT = 3;
 
 export const progressTimeline = {

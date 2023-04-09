@@ -5,7 +5,7 @@
 	const { currentSong } = $page.data;
 </script>
 
-<span class="inline-flex items-center text-sm text-black dark:text-primary-100">
+<span class="inline-flex items-center text-sm">
 	<SpotifyIcon class="mr-2 flex-none text-lg h-4 w-4" />
 
 	<span class="mr-1 flex-none">Listening to</span>

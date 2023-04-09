@@ -34,6 +34,7 @@
 		"svelte": "^3.58.0",
 		"svelte-check": "^3.1.4",
 		"svelte-command-palette": "^1.2.1",
+		"svelte-transition": "^0.0.7",
 		"tailwindcss": "^3.3.1",
 		"tslib": "^2.5.0",
 		"typescript": "^5.0.3",

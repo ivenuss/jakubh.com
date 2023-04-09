@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Box from '$lib/components/Box.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 	import type { StackItem } from '$lib/constants';
 	import clsx from 'clsx';
@@ -12,14 +13,7 @@
 	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
 		{#each items as { icon, name, color, url }}
 			<li>
-				<svelte:element
-					this={url ? 'a' : 'div'}
-					href={url}
-					class={clsx(
-						'flex items-center gap-3 rounded-md p-3 bg-neutral-50 dark:bg-zinc-900 dark:bg-opacity-75 dark:backdrop-saturate-150 dark:backdrop-blur-xl',
-						{ 'ring-inset hover:ring-2 ring-zinc-800 transition-shadow': url }
-					)}
-				>
+				<Box as={url ? 'a' : 'div'} href={url}>
 					{#if icon}
 						<span
 							class="p-2 items-center justify-center rounded-lg"
@@ -32,7 +26,7 @@
 					{/if}
 
 					<div class="text-sm dark:text-zinc-300">{name}</div>
-				</svelte:element>
+				</Box>
 			</li>
 		{/each}
 	</ul>

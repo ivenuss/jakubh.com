@@ -47,8 +47,8 @@
 </script>
 
 <section class="mb-6 flex flex-col">
-	<Headline level="3" class="mb-3">Top 10 Tracks I listen To</Headline>
-	<div aria-expanded={!isCollapsed} class="flex flex-col gap-4">
+	<Headline level="2" class="mb-3">Top 10 Tracks I listen To</Headline>
+	<div class="flex flex-col gap-4">
 		{#if tracks}
 			{#each tracks as track, i}
 				<MusicTrack
@@ -65,8 +65,9 @@
 	</div>
 
 	<button
-		on:click={() => (isCollapsed = !isCollapsed)}
+		aria-expanded={!isCollapsed}
 		class="mx-auto mt-2 self-start p-2 font-medium text-secondary-accent hover:text-secondary-accent-hover"
+		on:click={() => (isCollapsed = !isCollapsed)}
 	>
 		Show {isCollapsed ? 'all' : 'less'}
 	</button>

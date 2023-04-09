@@ -9,11 +9,11 @@
 
 <ul class="flex flex-col gap-2">
 	{#each projects as project}
-		<li class="overflow-hidden">
+		<li class="overflow-hidden rounded-lg">
 			<a href="/projects/{project.slug}" class="group relative">
 				<Img
+					alt="{project.title}'s thumbnail"
 					src="/images/projects/{project.slug}/thumbnail.png"
-					alt={project.title}
 					class="h-28 group-hover:h-52 duration-300 ease-in-out transition-all w-full object-cover"
 				/>
 				<div
@@ -22,9 +22,9 @@
 				/>
 
 				<div
-					class="absolute bottom-0 left-0 p-6 transition-transform ease-in-out duration-300 translate-y-28 group-hover:translate-y-0"
+					class="absolute bottom-0 left-0 p-6 text-white transition-transform ease-in-out duration-300 translate-y-full group-hover:translate-y-0"
 				>
-					<Headline level="3" class="mb-1.5">{project.title}</Headline>
+					<Headline level="2" class="mb-1.5">{project.title}</Headline>
 					<p class="text-sm">{project.description}</p>
 				</div>
 			</a>

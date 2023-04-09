@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import Contact from './Contact.svelte';
 	import Hero from './Hero.svelte';
 	import Projects from './Projects.svelte';
@@ -9,3 +10,5 @@
 	<Projects />
 	<Contact />
 </div>
+
+<Seo title="Jakub Habrcetl / Web developer & designer" />

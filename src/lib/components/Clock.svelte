@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Description from './Description.svelte';
 
 	let time = new Date();
 
@@ -20,4 +21,4 @@
 	const formatNumber = (number: number) => String('0' + number).slice(-2);
 </script>
 
-<time class="text-sm text-zinc-400 select-none">{hours}:{minutes}:{seconds}</time>
+<Description as="time" class="text-sm select-none">{hours}:{minutes}:{seconds}</Description>

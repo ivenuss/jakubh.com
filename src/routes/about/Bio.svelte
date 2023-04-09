@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<Headline level="3" class="mb-3">Short Bio</Headline>
+	<Headline level="2" class="mb-3">Short Bio</Headline>
 	<div class="flex flex-row gap-5">
 		<p class="w-full dark:text-zinc-400">
 			Hey, my name is Jakub. I love building user interfaces heavily focused on user experience.
@@ -12,9 +12,9 @@
 		</p>
 
 		<div
-			class="h-20 w-20 flex-none hover:ring-[3px] rounded-full overflow-hidden transition-shadow duration-300 dark:ring-zinc-700"
+			class="h-20 w-20 flex-none hover:ring-[3px] rounded-full overflow-hidden transition-shadow duration-300 ring-zinc-300 dark:ring-zinc-700"
 		>
-			<img loading="lazy" alt="Profile" src="profile_pic.png" class="grayscale" />
+			<img loading="lazy" alt="Profile" src="/images/profile_pic.png" class="grayscale" />
 		</div>
 	</div>
 </section>

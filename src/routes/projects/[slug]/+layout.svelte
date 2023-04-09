@@ -4,6 +4,7 @@
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
 	import Image from '$lib/components/markdown/img.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	// type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
 
@@ -39,9 +40,10 @@
 	<div class="flex items-center flex-wrap gap-0.5">
 		{#each frontmatter.stack as tag}
 			<span
-				class="inline-flex rounded uppercase cursor-default transition-colors text-sm px-2 py-1 dark:text-zinc-400 dark:hover:bg-zinc-800"
-				>{tag}</span
+				class="inline-flex rounded uppercase cursor-default transition-colors text-sm px-2 py-1 hover:bg-zinc-100 hover:text-zinc-900 text-zinc-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-200"
 			>
+				{tag}
+			</span>
 		{/each}
 	</div>
 </header>
@@ -49,10 +51,12 @@
 <article
 	class={clsx(
 		'prose prose-pre:bg-gray-200 dark:prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg',
-		'prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-zinc-800 dark:prose-code:text-primary-100 dark:prose-pre:bg-zinc-800'
+		'prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-zinc-800 dark:prose-code:text-zinc-100 dark:prose-pre:bg-zinc-800'
 	)}
 >
 	<slot />
 
 	<svelte:component this={component} />
 </article>
+
+<Seo title={`${frontmatter.title} / Jakub Habrcetl`} description={frontmatter.description} />

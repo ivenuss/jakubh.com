@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	const fontSizes = {
 		1: 'text-xl',
-		2: 'text-xl',
+		2: 'text-lg',
 		3: 'text-lg',
 		4: 'text-base',
 		5: 'text-sm',
@@ -30,9 +30,6 @@
 	let headingElement: HeadingElement = `h${level}`;
 </script>
 
-<svelte:element
-	this={headingElement}
-	class={clsx('text-neutral-900 dark:text-zinc-50', fontSizes[level], fontWeights[weight], cn)}
->
+<svelte:element this={headingElement} class={clsx(fontSizes[level], fontWeights[weight], cn)}>
 	<slot />
 </svelte:element>
