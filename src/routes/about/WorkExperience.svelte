@@ -6,7 +6,9 @@
 
 <section class="flex flex-col">
 	<Headline level="3" class="mb-5">Work Experience</Headline>
-	{#each workExperiences as experience}
-		<ExperienceRow {...experience} />
-	{/each}
+	<div class="flex flex-col gap-4">
+		{#each workExperiences as experience}
+			<ExperienceRow {...experience} />
+		{/each}
+	</div>
 </section>

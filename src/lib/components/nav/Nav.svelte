@@ -1,5 +1,6 @@
 <script>
 	import Clock from '../Clock.svelte';
+	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 	import NavLink from './NavLink.svelte';
 </script>
 
@@ -11,7 +12,8 @@
 			</div>
 		</a>
 
-		<Clock />
+		<!-- <Clock /> -->
+		<ThemeSwitcher />
 	</div>
 
 	<ul class="ml-auto hidden md:flex items-center gap-2">

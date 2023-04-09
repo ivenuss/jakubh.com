@@ -23,6 +23,10 @@ import JestIcon from '$lib/components/svg/icons/jest.svg?component';
 import PhotoshopIcon from '$lib/components/svg/icons/photoshop.svg?component';
 import IllustratorIcon from '$lib/components/svg/icons/illustrator.svg?component';
 import InDesignIcon from '$lib/components/svg/icons/indesign.svg?component';
+import LinkedInIcon from '$lib/components/svg/icons/linkedin.svg?component';
+import TwitterIcon from '$lib/components/svg/icons/twitter.svg?component';
+import GitHubIcon from '$lib/components/svg/icons/github.svg?component';
+import BehanceIcon from '$lib/components/svg/icons/behance.svg?component';
 
 export const PREVIEW_TRACK_COUNT = 3;
 
@@ -214,25 +218,25 @@ export const socialMedias = [
 	{
 		title: 'GitHub',
 		color: '#4078c0',
-		icon: undefined,
-		link: '#'
+		icon: GitHubIcon,
+		link: 'https://github.com/ivenuss'
 	},
 	{
 		title: 'LinkedIn',
 		color: '#0077B5',
-		icon: undefined,
-		link: '#'
+		icon: LinkedInIcon,
+		link: 'https://www.linkedin.com/in/jakubhabrcetl'
 	},
 	{
 		title: 'Behance',
 		color: '#053EFF',
-		icon: undefined,
-		link: '#'
+		icon: BehanceIcon,
+		link: 'https://www.behance.net/jakubhabrcetl'
 	},
 	{
 		title: 'Twitter',
 		color: '#1D9BF0',
-		icon: undefined,
-		link: '#'
+		icon: TwitterIcon,
+		link: 'https://twitter.com/ijakubh'
 	}
 ];

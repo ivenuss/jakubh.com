@@ -1,7 +1,8 @@
 import type { PageServerLoad } from './$types';
 import type { Project } from '$lib/types';
+import { redirect, type Actions } from '@sveltejs/kit';
 
-export const prerender = true;
+// export const prerender = true;
 
 const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;
 
@@ -26,3 +27,16 @@ export const load = (async () => {
 		)
 	};
 }) satisfies PageServerLoad;
+
+export const actions = {
+	setTheme: async ({ url, cookies }) => {
+		const theme = url.searchParams.get('theme');
+		const redirectTo = url.searchParams.get('redirect');
+
+		if (theme) {
+			cookies.set('theme', theme, { path: '/', maxAge: 60 * 60 * 24 * 365 });
+		}
+
+		throw redirect(303, redirectTo ?? '/');
+	}
+} satisfies Actions;
