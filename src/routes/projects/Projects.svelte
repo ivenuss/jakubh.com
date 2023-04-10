@@ -14,15 +14,15 @@
 				<Img
 					alt="{project.title}'s thumbnail"
 					src="/images/projects/{project.slug}/thumbnail.png"
-					class="h-28 group-hover:h-52 duration-300 ease-in-out transition-all w-full object-cover"
+					class="h-28 w-full bg-zinc-100 object-cover transition-all duration-300 ease-in-out group-hover:h-52 dark:bg-zinc-900"
 				/>
 				<div
 					aria-hidden="true"
-					class="absolute top-0 left-0 right-0 bottom-0 transition-colors ease-in-out duration-300 group-hover:bg-zinc-800/40"
+					class="absolute bottom-0 left-0 right-0 top-0 transition-colors duration-300 ease-in-out group-hover:bg-zinc-800/40"
 				/>
 
 				<div
-					class="absolute bottom-0 left-0 p-6 text-white transition-transform ease-in-out duration-300 translate-y-full group-hover:translate-y-0"
+					class="absolute bottom-0 left-0 translate-y-full p-6 text-white transition-transform duration-300 ease-in-out group-hover:translate-y-0"
 				>
 					<Headline level="2" class="mb-1.5">{project.title}</Headline>
 					<p class="text-sm">{project.description}</p>

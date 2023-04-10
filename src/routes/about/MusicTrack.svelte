@@ -34,19 +34,19 @@
 	{#if audioUrl}
 		<button
 			type="button"
-			class="relative ml-auto flex-none w-5 h-5"
-			aria-label={`${isPlaying ? 'Pause' : 'Play'} ${title} by ${artist}`}
+			class="relative ml-auto h-5 w-5 flex-none"
+			aria-label="{isPlaying ? 'Pause' : 'Play'} {title} by {artist}"
 			on:click
 		>
 			<PauseIcon
 				class={clsx(
-					'absolute top-0 left-0 transition-opacity',
+					'absolute left-0 top-0 transition-opacity',
 					isPlaying ? 'opacity-100' : 'opacity-0'
 				)}
 			/>
 			<PlayIcon
 				class={clsx(
-					'absolute top-0 left-0 transition-opacity',
+					'absolute left-0 top-0 transition-opacity',
 					isPlaying ? 'opacity-0' : 'opacity-100'
 				)}
 			/>

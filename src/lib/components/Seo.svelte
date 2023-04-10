@@ -13,8 +13,8 @@
 	<title>{title}</title>
 	<meta name="robots" content="follow, index" />
 	<meta content={description} name="description" />
-	<meta property="og:url" content={`${SITE_URL}${$page.url.pathname}`} />
-	<link rel="canonical" href={`${SITE_URL}${$page.url.pathname}`} />
+	<meta property="og:url" content="{SITE_URL}{$page.url.pathname}" />
+	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
 	<meta property="og:type" content={type} />
 	<meta property="og:site_name" content="JakubH" />
 	<meta property="og:description" content={description} />

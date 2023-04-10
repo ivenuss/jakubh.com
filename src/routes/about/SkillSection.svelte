@@ -10,16 +10,16 @@
 
 <div>
 	<Headline level="3" class="mb-3 !text-base">{title}</Headline>
-	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+	<ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
 		{#each items as { icon, name, color, url }}
 			<li>
 				<Box as={url ? 'a' : 'div'} href={url}>
 					{#if icon}
 						<span
-							class="p-2 items-center justify-center rounded-lg"
+							class="items-center justify-center rounded-lg p-2"
 							style="background-color: {color}26;"
 						>
-							<span class="grid place-items-center h-4 w-4">
+							<span class="grid h-4 w-4 place-items-center">
 								<svelte:component this={icon} />
 							</span>
 						</span>

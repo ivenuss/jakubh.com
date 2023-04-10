@@ -24,7 +24,7 @@
 	disabled={isLoading || disabled}
 	class={clsx(
 		'font-base inline-flex items-center rounded transition-colors',
-		'px-4 items-center justify-center font-medium h-8 min-w-[2rem] text-sm',
+		'h-8 min-w-[2rem] items-center justify-center px-4 text-sm font-medium',
 		'bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-white',
 		cn
 	)}

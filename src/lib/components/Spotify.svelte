@@ -6,7 +6,7 @@
 </script>
 
 <span class="inline-flex items-center text-sm">
-	<SpotifyIcon class="mr-2 flex-none text-lg h-4 w-4" />
+	<SpotifyIcon class="mr-2 h-4 w-4 flex-none text-lg" />
 
 	<span class="mr-1 flex-none">Listening to</span>
 

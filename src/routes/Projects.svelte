@@ -13,7 +13,7 @@
 </script>
 
 <section class="flex flex-col gap-4">
-	<div class="flex flex-col mb-6">
+	<div class="mb-6 flex flex-col">
 		<Headline level="2" class="mb-2.5">My latest projects</Headline>
 		<Description>A collection of some side projects that have shipped recently.</Description>
 	</div>
@@ -27,25 +27,25 @@
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
 					/>
-					<div class="flex items-center gap-3 overflow-hidden max-w-fit">
+					<div class="flex max-w-fit items-center gap-3 overflow-hidden">
 						<Headline level="3" class="!text-base transition-colors">
 							{project.title}
 						</Headline>
 						<Description
 							as="span"
-							class="truncate text-sm group-hover:opacity-100 opacity-0 transition-opacity"
+							class="truncate text-sm opacity-0 transition-opacity group-hover:opacity-100"
 						>
 							{project.description}
 						</Description>
 					</div>
 					<ExternalIcon
-						class="flex-none h-4 w-4 ml-auto text-zinc-500 dark:group-hover:text-zinc-300 group-hover:text-zinc-800 transition-colors"
+						class="ml-auto h-4 w-4 flex-none text-zinc-500 transition-colors group-hover:text-zinc-800 dark:group-hover:text-zinc-300"
 					/>
 				</Box>
 			</li>
 		{/each}
 	</ul>
-	<a href="/projects" class="text-sm text-zinc-500 dark:text-zinc-400 hover:underline">
+	<a href="/projects" class="text-sm text-zinc-500 hover:underline dark:text-zinc-400">
 		...and much more!
 	</a>
 </section>
