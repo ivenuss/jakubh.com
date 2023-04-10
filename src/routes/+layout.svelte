@@ -4,6 +4,10 @@
 	import Nav from '../lib/components/nav/Nav.svelte';
 </script>
 
+<svelte:head>
+	<script async src="https://cdn.splitbee.io/sb.js"></script>
+</svelte:head>
+
 <div class="relative flex min-h-screen flex-col">
 	<Nav />
 

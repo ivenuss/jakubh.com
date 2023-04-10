@@ -53,7 +53,8 @@
 <article
 	class={clsx(
 		'prose dark:prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-gray-200',
-		'prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-zinc-800 dark:prose-code:text-zinc-100 dark:prose-pre:bg-zinc-800'
+		'prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-zinc-800 dark:prose-code:text-zinc-100 dark:prose-pre:bg-zinc-800',
+		'prose-code:bg-zinc-100 prose-code:text-zinc-900 prose-pre:bg-zinc-100'
 	)}
 >
 	<slot />

@@ -14,7 +14,7 @@
 				<Img
 					alt="{project.title}'s thumbnail"
 					src="/images/projects/{project.slug}/thumbnail.png"
-					class="h-28 w-full object-cover transition-all duration-300 ease-in-out group-hover:h-52"
+					class="h-28 w-full object-cover transition-all duration-300 bg-zinc-100 dark:bg-zinc-900 ease-in-out group-hover:h-52"
 				/>
 				<div
 					aria-hidden="true"
