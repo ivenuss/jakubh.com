@@ -1,27 +1,38 @@
-# jakubh.com
+# create-svelte
 
-![banner](https://i.imgur.com/MIpPTuB.png)
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Design
+## Creating a project
 
-The main goal for me was to make the design as minimalistic as possible, which I think I achieved.
+If you're seeing this, you've probably already done this step. Congrats!
 
-The layout was inspired by [Lee Rob](https://leerob.io/). I wanted to make a theme switcher so the website is available in two themes (Light & Dark).
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## Technologies
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-Frontend is built with Next.js and backend is built on Next.js [serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions). For the database I'm using [Supabase](https://supabase.com) which is a kind of [Firebase](https://firebase.google.com) alternative. Database is primarily used as a storage of all image paths. It is hosted on [Vercel](https://vercel.com/).
+## Developing
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Database**: [Supabase](https://supabase.com/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Features
+```bash
+npm run dev
 
-### Projects
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Project section is built on [Contentlayer](https://www.contentlayer.dev/) which is a really cool tool for transferring pure MDX to JSON.
+## Building
 
-### Contact
+To create a production version of your app:
 
-Contact form sends a HTTP request to API endpoint and thanks to [Nodemailer](https://nodemailer.com) I am able to convert this message to an email.
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
