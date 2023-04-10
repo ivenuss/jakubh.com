@@ -30,5 +30,5 @@
 		<meta property="article:published_time" content={date} />
 	{/if}
 
-	<link rel="icon" type="image/x-icon" href="/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
 </svelte:head>
