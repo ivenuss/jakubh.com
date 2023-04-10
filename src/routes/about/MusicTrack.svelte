@@ -35,7 +35,7 @@
 		<button
 			type="button"
 			class="relative ml-auto h-5 w-5 flex-none"
-			aria-label={`${isPlaying ? 'Pause' : 'Play'} ${title} by ${artist}`}
+			aria-label="{isPlaying ? 'Pause' : 'Play'} {title} by {artist}"
 			on:click
 		>
 			<PauseIcon

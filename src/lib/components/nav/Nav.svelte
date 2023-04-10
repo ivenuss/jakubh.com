@@ -1,6 +1,5 @@
 <script>
 	import Transition from 'svelte-transition';
-	import Clock from '../Clock.svelte';
 	import MenuIcon from '../svg/icons/menu.svg?component';
 	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 	import NavLink from './NavLink.svelte';
@@ -21,14 +20,13 @@
 </script>
 
 <nav class="mx-auto mb-2 flex w-full max-w-screen-sm items-center justify-between px-4 py-4">
-	<div class="flex items-center gap-3">
+	<div class="flex items-center gap-4">
 		<a class="flex items-center" href="/">
 			<div class="text-lg">
 				<span class="font-bold">Jakub</span><span>H</span>
 			</div>
 		</a>
 		<ThemeSwitcher />
-		<Clock />
 	</div>
 
 	<ul class="ml-auto hidden items-center gap-1.5 md:flex">

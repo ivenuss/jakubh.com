@@ -21,4 +21,4 @@
 	const formatNumber = (number: number) => String('0' + number).slice(-2);
 </script>
 
-<Description as="time" class="select-none text-sm">{hours}:{minutes}:{seconds}</Description>
+<Description as="time" class="select-none text-xs">{hours}:{minutes}:{seconds}</Description>

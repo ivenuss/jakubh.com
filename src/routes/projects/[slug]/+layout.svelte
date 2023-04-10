@@ -6,8 +6,6 @@
 	import Image from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
-	// type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
-
 	$: frontmatter = $page.data.frontmatter as PageData['frontmatter'];
 	$: component = $page.data.component as PageData['component'];
 </script>
@@ -62,4 +60,4 @@
 	<svelte:component this={component} />
 </article>
 
-<Seo title={`${frontmatter.title} / Jakub Habrcetl`} description={frontmatter.description} />
+<Seo title="{frontmatter.title} / Jakub Habrcetl" description={frontmatter.description} />

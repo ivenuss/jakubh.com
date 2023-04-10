@@ -66,7 +66,7 @@
 
 	<button
 		aria-expanded={!isCollapsed}
-		class="text-secondary-accent hover:text-secondary-accent-hover mx-auto mt-2 self-start p-2 font-medium"
+		class="mx-auto mt-2 self-start p-2 font-medium hover:underline"
 		on:click={() => (isCollapsed = !isCollapsed)}
 	>
 		Show {isCollapsed ? 'all' : 'less'}

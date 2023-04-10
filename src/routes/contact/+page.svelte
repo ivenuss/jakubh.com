@@ -3,7 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
-	import { socialMedias } from '$lib/constants';
+	import { EMAIL, socialMedias } from '$lib/constants';
 </script>
 
 <Headline level="1" class="mb-5">Contact</Headline>
@@ -27,7 +27,7 @@
 	<section>
 		<Headline level="2" class="mb-3">Email</Headline>
 
-		<Button href="mailto:hello@jakubh.com">hello@jakubh.com</Button>
+		<Button href="mailto:{EMAIL}">{EMAIL}</Button>
 	</section>
 </div>
 
