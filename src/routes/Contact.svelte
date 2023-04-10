@@ -16,7 +16,7 @@
 
 		<a
 			href="mailto:hello@jakubh.com"
-			class="font-medium text-zinc-500 dark:text-zinc-400 hover:underline"
+			class="font-medium text-zinc-500 hover:underline dark:text-zinc-400"
 		>
 			hello@jakubh.com
 		</a>

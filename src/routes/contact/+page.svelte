@@ -16,7 +16,7 @@
 			{#each socialMedias as { title, icon, link }}
 				<li>
 					<Box as="a" href={link} class="flex items-center gap-2.5">
-						<svelte:component this={icon} class="w-5 h-5" />
+						<svelte:component this={icon} class="h-5 w-5" />
 						<span class="text-sm">{title}</span>
 					</Box>
 				</li>

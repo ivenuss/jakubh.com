@@ -7,7 +7,7 @@
 		<div class="relative h-14 w-14">
 			<img src="/images/profile_pic.png" alt="Profile" class="absolute h-14 w-14 rounded-lg" />
 			<span
-				class="absolute [animation:_ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite] inline-flex -z-[1] top-2 left-2 right-2 bottom-2 rounded-lg bg-zinc-400 opacity-75"
+				class="absolute bottom-2 left-2 right-2 top-2 -z-[1] inline-flex rounded-lg bg-zinc-400 opacity-75 [animation:_ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite]"
 			/>
 		</div>
 

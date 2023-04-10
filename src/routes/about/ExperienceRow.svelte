@@ -50,7 +50,7 @@
 
 <div id="2022-12-15" aria-labelledby="2022-12-15-heading" class="flex flex-col">
 	<div class="mb-3 flex items-center gap-3">
-		<div class="p-2 rounded-lg" style="background-color: {companyColor}22;">
+		<div class="rounded-lg p-2" style="background-color: {companyColor}22;">
 			<svelte:component this={companyLogo} class="h-5 w-5" />
 		</div>
 

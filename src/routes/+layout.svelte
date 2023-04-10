@@ -8,7 +8,7 @@
 	<Nav />
 
 	<div class="relative mb-auto">
-		<main class="mx-auto max-w-screen-sm px-4 w-full">
+		<main class="mx-auto w-full max-w-screen-sm px-4">
 			<slot />
 		</main>
 	</div>

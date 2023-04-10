@@ -14,8 +14,8 @@
 	this={as}
 	{...$$restProps}
 	class={clsx(
-		'flex items-center gap-3 rounded-md p-3 bg-neutral-50 shadow-sm dark:shadow-none dark:bg-zinc-900 dark:bg-opacity-75 dark:backdrop-saturate-150 dark:backdrop-blur-xl',
-		{ 'ring-inset hover:ring-2 dark:ring-zinc-800 ring-zinc-200 transition-shadow': as === 'a' },
+		'flex items-center gap-3 rounded-md bg-neutral-50 p-3 shadow-sm dark:bg-zinc-900 dark:bg-opacity-75 dark:shadow-none dark:backdrop-blur-xl dark:backdrop-saturate-150',
+		{ 'ring-inset ring-zinc-200 transition-shadow hover:ring-2 dark:ring-zinc-800': as === 'a' },
 		$$restProps.class
 	)}
 >

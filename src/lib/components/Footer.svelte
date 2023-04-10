@@ -48,7 +48,7 @@
 		{/each}
 	</ul> -->
 	<div class="mx-auto mt-14 flex flex-col items-center pb-12">
-		<span class="text-secondary-300 mt-2 mb-4 text-sm dark:text-zinc-400">
+		<span class="text-secondary-300 mb-4 mt-2 text-sm dark:text-zinc-400">
 			© {new Date().getFullYear()} jakubh.com
 		</span>
 
