@@ -15,6 +15,8 @@
 <header class="mb-12">
 	<div class="mb-2 flex items-center">
 		<Image
+			width={84}
+			height={84}
 			alt={frontmatter.title}
 			src="/images/projects/{frontmatter.slug}/icon.png"
 			class="mr-4 h-12 w-12 rounded-lg dark:bg-primary-800"
