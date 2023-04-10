@@ -1,10 +1,11 @@
-*.log
-.contentlayer
-.next
+.DS_Store
 node_modules
-.vercel
+/build
+/.svelte-kit
+/package
 .env
-
-# Next sitemap
-robots.txt
-sitemap*.xml
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.vercel
