@@ -3,7 +3,7 @@
 	import MenuIcon from '../svg/icons/menu.svg?component';
 	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 	import NavLink from './NavLink.svelte';
-	import { afterNavigate } from '$app/navigation';
+	import { beforeNavigate } from '$app/navigation';
 
 	let expanded = false;
 
@@ -14,7 +14,7 @@
 		{ href: '/contact', label: 'Contact' }
 	];
 
-	afterNavigate(() => {
+	beforeNavigate(() => {
 		expanded = false;
 	});
 </script>
