@@ -17,6 +17,8 @@ type ProjectFrontmatter = {
 export const load = (async ({ params }) => {
 	const modules = import.meta.glob(`/src/lib/data/projects/*.{md,svx,svelte.md}`);
 
+	// TODO: create type
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const project: any = Object.entries(modules).find(([path]) => {
 		const slug = getSlugFromPath(path);
 

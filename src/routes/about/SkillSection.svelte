@@ -2,7 +2,6 @@
 	import Box from '$lib/components/Box.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 	import type { StackItem } from '$lib/constants';
-	import clsx from 'clsx';
 
 	export let title: string;
 	export let items: StackItem[];
