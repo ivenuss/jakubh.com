@@ -41,15 +41,15 @@
 </nav>
 
 <Transition show={expanded}>
-	<Transition
-		enter="transition ease-in-out duration-300 transform"
-		enterFrom="translate-x-full"
-		enterTo="translate-x-0"
-		leave="transition ease-in-out duration-300 transform"
-		leaveFrom="translate-x-0"
-		leaveTo="translate-x-full"
-	>
-		<div class="absolute bottom-0 left-0 right-0 top-16 z-50 block md:hidden">
+	<div class="md:hidden fixed inset-0 top-16 flex z-50">
+		<Transition
+			enter="transition ease-in-out duration-300 transform"
+			enterFrom="translate-x-full"
+			enterTo="translate-x-0"
+			leave="transition ease-in-out duration-300 transform"
+			leaveFrom="translate-x-0"
+			leaveTo="translate-x-full"
+		>
 			<aside class="h-full w-full bg-white dark:bg-black">
 				<ul class="mx-auto flex max-w-screen-sm flex-col gap-1.5 px-4">
 					{#each links as { href, label }}
@@ -57,6 +57,6 @@
 					{/each}
 				</ul>
 			</aside>
-		</div>
-	</Transition>
+		</Transition>
+	</div>
 </Transition>
