@@ -41,7 +41,7 @@
 </nav>
 
 <Transition show={expanded}>
-	<div class="md:hidden fixed inset-0 top-16 flex z-50">
+	<div class="fixed inset-0 top-16 z-50 flex md:hidden">
 		<Transition
 			enter="transition ease-in-out duration-300 transform"
 			enterFrom="translate-x-full"
