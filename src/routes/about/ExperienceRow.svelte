@@ -45,6 +45,7 @@
 	export let endDate: string | undefined = undefined;
 
 	const DATE_FORMAT = 'MMM yyyy';
+
 	const duration = formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date());
 </script>
 
