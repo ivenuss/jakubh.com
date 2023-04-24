@@ -62,7 +62,7 @@ export const workExperiences = [
 		companySite: 'https://www.cdn77.com/',
 		employmentType: 'Full-time',
 		title: 'Frontend Developer',
-		startDate: '02-15-2023',
+		startDate: '2023-02-15',
 		endDate: undefined
 	},
 	{
@@ -72,8 +72,8 @@ export const workExperiences = [
 		companySite: 'https://o.seznam.cz/',
 		employmentType: 'Full-time',
 		title: 'UI Developer',
-		startDate: '11-14-2022',
-		endDate: '12-31-2022'
+		startDate: '2022-11-14',
+		endDate: '2022-12-31'
 	}
 ];
 
