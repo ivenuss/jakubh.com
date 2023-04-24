@@ -35,7 +35,12 @@
 		{/each}
 	</ul>
 
-	<button on:click={() => (expanded = !expanded)} class="block p-1 md:hidden">
+	<button
+		title={expanded ? 'Close sidebar' : 'Open sidebar'}
+		aria-label={expanded ? 'Close sidebar' : 'Open sidebar'}
+		on:click={() => (expanded = !expanded)}
+		class="block p-1 md:hidden"
+	>
 		<MenuIcon class="h-6 w-6" />
 	</button>
 </nav>
