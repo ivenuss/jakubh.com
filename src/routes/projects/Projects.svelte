@@ -9,13 +9,16 @@
 
 <ul class="flex flex-col gap-2">
 	{#each projects as project}
-		<li class="overflow-hidden rounded-lg">
-			<a href="/projects/{project.slug}" class="group relative">
+		<li
+			class="h-28 hover:h-52 w-full group relative transition-all duration-300 ease-in-out rounded-lg overflow-hidden"
+		>
+			<a href="/projects/{project.slug}">
 				<Img
 					alt="{project.title}'s thumbnail"
 					src="/images/projects/{project.slug}/thumbnail.png"
-					class="h-28 w-full bg-zinc-100 object-cover transition-all duration-300 ease-in-out group-hover:h-52 dark:bg-zinc-900"
+					class="w-full h-full bg-zinc-100 object-cover dark:bg-zinc-900"
 				/>
+
 				<div
 					aria-hidden="true"
 					class="absolute bottom-0 left-0 right-0 top-0 transition-colors duration-300 ease-in-out group-hover:bg-zinc-800/40"

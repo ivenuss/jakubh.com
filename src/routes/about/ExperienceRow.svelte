@@ -48,28 +48,26 @@
 	const duration = formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date());
 </script>
 
-<div id="2022-12-15" aria-labelledby="2022-12-15-heading" class="flex flex-col">
+<li class="flex flex-col">
 	<div class="mb-3 flex items-center gap-3">
 		<div class="rounded-lg p-2" style="background-color: {companyColor}22;">
 			<svelte:component this={companyLogo} class="h-5 w-5" />
 		</div>
 
-		<a href={companySite} title={companyName} class="text-base font-medium hover:underline"
-			>{companyName}</a
-		>
+		<a href={companySite} title={companyName} class="text-base font-medium hover:underline">
+			{companyName}
+		</a>
 	</div>
 
-	<div>
-		<div class="mb-2">
-			<Headline level="3" class="mb-0.5 !text-base">
-				{title} · {employmentType}
-			</Headline>
-			<Description as="div" class="text-sm text-zinc-400 dark:text-zinc-400">
-				<span>{format(new Date(startDate), DATE_FORMAT)}</span>
-				{' - '}
-				{endDate ? format(new Date(endDate), DATE_FORMAT) : 'Present'}
-				{duration ? ' · ' + duration : null}
-			</Description>
-		</div>
+	<div class="mb-2">
+		<Headline level="3" class="mb-0.5 !text-base">
+			{title} · {employmentType}
+		</Headline>
+		<Description as="div" class="text-sm text-zinc-400 dark:text-zinc-400">
+			<span>{format(new Date(startDate), DATE_FORMAT)}</span>
+			{' - '}
+			{endDate ? format(new Date(endDate), DATE_FORMAT) : 'Present'}
+			{duration ? ' · ' + duration : null}
+		</Description>
 	</div>
-</div>
+</li>

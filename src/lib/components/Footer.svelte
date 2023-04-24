@@ -13,9 +13,9 @@
 		<Spotify />
 
 		<ul class="mt-3.5 flex items-center gap-1.5">
-			{#each socialMedias as { icon, link }}
+			{#each socialMedias as { icon, link, title }}
 				<li>
-					<Box as="a" href={link} class="!p-1.5">
+					<Box as="a" href={link} class="!p-1.5" aria-label={title} {title}>
 						<svelte:component this={icon} class="h-5 w-5" />
 					</Box>
 				</li>
