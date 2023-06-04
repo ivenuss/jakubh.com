@@ -4,6 +4,7 @@
 	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 	import NavLink from './NavLink.svelte';
 	import { beforeNavigate } from '$app/navigation';
+	import { removeScroll } from '$lib/actions/removeScroll';
 
 	let expanded = false;
 
@@ -19,7 +20,9 @@
 	});
 </script>
 
-<nav class="mx-auto mb-2 flex w-full max-w-screen-sm items-center justify-between px-4 py-4">
+<nav
+	class="sticky top-0 bg-white dark:bg-black mx-auto mb-2 z-50 flex w-full max-w-screen-sm items-center justify-between px-4 py-4"
+>
 	<div class="flex items-center gap-4">
 		<a class="flex items-center" href="/">
 			<div class="text-lg">
@@ -46,7 +49,7 @@
 </nav>
 
 <Transition show={expanded}>
-	<div class="fixed inset-0 top-16 z-50 flex md:hidden">
+	<div use:removeScroll={{ disable: !expanded }} class="fixed inset-0 top-16 z-50 flex md:hidden">
 		<Transition
 			enter="transition ease-in-out duration-300 transform"
 			enterFrom="translate-x-full"
