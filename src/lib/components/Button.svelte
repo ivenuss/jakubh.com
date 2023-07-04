@@ -9,10 +9,10 @@
 		isLoading?: boolean;
 	}
 
-	export let href: string | undefined = undefined;
-	export let disabled: boolean = false;
-	export let cn = '';
-	export let isLoading = false;
+	export let href: $$Props['href'] = undefined;
+	export let disabled: $$Props['disabled'] = false;
+	export let cn: $$Props['class'] = '';
+	export let isLoading: $$Props['isLoading'] = false;
 
 	export { cn as class };
 </script>
@@ -29,11 +29,7 @@
 		cn
 	)}
 >
-	<span
-		class={clsx('flex select-none items-center truncate', {
-			invisible: isLoading
-		})}
-	>
+	<span class={clsx('flex items-center truncate', { 'select-none': !href, invisible: isLoading })}>
 		<slot />
 	</span>
 </svelte:element>

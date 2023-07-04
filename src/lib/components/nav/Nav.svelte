@@ -21,7 +21,7 @@
 </script>
 
 <nav
-	class="sticky top-0 bg-white dark:bg-black mx-auto mb-2 z-50 flex w-full max-w-screen-sm items-center justify-between px-4 py-4"
+	class="sticky top-0 z-50 mx-auto mb-2 flex w-full max-w-screen-sm items-center justify-between bg-white px-4 py-4 dark:bg-black"
 >
 	<div class="flex items-center gap-4">
 		<a class="flex items-center" href="/">
