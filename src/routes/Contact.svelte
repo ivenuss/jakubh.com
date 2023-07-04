@@ -15,7 +15,7 @@
 	<div class="flex items-center gap-6">
 		<Button href="/contact">Get in Touch</Button>
 
-		<a href="mailto:{EMAIL}" class="font-medium text-zinc-500 hover:underline dark:text-zinc-400">
+		<a href="mailto:{EMAIL}" class="font-medium text-zinc-600 hover:underline dark:text-zinc-400">
 			{EMAIL}
 		</a>
 	</div>
