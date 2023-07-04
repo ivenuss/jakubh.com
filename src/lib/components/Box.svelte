@@ -1,13 +1,8 @@
 <script lang="ts">
 	import clsx from 'clsx';
 
-	type Element = $$Generic<keyof HTMLElementTagNameMap>;
-
-	type $$Props = svelteHTML.IntrinsicElements[Element] & {
-		as: Element;
-	};
-
-	export let as: Element;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	export let as: any;
 </script>
 
 <svelte:element

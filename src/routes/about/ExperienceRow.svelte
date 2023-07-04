@@ -64,7 +64,7 @@
 		<Headline level="3" class="mb-0.5 !text-base">
 			{title} · {employmentType}
 		</Headline>
-		<Description as="div" class="text-sm text-zinc-400 dark:text-zinc-400">
+		<Description as="div" class="text-xs text-zinc-400 dark:text-zinc-400">
 			<span>{format(new Date(startDate), DATE_FORMAT)}</span>
 			{' - '}
 			{endDate ? format(new Date(endDate), DATE_FORMAT) : 'Present'}

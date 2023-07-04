@@ -7,5 +7,4 @@
 	export let alt: string;
 </script>
 
-<!-- svelte-ignore a11y-missing-attribute -->
 <img {width} {height} {src} {alt} loading="lazy" class={clsx('rounded-lg', $$restProps.class)} />

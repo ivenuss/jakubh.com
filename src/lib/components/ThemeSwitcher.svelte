@@ -21,8 +21,10 @@
 
 <form
 	method="POST"
-	use:enhance={handleUpdateTheme}
 	class="flex items-center rounded-full bg-zinc-100 p-1.5 ring-zinc-300 transition-colors active:bg-zinc-200/80 active:ring-2 dark:bg-zinc-800 dark:ring-zinc-500 dark:active:bg-zinc-700"
+	data-sveltekit-noscroll
+	data-sveltekit-keepfocus
+	use:enhance={handleUpdateTheme}
 >
 	{#if currentTheme === 'light'}
 		<button formaction="/?/setTheme&theme=dark&redirect={redirect}">
