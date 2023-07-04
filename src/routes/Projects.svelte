@@ -33,7 +33,7 @@
 						</Headline>
 						<Description
 							as="span"
-							class="truncate text-sm opacity-0 transition-opacity group-hover:opacity-100"
+							class="truncate text-xs opacity-0 transition-opacity group-hover:opacity-100"
 						>
 							{project.description}
 						</Description>

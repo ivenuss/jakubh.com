@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<Headline level="2" class="mb-3">Short Bio</Headline>
+	<Headline level="2" class="mb-3">Short bio</Headline>
 	<div class="flex flex-row gap-5">
 		<p class="w-full text-sm dark:text-zinc-400">
 			Hey, my name is Jakub. I love building user interfaces heavily focused on user experience.

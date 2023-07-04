@@ -47,7 +47,7 @@
 </script>
 
 <section class="mb-6 flex flex-col">
-	<Headline level="2" class="mb-3">Top 10 Tracks I listen To</Headline>
+	<Headline level="2" class="mb-3">Top 10 tracks I listen to</Headline>
 	<div class="flex flex-col gap-4">
 		{#if tracks}
 			{#each tracks as track, i}
