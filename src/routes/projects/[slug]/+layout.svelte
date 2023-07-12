@@ -13,8 +13,9 @@
 <header class="mb-12">
 	<div class="mb-2 flex items-center">
 		<Image
-			width={84}
-			height={84}
+			width="48"
+			height="48"
+			loading="eager"
 			alt={frontmatter.title}
 			src="/images/projects/{frontmatter.slug}/icon.png"
 			class="dark:bg-primary-800 mr-4 h-12 w-12 rounded-lg"
@@ -32,7 +33,8 @@
 	</div>
 
 	<Image
-		alt=""
+		alt="Thumbnail"
+		loading="eager"
 		src="/images/projects/{frontmatter.slug}/thumbnail.png"
 		class="dark:bg-primary-800 mb-2 h-48 w-full rounded-lg bg-gray-100 object-cover"
 	/>

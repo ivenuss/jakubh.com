@@ -14,6 +14,7 @@
 		>
 			<a href="/projects/{project.slug}">
 				<Img
+					loading="eager"
 					alt="{project.title}'s thumbnail"
 					src="/images/projects/{project.slug}/thumbnail.png"
 					class="h-full w-full bg-zinc-100 object-cover dark:bg-zinc-900"

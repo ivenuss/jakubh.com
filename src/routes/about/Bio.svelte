@@ -14,7 +14,7 @@
 		<div
 			class="h-20 w-20 flex-none overflow-hidden rounded-full ring-zinc-300 transition-shadow duration-300 hover:ring-[3px] dark:ring-zinc-700"
 		>
-			<img loading="lazy" alt="Profile" src="/images/profile_pic.png" class="grayscale" />
+			<img loading="eager" alt="Profile" src="/images/profile_pic.png" class="grayscale" />
 		</div>
 	</div>
 </section>

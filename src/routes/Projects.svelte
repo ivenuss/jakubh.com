@@ -23,6 +23,8 @@
 			<li>
 				<Box as="a" href="/projects/{project.slug}" class="group">
 					<img
+						width="32"
+						height="32"
 						class="h-8 w-8 rounded"
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
