@@ -1,11 +1,13 @@
 import type { LayoutServerLoad } from './$types';
 import { getNowPlaying } from '$lib/server/spotify';
 
-export const load = (async ({ cookies }) => {
+export const load = (async ({ cookies, setHeaders }) => {
 	const theme = cookies.get('theme') ?? 'dark';
 	const song = await getNowPlaying();
 
 	const obj = { theme };
+
+	setHeaders({ 'cache-control': 'max-age=30' });
 
 	if (!song?.is_playing || !song.item) {
 		return { ...obj, currentSong: { isPlaying: false } };
