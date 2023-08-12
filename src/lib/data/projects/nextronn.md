@@ -69,4 +69,4 @@ I added a PWA functionality for users to make them easily access to the app thro
 
 User profile is allowing users to search for each other and see their statistics such as activity, their linked profiles _(Youtube, Discord, Steam)_, their chat history etc. THey can also customize their profile. They can add custom bio or background. This helps to connect the community and differentiate themselves from others. I can't forget that each user has its own HTML page that is based on [Incremental Static Regeneration](https://vercel.com/docs/concepts/next.js/incremental-static-regeneration) that improves the SEO.
 
-![Nextronn user profile screen capture](/images/projects/nextronn/aduser_profilein_panel.png)
+![Nextronn user profile screen capture](/images/projects/nextronn/user_profile.png)
