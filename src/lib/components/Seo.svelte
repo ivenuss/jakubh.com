@@ -2,8 +2,8 @@
 	import { page } from '$app/stores';
 	import { SITE_URL } from '$lib/constants';
 
-	export let title = 'Jakub Habrcetl / Web developer.';
-	export let description = "My name is Jakub Habrcetl. I'm a web developer and graphic designer.";
+	export let title = 'Jakub Habrcetl / Web dev, UI & UX Designer.';
+	export let description = "My name is Jakub Habrcetl. I'm a web developer, UI & UX Designer.";
 	export let image = SITE_URL + '/images/banner.png';
 	export let type = 'website';
 	export let date: string | undefined = undefined;
