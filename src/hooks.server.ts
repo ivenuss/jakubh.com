@@ -1,7 +1,7 @@
 import type { Handle } from '@sveltejs/kit';
 
 export const handle = (async ({ event, resolve }) => {
-	const newTheme = event.url.searchParams.get('theme');
+	const newTheme = event?.url?.searchParams?.get('theme');
 	const cookieTheme = event.cookies.get('theme');
 
 	const theme = newTheme ?? cookieTheme ?? 'dark';
