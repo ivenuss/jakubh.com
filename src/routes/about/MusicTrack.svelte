@@ -20,7 +20,7 @@
 
 	<img
 		alt="Track cover"
-		class="h-10 w-10 flex-none overflow-hidden rounded-md bg-neutral-100"
+		class="dark:bg-zin-900 h-10 w-10 flex-none overflow-hidden rounded-md bg-neutral-100"
 		src={thumbnailUrl}
 	/>
 

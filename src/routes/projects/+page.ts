@@ -12,7 +12,7 @@ export const load = (async () => {
 				({
 					slug: getSlugFromPath(path),
 					...(project as unknown as App.MdsvexFile).metadata
-				} as Project)
+				}) as Project
 		)
 	);
 
