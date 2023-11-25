@@ -1,14 +1,14 @@
-import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
 
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode: ['class', '[data-mode="dark"]'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter', ...fontFamily.sans]
+				sans: ['Geist', ...fontFamily.sans]
 			},
 			fontWeight: {
 				bold: '600'

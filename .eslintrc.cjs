@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
 	root: true,
 	extends: [
@@ -7,7 +8,7 @@ module.exports = {
 		'prettier'
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', 'import'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
@@ -26,5 +27,14 @@ module.exports = {
 				parser: '@typescript-eslint/parser'
 			}
 		}
-	]
+	],
+	rules: {
+		'import/order': [
+			'error',
+			{
+				'newlines-between': 'never',
+				pathGroups: [{ pattern: '$*/**', group: 'internal' }]
+			}
+		]
+	}
 };

@@ -1,8 +1,7 @@
 import type { ComponentType } from 'svelte';
-
+import { GithubIcon, LinkedinIcon } from 'lucide-svelte';
 import CDN77Logo from '$lib/images/cdn77.svg?component';
 import SeznamLogo from '$lib/images/seznam.svg?component';
-
 import CSSIcon from '$lib/components/svg/icons/css.svg?component';
 import HTMLIcon from '$lib/components/svg/icons/html.svg?component';
 import TypeScriptIcon from '$lib/components/svg/icons/typescript.svg?component';
@@ -23,9 +22,7 @@ import JestIcon from '$lib/components/svg/icons/jest.svg?component';
 import PhotoshopIcon from '$lib/components/svg/icons/photoshop.svg?component';
 import IllustratorIcon from '$lib/components/svg/icons/illustrator.svg?component';
 import InDesignIcon from '$lib/components/svg/icons/indesign.svg?component';
-import LinkedInIcon from '$lib/components/svg/icons/linkedin.svg?component';
 import TwitterIcon from '$lib/components/svg/icons/twitter.svg?component';
-import GitHubIcon from '$lib/components/svg/icons/github.svg?component';
 import BehanceIcon from '$lib/components/svg/icons/behance.svg?component';
 
 export const SITE_URL = 'https://jakubh.com';
@@ -71,7 +68,7 @@ export const workExperiences = [
 		companyColor: '#CC0000',
 		companySite: 'https://o.seznam.cz/',
 		employmentType: 'Full-time',
-		title: 'UI Developer',
+		title: 'Frontend Developer',
 		startDate: '2022-11-14',
 		endDate: '2022-12-31'
 	}
@@ -220,13 +217,13 @@ export const socialMedias = [
 	{
 		title: 'GitHub',
 		color: '#4078c0',
-		icon: GitHubIcon,
+		icon: GithubIcon,
 		link: 'https://github.com/ivenuss'
 	},
 	{
 		title: 'LinkedIn',
 		color: '#0077B5',
-		icon: LinkedInIcon,
+		icon: LinkedinIcon,
 		link: 'https://www.linkedin.com/in/jakubhabrcetl'
 	},
 	{
@@ -242,3 +239,6 @@ export const socialMedias = [
 		link: 'https://twitter.com/ijakubh'
 	}
 ];
+
+export const focusRingClass =
+	'outline-none focus-visible:ring-2 focus-visible:ring-sky-700 focus-visible:ring-offset-zinc-900';

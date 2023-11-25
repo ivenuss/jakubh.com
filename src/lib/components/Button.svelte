@@ -1,6 +1,7 @@
 <script lang="ts">
 	import clsx from 'clsx';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import { focusRingClass } from '$lib/constants';
 
 	interface $$Props extends HTMLButtonAttributes {
 		href?: string;
@@ -25,9 +26,10 @@
 	{href}
 	disabled={isLoading || disabled}
 	class={clsx(
-		'font-base inline-flex items-center rounded transition-colors duration-150',
+		'font-base inline-flex items-center rounded ring-offset-2 transition-colors duration-150',
 		'h-8 min-w-[2rem] items-center justify-center px-3.5 text-sm font-medium',
-		'bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white',
+		'bg-neutral-100 text-neutral-900 hover:bg-white',
+		focusRingClass,
 		cn
 	)}
 >
