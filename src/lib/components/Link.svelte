@@ -1,7 +1,7 @@
 <script lang="ts">
-	import clsx from 'clsx';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
 	import { focusRingClass } from '$lib/constants';
+	import { cn } from '$lib/utils/cn';
 
 	interface $$Props extends HTMLAnchorAttributes {
 		unstyled?: boolean;
@@ -13,7 +13,7 @@
 <a
 	{...props}
 	href={props.href}
-	class={clsx(
+	class={cn(
 		{ 'hover:underline': !props.unstyled },
 		focusRingClass,
 		'focus-visible:rounded focus-visible:ring-offset-2',

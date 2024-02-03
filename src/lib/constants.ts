@@ -1,5 +1,5 @@
 import type { ComponentType } from 'svelte';
-import { GithubIcon, LinkedinIcon } from 'lucide-svelte';
+import { GithubIcon } from 'lucide-svelte';
 import CDN77Logo from '$lib/images/cdn77.svg?component';
 import SeznamLogo from '$lib/images/seznam.svg?component';
 import CSSIcon from '$lib/components/svg/icons/css.svg?component';
@@ -23,6 +23,7 @@ import PhotoshopIcon from '$lib/components/svg/icons/photoshop.svg?component';
 import IllustratorIcon from '$lib/components/svg/icons/illustrator.svg?component';
 import InDesignIcon from '$lib/components/svg/icons/indesign.svg?component';
 import TwitterIcon from '$lib/components/svg/icons/twitter.svg?component';
+import LinkedInIcon from '$lib/components/svg/icons/linkedin.svg?component';
 import BehanceIcon from '$lib/components/svg/icons/behance.svg?component';
 
 export const SITE_URL = 'https://jakubh.com';
@@ -223,7 +224,7 @@ export const socialMedias = [
 	{
 		title: 'LinkedIn',
 		color: '#0077B5',
-		icon: LinkedinIcon,
+		icon: LinkedInIcon,
 		link: 'https://www.linkedin.com/in/jakubhabrcetl'
 	},
 	{

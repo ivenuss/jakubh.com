@@ -2,15 +2,14 @@
 	import Link from '$lib/components/Link.svelte';
 
 	const images = import.meta.glob('$lib/images/gallery/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-		query: { enhanced: true }
-	}) as Record<string, () => Promise<{ default: string }>>;
+		query: { enhanced: true },
+		eager: true
+	}) as Record<string, { default: string }>;
 </script>
 
 <div class="m-2 grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-2">
-	{#each Object.values(images) as promise}
-		{#await promise() then module}
-			<enhanced:img src={module.default} class="z-30 h-full max-h-[660px] w-full object-cover" />
-		{/await}
+	{#each Object.values(images) as module}
+		<enhanced:img src={module.default} class="z-30 h-full max-h-[660px] w-full object-cover" />
 	{/each}
 </div>
 

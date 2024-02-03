@@ -1,6 +1,6 @@
 <script lang="ts">
-	import clsx from 'clsx';
 	import type { PageData } from './$types';
+	import { cn } from '$lib/utils/cn';
 	import { focusRingClass } from '$lib/constants';
 	import { page } from '$app/stores';
 	import Img from '$lib/components/markdown/img.svelte';
@@ -14,7 +14,7 @@
 		<li class="contents">
 			<a
 				href="/projects/{project.slug}"
-				class={clsx(
+				class={cn(
 					'group relative h-36 w-full overflow-hidden rounded-lg transition-all duration-300 ease-in-out focus-visible:ring-offset-2 md:h-28 md:hover:h-52 md:focus-visible:h-52',
 					focusRingClass
 				)}

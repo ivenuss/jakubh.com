@@ -28,7 +28,7 @@ export const load = (async ({ params }) => {
 	})?.[1]?.();
 
 	if (!project) {
-		throw error(404); // Couldn't resolve the post
+		error(404); // Couldn't resolve the post
 	}
 
 	const { default: component, metadata: frontmatter } = await project;

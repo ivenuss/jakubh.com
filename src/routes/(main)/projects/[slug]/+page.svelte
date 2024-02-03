@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { format } from 'date-fns';
-	import clsx from 'clsx';
 	import { ExternalLinkIcon, GithubIcon } from 'lucide-svelte';
 	import type { PageData } from './$types';
 	import { page } from '$app/stores';
@@ -8,6 +7,7 @@
 	import Image from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
+	import { cn } from '$lib/utils/cn';
 
 	$: frontmatter = $page.data.frontmatter as PageData['frontmatter'];
 	$: component = $page.data.component as PageData['component'];
@@ -74,7 +74,7 @@
 	</header>
 
 	<div
-		class={clsx(
+		class={cn(
 			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-gray-200',
 			'prose-code:bg-neutral-800 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-neutral-800 prose-pre:text-sm'
 		)}

@@ -19,17 +19,18 @@
 </script>
 
 <script lang="ts">
-	import clsx from 'clsx';
+	import { cn } from '$lib/utils/cn';
 
 	/***** Props *****/
 	export let weight: keyof typeof fontWeights = 'medium';
 	export let level: HeadlineLevels | `${HeadlineLevels}`;
-	export let cn = '';
-	export { cn as class };
+
+	export let className = '';
+	export { className as class };
 
 	let headingElement: HeadingElement = `h${level}`;
 </script>
 
-<svelte:element this={headingElement} class={clsx(fontSizes[level], fontWeights[weight], cn)}>
+<svelte:element this={headingElement} class={cn(fontSizes[level], fontWeights[weight], className)}>
 	<slot />
 </svelte:element>

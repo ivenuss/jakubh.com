@@ -1,5 +1,5 @@
 <script lang="ts">
-	import clsx from 'clsx';
+	import { cn } from '$lib/utils/cn';
 
 	export let width: number | string | undefined = undefined;
 	export let height: number | string | undefined = undefined;
@@ -10,4 +10,4 @@
 </script>
 
 <!-- prettier-ignore -->
-<img  src={src} {width} {height} {alt} {style} {loading} class={clsx('rounded-lg', $$restProps.class)} />
+<img  src={src} {width} {height} {alt} {style} {loading} class={cn('rounded-lg', $$restProps.class)} />
