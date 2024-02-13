@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { socialMedias } from '$lib/constants';
 	import Box from './Box.svelte';
+	import { socialMedias } from '$lib/constants';
 </script>
 
-<footer class="mx-auto w-full max-w-screen-sm px-4 pb-12 pt-16">
+<footer class="mx-auto w-full max-w-screen-sm px-4 pb-28 pt-16 md:pb-12">
 	<div class="mx-auto flex flex-col items-center">
-		<span class="text-secondary-300 mb-4 mt-2 text-sm dark:text-zinc-400">
+		<span class="mb-4 mt-2 text-sm text-neutral-400">
 			© {new Date().getFullYear()} jakubh.com
 		</span>
 

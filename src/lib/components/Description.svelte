@@ -1,12 +1,12 @@
 <script lang="ts">
-	import clsx from 'clsx';
+	import { cn } from '$lib/utils/cn';
 
-	export let cn = '';
-	export { cn as class };
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	export let as: any = 'p';
+	export let className = '';
+	export { className as class };
+
+	export let as: 'p' | 'span' | 'div' | 'time' = 'p';
 </script>
 
-<svelte:element this={as} class={clsx('text-sm text-zinc-500 dark:text-zinc-400', cn)}>
+<svelte:element this={as} class={cn('text-sm text-neutral-400', className)}>
 	<slot />
 </svelte:element>

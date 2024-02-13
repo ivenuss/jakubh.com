@@ -1,25 +1,26 @@
 <script lang="ts">
+	import Link from '../Link.svelte';
 	import { page } from '$app/stores';
-	import clsx from 'clsx';
+	import { cn } from '$lib/utils/cn';
 
-	export let cn = '';
-	export { cn as class };
 	export let href: string;
+
+	export let className = '';
+	export { className as class };
 
 	$: isActive = $page.url.pathname === href;
 </script>
 
-<li>
-	<a
+<li class="contents">
+	<Link
 		{href}
-		class={clsx(
-			'relative flex rounded px-2 py-1 text-sm font-medium transition-colors hover:bg-neutral-100 dark:hover:bg-zinc-900 md:inline-flex',
-			isActive
-				? 'bg-neutral-100 text-neutral-800 dark:bg-zinc-900 dark:text-zinc-50'
-				: 'text-neutral-700 dark:text-zinc-300',
-			cn
+		unstyled
+		class={cn(
+			'relative text-sm font-medium transition-colors focus-visible:ring-offset-0 md:inline-flex',
+			isActive ? 'text-neutral-50 underline' : 'text-neutral-300',
+			className
 		)}
 	>
 		<slot />
-	</a>
+	</Link>
 </li>
