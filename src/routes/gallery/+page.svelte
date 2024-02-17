@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const images = import.meta.glob('$lib/images/gallery/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
 		query: { enhanced: true },
@@ -20,3 +21,5 @@
 >
 	Return home
 </Link>
+
+<Seo title="Gallery / Jakub Habrcetl" description="A collection of images from my life." />
