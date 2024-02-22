@@ -2,7 +2,7 @@
 title: 'Lyrixfy'
 publishedAt: '2022-09-22'
 description: 'Tool for bringing the meaning of lyrics 🎶'
-preview: 'https://lyrixfy.com/'
+preview: 'https://lyrixfy.vercel.app/'
 owner: 'ivenuss'
 repo: 'lyrixfy'
 stack: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'PWA', 'tRPC']
