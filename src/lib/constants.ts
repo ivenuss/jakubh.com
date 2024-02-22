@@ -25,6 +25,7 @@ import InDesignIcon from '$lib/components/svg/icons/indesign.svg?component';
 import TwitterIcon from '$lib/components/svg/icons/twitter.svg?component';
 import LinkedInIcon from '$lib/components/svg/icons/linkedin.svg?component';
 import BehanceIcon from '$lib/components/svg/icons/behance.svg?component';
+import PlaywrightIcon from '$lib/components/svg/icons/playwright.svg?component';
 
 export const SITE_URL = 'https://jakubh.com';
 export const EMAIL = 'hello@jakubh.com';
@@ -57,7 +58,7 @@ export const workExperiences = [
 		companyName: 'CDN77',
 		companyLogo: CDN77Logo,
 		companyColor: '#FFE115',
-		companySite: 'https://www.cdn77.com/',
+		companySite: 'https://www.cdn77.jobs/',
 		employmentType: 'Full-time',
 		title: 'Frontend Developer',
 		startDate: '2023-02-15',
@@ -114,6 +115,12 @@ export const techStack: Record<string, StackItem[]> = {
 			icon: JestIcon,
 			color: '#C21325',
 			url: 'https://jestjs.io/'
+		},
+		{
+			name: 'Playwright',
+			icon: PlaywrightIcon,
+			color: '#37953C',
+			url: 'https://playwright.dev/'
 		}
 	],
 	Frontend: [
@@ -188,7 +195,7 @@ export const techStack: Record<string, StackItem[]> = {
 			url: 'https://www.figma.com/'
 		},
 		{
-			name: 'Visual Studio Code',
+			name: 'VS Code',
 			icon: VSCIcon,
 			color: '#007ACC',
 			url: 'https://code.visualstudio.com/'
