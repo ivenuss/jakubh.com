@@ -60,7 +60,7 @@ export const workExperiences = [
 		companyColor: '#FFE115',
 		companySite: 'https://www.cdn77.jobs/',
 		employmentType: 'Full-time',
-		title: 'Frontend Developer',
+		title: 'Frontend developer',
 		startDate: '2023-02-15',
 		endDate: undefined
 	},
@@ -70,7 +70,7 @@ export const workExperiences = [
 		companyColor: '#CC0000',
 		companySite: 'https://o.seznam.cz/',
 		employmentType: 'Full-time',
-		title: 'Frontend Developer',
+		title: 'Frontend developer',
 		startDate: '2022-11-14',
 		endDate: '2022-12-31'
 	}
