@@ -3,22 +3,22 @@
 	import { focusRingClass } from '$lib/constants';
 	import { cn } from '$lib/utils/cn';
 
-	interface $$Props extends HTMLAnchorAttributes {
+	interface Props extends HTMLAnchorAttributes {
 		unstyled?: boolean;
 	}
 
-	$: props = $$props as $$Props;
+	let { unstyled, href, class: classes = '', children, ...rest }: Props = $props();
 </script>
 
 <a
-	{...props}
-	href={props.href}
+	{...rest}
+	{href}
 	class={cn(
-		{ 'hover:underline': !props.unstyled },
+		{ 'hover:underline': !unstyled },
 		focusRingClass,
 		'focus-visible:rounded focus-visible:ring-offset-2',
-		props.class
+		classes
 	)}
 >
-	<slot />
+	{@render children?.()}
 </a>

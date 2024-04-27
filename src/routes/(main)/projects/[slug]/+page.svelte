@@ -9,8 +9,7 @@
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 	import { cn } from '$lib/utils/cn';
 
-	$: frontmatter = $page.data.frontmatter as PageData['frontmatter'];
-	$: component = $page.data.component as PageData['component'];
+	let { frontmatter, component } = $derived($page.data as PageData);
 </script>
 
 <article>

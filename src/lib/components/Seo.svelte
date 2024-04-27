@@ -2,11 +2,21 @@
 	import { page } from '$app/stores';
 	import { SITE_URL } from '$lib/constants';
 
-	export let title = 'Jakub Habrcetl / Web dev, UI & UX Designer.';
-	export let description = "My name is Jakub Habrcetl. I'm a web developer, UI & UX Designer.";
-	export let image = SITE_URL + '/images/banner.png';
-	export let type = 'website';
-	export let date: string | undefined = undefined;
+	interface Props {
+		title?: string;
+		description?: string;
+		image?: string;
+		type?: string;
+		date?: string | undefined;
+	}
+
+	let {
+		title = 'Jakub Habrcetl / Web dev, UI & UX Designer.',
+		description = "My name is Jakub Habrcetl. I'm a web developer, UI & UX Designer.",
+		image = SITE_URL + '/images/banner.png',
+		type = 'website',
+		date = undefined
+	}: Props = $props();
 </script>
 
 <svelte:head>
