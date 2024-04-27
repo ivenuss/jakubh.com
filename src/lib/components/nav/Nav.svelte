@@ -9,11 +9,11 @@
 	import { cn } from '$lib/utils/cn';
 	import { removeScroll } from '$lib/actions/removeScroll';
 
+	let expanded = $state(false);
+
 	beforeNavigate(() => {
 		expanded = false;
 	});
-
-	let expanded = false;
 
 	const links = [
 		{ href: '/', label: 'home' },
@@ -21,16 +21,18 @@
 		{ href: '/projects', label: 'projects' }
 	];
 
-	$: tooltipTitle = `${expanded ? 'Close' : 'Open'} sidebar`;
+	let tooltipTitle = $derived(`${expanded ? 'Close' : 'Open'} sidebar`);
 </script>
 
 {#if expanded}
-	<!-- svelte-ignore a11y-no-static-element-interactions a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
 	<div
 		use:removeScroll={{ disable: false }}
 		class="fixed bottom-0 left-0 right-0 top-0 z-10 bg-neutral-900/60 md:hidden"
-		on:click={() => (expanded = false)}
-	/>
+		onclick={() => {
+			expanded = false;
+		}}
+	></div>
 {/if}
 
 <nav class="relative z-10">
@@ -57,7 +59,9 @@
 				title={tooltipTitle}
 				aria-label={tooltipTitle}
 				class="grid h-10 w-10 flex-none place-items-center rounded-full bg-neutral-800 p-1 text-white hover:bg-neutral-700 md:hidden"
-				on:click={() => (expanded = !expanded)}
+				onclick={() => {
+					expanded = !expanded;
+				}}
 			>
 				<MenuIcon class="h-6 w-6" />
 			</Button>

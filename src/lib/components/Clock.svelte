@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import Description from './Description.svelte';
 
-	let time = new Date();
+	const formatNumber = (number: number) => String('0' + number).slice(-2);
 
-	$: hours = time.getHours();
-	$: minutes = formatNumber(time.getMinutes());
-	$: seconds = formatNumber(time.getSeconds());
+	let time = $state(new Date());
 
-	onMount(() => {
+	let hours = $derived(time.getHours());
+	let minutes = $derived(formatNumber(time.getMinutes()));
+	let seconds = $derived(formatNumber(time.getSeconds()));
+
+	$effect(() => {
 		const interval = setInterval(() => {
 			time = new Date();
 		}, 1000);
@@ -17,8 +18,6 @@
 			clearInterval(interval);
 		};
 	});
-
-	const formatNumber = (number: number) => String('0' + number).slice(-2);
 </script>
 
 <Description as="time" class="select-none font-mono !text-[10px]">

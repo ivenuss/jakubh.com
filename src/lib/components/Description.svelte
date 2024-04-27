@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { cn } from '$lib/utils/cn';
 
-	export let className = '';
-	export { className as class };
+	interface Props {
+		class?: string;
+		as?: 'p' | 'span' | 'div' | 'time';
+		children: import('svelte').Snippet;
+	}
 
-	export let as: 'p' | 'span' | 'div' | 'time' = 'p';
+	let { class: classes, as = 'p', children }: Props = $props();
 </script>
 
-<svelte:element this={as} class={cn('text-sm text-neutral-400', className)}>
-	<slot />
+<svelte:element this={as} class={cn('text-sm text-neutral-400', classes)}>
+	{@render children()}
 </svelte:element>

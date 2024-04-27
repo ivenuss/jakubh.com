@@ -3,8 +3,12 @@
 	import Box from '$lib/components/Box.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 
-	export let title: string;
-	export let items: StackItem[];
+	interface Props {
+		title: string;
+		items: StackItem[];
+	}
+
+	let { title, items }: Props = $props();
 </script>
 
 <div>

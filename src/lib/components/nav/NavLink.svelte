@@ -3,12 +3,15 @@
 	import { page } from '$app/stores';
 	import { cn } from '$lib/utils/cn';
 
-	export let href: string;
+	interface Props {
+		href: string;
+		class?: string;
+		children?: import('svelte').Snippet;
+	}
 
-	export let className = '';
-	export { className as class };
+	let { href, class: classes, children }: Props = $props();
 
-	$: isActive = $page.url.pathname === href;
+	let isActive = $derived($page.url.pathname === href);
 </script>
 
 <li class="contents">
@@ -18,9 +21,9 @@
 		class={cn(
 			'relative text-sm font-medium transition-colors focus-visible:ring-offset-0 md:inline-flex',
 			isActive ? 'text-neutral-50 underline' : 'text-neutral-300',
-			className
+			classes
 		)}
 	>
-		<slot />
+		{@render children?.()}
 	</Link>
 </li>

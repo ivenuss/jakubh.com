@@ -36,14 +36,27 @@
 	import Link from '$lib/components/Link.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 
-	export let companyName: string;
-	export let companyLogo: ComponentType;
-	export let companyColor: string;
-	export let companySite: string;
-	export let employmentType: string;
-	export let title: string;
-	export let startDate: string;
-	export let endDate: string | undefined = undefined;
+	interface Props {
+		companyName: string;
+		companyLogo: ComponentType;
+		companyColor: string;
+		companySite: string;
+		employmentType: string;
+		title: string;
+		startDate: string;
+		endDate?: string;
+	}
+
+	let {
+		companyName,
+		companyLogo,
+		companyColor,
+		companySite,
+		employmentType,
+		title,
+		startDate,
+		endDate
+	}: Props = $props();
 
 	const DATE_FORMAT = 'MMM yyyy';
 

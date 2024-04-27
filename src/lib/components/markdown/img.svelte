@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { cn } from '$lib/utils/cn';
+	import type { HTMLImgAttributes } from 'svelte/elements';
 
-	export let width: number | string | undefined = undefined;
-	export let height: number | string | undefined = undefined;
-	export let style: string | undefined | null = undefined;
-	export let src: string;
-	export let alt: string;
-	export let loading: 'eager' | 'lazy' = 'lazy';
+	type Props = Pick<
+		HTMLImgAttributes,
+		'width' | 'height' | 'style' | 'src' | 'alt' | 'loading' | 'class'
+	>;
+
+	let { src, loading = 'lazy', class: classes, ...rest }: Props = $props();
 </script>
 
 <!-- prettier-ignore -->
-<img  src={src} {width} {height} {alt} {style} {loading} class={cn('rounded-lg', $$restProps.class)} />
+<img  src={src} {...rest} class={cn('rounded-lg', classes)} />

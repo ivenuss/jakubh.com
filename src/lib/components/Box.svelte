@@ -1,20 +1,25 @@
-<script lang="ts">
+<script lang="ts" generics="Element extends keyof SvelteHTMLElements">
 	import type { SvelteHTMLElements } from 'svelte/elements';
 	import { focusRingClass } from '$lib/constants';
 	import { cn } from '$lib/utils/cn';
 
-	export let as: keyof SvelteHTMLElements;
+	type Props = {
+		as: Element;
+		children: import('svelte').Snippet;
+	} & SvelteHTMLElements[Element];
+
+	let { as, children, class: classes, ...rest }: Props = $props();
 </script>
 
 <svelte:element
 	this={as}
-	{...$$restProps}
+	{...rest}
 	class={cn(
 		'flex items-center gap-3 rounded-md bg-neutral-800 p-3 shadow-sm',
 		{ 'ring-inset ring-neutral-700 transition-shadow hover:ring-2': as === 'a' },
-		focusRingClass,
-		$$restProps.class
+		classes,
+		focusRingClass
 	)}
 >
-	<slot />
+	{@render children?.()}
 </svelte:element>

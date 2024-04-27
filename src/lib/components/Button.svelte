@@ -3,7 +3,7 @@
 	import { focusRingClass } from '$lib/constants';
 	import { cn } from '$lib/utils/cn';
 
-	interface $$Props extends HTMLButtonAttributes {
+	interface Props extends HTMLButtonAttributes {
 		href?: string;
 		disabled?: boolean;
 		class?: string;
@@ -11,19 +11,21 @@
 		isLoading?: boolean;
 	}
 
-	export let href: $$Props['href'] = undefined;
-	export let disabled: $$Props['disabled'] = false;
-	export let className: $$Props['class'] = '';
-	export let contentClass: $$Props['contentClass'] = '';
-	export let isLoading: $$Props['isLoading'] = false;
-
-	export { className as class };
+	let {
+		href,
+		disabled,
+		class: classes,
+		contentClass,
+		isLoading,
+		children,
+		...rest
+	}: Props = $props();
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <svelte:element
 	this={href ? 'a' : 'button'}
-	{...$$restProps}
+	{...rest}
 	{href}
 	disabled={isLoading || disabled}
 	class={cn(
@@ -31,9 +33,8 @@
 		'h-8 min-w-[2rem] items-center justify-center px-3.5 text-sm font-medium',
 		'bg-neutral-100 text-neutral-900 hover:bg-white',
 		focusRingClass,
-		className
+		classes
 	)}
-	on:click
 >
 	<span
 		class={cn(
@@ -42,6 +43,6 @@
 			contentClass
 		)}
 	>
-		<slot />
+		{@render children?.()}
 	</span>
 </svelte:element>
