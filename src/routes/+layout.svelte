@@ -3,11 +3,19 @@
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
 
-	inject({ mode: dev ? 'development' : 'production' });
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
+
+	$effect(() => {
+		inject({ mode: dev ? 'development' : 'production' });
+	});
 </script>
 
 <svelte:head>
 	<script async src="https://cdn.splitbee.io/sb.js"></script>
 </svelte:head>
 
-<slot />
+{@render children?.()}

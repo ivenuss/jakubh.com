@@ -13,7 +13,7 @@
 	<div class="flex items-center gap-6">
 		<Link
 			href="mailto:{EMAIL}"
-			class="font-medium text-neutral-400 hover:text-white hover:underline"
+			class="font-medium text-neutral-400 underline hover:text-white hover:underline"
 		>
 			{EMAIL}
 		</Link>
