@@ -26,8 +26,10 @@ export function focusTrap(node: HTMLElement, enabled: boolean) {
 		return focusableElems
 			.filter((elem) => elem.tabIndex >= 0)
 			.sort((a, b) => {
-				if (a.tabIndex === 0 && b.tabIndex > 0) return 1; // Move 0 to end of array
-				else if (a.tabIndex > 0 && b.tabIndex === 0) return -1; // Move 0 to end of array
+				if (a.tabIndex === 0 && b.tabIndex > 0)
+					return 1; // Move 0 to end of array
+				else if (a.tabIndex > 0 && b.tabIndex === 0)
+					return -1; // Move 0 to end of array
 				else return a.tabIndex - b.tabIndex; // Sort non-zero values in ascending order
 			});
 	};
@@ -50,7 +52,9 @@ export function focusTrap(node: HTMLElement, enabled: boolean) {
 	const onScanElements = (fromObserver: boolean) => {
 		if (enabled === false) return;
 		// Gather all focusable elements, sorted according to tabindex
-		const focusableElems: HTMLElement[] = sortByTabIndex(Array.from(node.querySelectorAll(elemWhitelist)));
+		const focusableElems: HTMLElement[] = sortByTabIndex(
+			Array.from(node.querySelectorAll(elemWhitelist))
+		);
 		if (focusableElems.length) {
 			// Set first/last focusable elements
 			elemFirst = focusableElems[0];
@@ -84,7 +88,8 @@ export function focusTrap(node: HTMLElement, enabled: boolean) {
 	return {
 		update(newArgs: boolean) {
 			enabled = newArgs;
-			newArgs ? onScanElements(false) : onCleanUp();
+
+			void (newArgs ? onScanElements(false) : onCleanUp());
 		},
 		destroy() {
 			onCleanUp();

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { cn } from '$lib/utils/cn';
 	import type { HTMLImgAttributes } from 'svelte/elements';
+	import { cn } from '$lib/utils/cn';
 
 	type Props = Pick<
 		HTMLImgAttributes,
@@ -11,4 +11,4 @@
 </script>
 
 <!-- prettier-ignore -->
-<img  src={src} {...rest} class={cn('rounded-lg', classes)} />
+<img  src={src} loading={loading} {...rest} class={cn('rounded-lg', classes)} />
