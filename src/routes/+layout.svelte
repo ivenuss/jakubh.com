@@ -19,7 +19,7 @@
 	<script
 		defer
 		data-domain="jakubh.com"
-		src="https://stats.jakubh.com/js/script.outbound-links.js"
+		src="https://analytics.jakubh.com/js/script.outbound-links.js"
 	></script>
 </svelte:head>
 
