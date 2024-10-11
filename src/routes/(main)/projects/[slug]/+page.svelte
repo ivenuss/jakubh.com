@@ -9,7 +9,7 @@
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 	import { cn } from '$lib/utils/cn';
 
-	let { frontmatter, component } = $derived($page.data as PageData);
+	let { frontmatter, component: Component } = $derived($page.data as PageData);
 </script>
 
 <article>
@@ -78,7 +78,7 @@
 			'prose-code:bg-neutral-800 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-neutral-800 prose-pre:text-sm'
 		)}
 	>
-		<svelte:component this={component} />
+		<Component />
 	</div>
 </article>
 
