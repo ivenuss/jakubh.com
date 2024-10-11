@@ -54,7 +54,7 @@ Search engine optimalization (SEO) was one of the keys. So users can share links
 
 Home screen
 
-![Lyrixfy home screen](/images/projects/lyrixfy/showcase.jpg)
+![Lyrixfy home screen](/images/projects/lyrixfy/showcase.png)
 
 Lines selection
 

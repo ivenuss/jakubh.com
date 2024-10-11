@@ -38,4 +38,4 @@ Some functions according to Contentlayer library were taken from the Contentlaye
 
 ### Preview
 
-![Docsum site preview capture](/images/projects/docsum/showcase.jpeg)
+![Docsum site preview capture](/images/projects/docsum/showcase.png)
