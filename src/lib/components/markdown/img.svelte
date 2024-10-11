@@ -10,5 +10,4 @@
 	let { src, loading = 'lazy', class: classes, ...rest }: Props = $props();
 </script>
 
-<!-- prettier-ignore -->
-<img  src={src} loading={loading} {...rest} class={cn('rounded-lg', classes)} />
+<img {src} {loading} {...rest} class={cn('rounded-lg', classes)} />
