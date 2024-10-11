@@ -14,16 +14,16 @@
 <div>
 	<Headline level="3" class="mb-3 !text-base">{title}</Headline>
 	<ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
-		{#each items as { icon, name, color, url }}
+		{#each items as { icon: Icon, name, color, url }}
 			<li>
 				<Box as={url ? 'a' : 'div'} href={url} class="h-full">
-					{#if icon}
+					{#if Icon}
 						<span
 							class="items-center justify-center rounded-lg p-2"
 							style="background-color: {color}26;"
 						>
-							<span class="grid h-4 w-4 place-items-center">
-								<svelte:component this={icon} />
+							<span class="grid size-4 place-items-center">
+								<Icon />
 							</span>
 						</span>
 					{/if}

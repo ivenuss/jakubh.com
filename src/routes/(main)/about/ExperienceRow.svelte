@@ -49,7 +49,7 @@
 
 	let {
 		companyName,
-		companyLogo,
+		companyLogo: CompanyLogo,
 		companyColor,
 		companySite,
 		employmentType,
@@ -61,12 +61,13 @@
 	const DATE_FORMAT = 'MMM yyyy';
 
 	const duration = formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date());
+
 </script>
 
 <li class="flex flex-col">
 	<div class="mb-3 flex items-center gap-3">
 		<div class="rounded-lg p-2" style="background-color: {companyColor}22;">
-			<svelte:component this={companyLogo} class="h-5 w-5" />
+			<CompanyLogo class="h-5 w-5" />
 		</div>
 
 		<Link href={companySite} title={companyName} class="text-base font-medium hover:underline">
