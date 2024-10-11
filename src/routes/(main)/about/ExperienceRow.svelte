@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	import { intervalToDuration } from 'date-fns';
 
 	const pluralize = (count: number, noun: string, suffix = 's') =>

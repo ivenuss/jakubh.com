@@ -25,7 +25,8 @@
 </script>
 
 {#if expanded}
-	<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div
 		use:removeScroll={{ disable: false }}
 		class="fixed bottom-0 left-0 right-0 top-0 z-10 bg-neutral-900/60 md:hidden"

@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	const headlineSizes = {
 		1: 'text-xl',
 		2: 'text-lg',
