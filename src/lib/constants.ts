@@ -1,4 +1,4 @@
-import type { ComponentType } from 'svelte';
+import type { Component } from 'svelte';
 import { GithubIcon } from 'lucide-svelte';
 import CDN77Logo from '$lib/images/cdn77.svg?component';
 import SeznamLogo from '$lib/images/seznam.svg?component';
@@ -76,7 +76,7 @@ export const workExperiences = [
 	}
 ];
 
-export type StackItem = { name: string; icon?: ComponentType; color?: string; url?: string };
+export type StackItem = { name: string; icon?: Component; color?: string; url?: string };
 
 export const techStack: Record<string, StackItem[]> = {
 	Design: [
