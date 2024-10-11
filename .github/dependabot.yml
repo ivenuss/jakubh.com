@@ -8,4 +8,4 @@ updates:
       time: '16:00'
     open-pull-requests-limit: 2
     commit-message:
-      prefix: 'chore'
+      prefix: 'chore(deps)'

@@ -4,41 +4,29 @@
 	const pluralize = (count: number, noun: string, suffix = 's') =>
 		`${noun}${count !== 1 ? suffix : ''}`;
 
-	// Write me a function that takes start and end dates and returns a string like "1 yr 2 mo"
-	export function formatDuration(startDate: Date, endDate: Date) {
-		const { years, months, days } = intervalToDuration({
-			start: startDate,
-			end: endDate
-		});
+	export const formatDuration = (start: Date, end: Date) => {
+		const { years, months, days } = intervalToDuration({ start, end });
 
-		const parts = [];
-
-		if (years) {
-			parts.push(`${years} ${pluralize(years, 'yr')}`);
-		}
-
-		if (months) {
-			parts.push(`${months} ${pluralize(months, 'mo')}`);
-		}
-
-		if (days) {
-			parts.push(`${days} ${pluralize(days, 'day')}`);
-		}
-
-		return parts.join(' ');
-	}
+		return [
+			years && `${years} ${pluralize(years, 'yr')}`,
+			months && `${months} ${pluralize(months, 'mo')}`,
+			days && `${days} ${pluralize(days, 'day')}`
+		]
+			.filter(Boolean)
+			.join(' ');
+	};
 </script>
 
 <script lang="ts">
 	import { format } from 'date-fns';
-	import type { ComponentType } from 'svelte';
+	import type { Component } from 'svelte';
 	import Description from '$lib/components/Description.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 
 	interface Props {
 		companyName: string;
-		companyLogo: ComponentType;
+		companyLogo: Component;
 		companyColor: string;
 		companySite: string;
 		employmentType: string;
@@ -61,7 +49,6 @@
 	const DATE_FORMAT = 'MMM yyyy';
 
 	const duration = formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date());
-
 </script>
 
 <li class="flex flex-col">
