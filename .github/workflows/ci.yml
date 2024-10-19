@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: 👀 Typecheck
-        run: pnpm run typecheck
+        run: pnpm run check
 
       - name: 💅 Format
         run: pnpm run format
