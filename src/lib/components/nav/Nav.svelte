@@ -1,9 +1,9 @@
 <script>
-	import { MenuIcon } from 'lucide-svelte';
+	import NavLink from './NavLink.svelte';
 	import Clock from '../Clock.svelte';
 	import Link from '../Link.svelte';
 	import Button from '../Button.svelte';
-	import NavLink from './NavLink.svelte';
+	import { MenuIcon } from 'lucide-svelte';
 	import { beforeNavigate } from '$app/navigation';
 	import { focusTrap } from '$lib/actions/focusTrap';
 	import { cn } from '$lib/utils/cn';

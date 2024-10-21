@@ -1,5 +1,5 @@
-import type { Component } from 'svelte';
 import { GithubIcon } from 'lucide-svelte';
+import type { Component } from 'svelte';
 import CDN77Logo from '$lib/images/cdn77.svg?component';
 import SeznamLogo from '$lib/images/seznam.svg?component';
 import CSSIcon from '$lib/components/svg/icons/css.svg?component';
