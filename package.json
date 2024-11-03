@@ -27,7 +27,7 @@
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-svelte": "^2.46.0",
 		"globals": "^15.11.0",
-		"lucide-svelte": "0.453.0",
+		"lucide-svelte": "0.454.0",
 		"mdsvex": "^0.12.3",
 		"postcss": "^8.4.47",
 		"prettier": "^3.3.3",
