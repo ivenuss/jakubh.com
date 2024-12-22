@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@poppanator/sveltekit-svg": "5.0.0-svelte5.5",
 		"@sveltejs/adapter-static": "3.0.6",
-		"@sveltejs/kit": "^2.9.0",
+		"@sveltejs/kit": "^2.14.1",
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@tailwindcss/typography": "^0.5.15",
 		"@types/eslint": "^9.6.1",
