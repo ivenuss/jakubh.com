@@ -249,4 +249,4 @@ export const socialMedias = [
 ];
 
 export const focusRingClass =
-	'outline-none focus-visible:ring-2 focus-visible:ring-sky-700 focus-visible:ring-offset-zinc-900';
+	'outline-hidden focus-visible:ring-2 focus-visible:ring-sky-700 focus-visible:ring-offset-zinc-900';

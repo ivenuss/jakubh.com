@@ -20,6 +20,6 @@
 	});
 </script>
 
-<Description as="time" class="select-none font-mono !text-[10px]">
+<Description as="time" class="select-none font-mono text-[10px]!">
 	{hours}:{minutes}:{seconds}
 </Description>

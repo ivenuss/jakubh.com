@@ -63,7 +63,7 @@
 	</div>
 
 	<div class="mb-2">
-		<Headline level="3" class="mb-0.5 !text-base">
+		<Headline level="3" class="mb-0.5 text-base!">
 			{title} · {employmentType}
 		</Headline>
 		<Description as="div" class="text-xs text-neutral-400">

@@ -12,7 +12,7 @@
 </script>
 
 <div>
-	<Headline level="3" class="mb-3 !text-base">{title}</Headline>
+	<Headline level="3" class="mb-3 text-base!">{title}</Headline>
 	<ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
 		{#each items as { icon: Icon, name, color, url }}
 			<li>
