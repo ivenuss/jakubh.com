@@ -47,7 +47,7 @@
 		<div class="flex flex-wrap items-center gap-0.5">
 			{#each frontmatter.stack as tag}
 				<span
-					class="inline-flex rounded px-2 py-1 text-xs uppercase text-neutral-400 transition-colors hover:bg-neutral-800 hover:text-neutral-200"
+					class="inline-flex rounded-sm px-2 py-1 text-xs uppercase text-neutral-400 transition-colors hover:bg-neutral-800 hover:text-neutral-200"
 				>
 					{tag}
 				</span>

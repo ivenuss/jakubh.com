@@ -25,12 +25,12 @@
 					<img
 						width="32"
 						height="32"
-						class="h-8 w-8 rounded"
+						class="h-8 w-8 rounded-sm"
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
 					/>
 					<div class="flex max-w-fit items-center gap-3 overflow-hidden">
-						<Headline level="3" class="!text-base transition-colors">
+						<Headline level="3" class="text-base! transition-colors">
 							{project.title}
 						</Headline>
 						<Description
