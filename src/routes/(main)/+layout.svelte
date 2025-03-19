@@ -11,8 +11,8 @@
 
 <div class="relative flex min-h-screen flex-col">
 	<Nav />
-	<div class="relative mb-auto mt-10 md:mt-0">
-		<main class="mx-auto w-full max-w-screen-sm px-4">
+	<div class="relative mt-10 mb-auto md:mt-0">
+		<main class="mx-auto w-full max-w-(--breakpoint-sm) px-4">
 			{@render children?.()}
 		</main>
 	</div>
