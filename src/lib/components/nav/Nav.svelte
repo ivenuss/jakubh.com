@@ -29,7 +29,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div
 		use:removeScroll={{ disable: false }}
-		class="fixed bottom-0 left-0 right-0 top-0 z-10 bg-neutral-900/60 md:hidden"
+		class="fixed top-0 right-0 bottom-0 left-0 z-10 bg-neutral-900/60 md:hidden"
 		onclick={() => {
 			expanded = false;
 		}}
@@ -41,7 +41,7 @@
 		class="fixed bottom-0 z-20 mx-auto w-screen bg-neutral-800 md:sticky md:top-0 md:mb-2 md:bg-neutral-900"
 	>
 		<span
-			class="relative mx-auto flex h-16 w-full max-w-screen-sm items-center justify-between px-4 md:py-4"
+			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
 		>
 			<div class="flex w-full items-center gap-4">
 				<Link unstyled href="/" class="flex items-center text-lg">
@@ -72,19 +72,19 @@
 	<ul
 		use:focusTrap={true}
 		class={cn(
-			'fixed bottom-16 left-0 right-0 flex w-screen transform flex-col rounded-t-xl border-b-2 border-black bg-neutral-800 transition-transform md:hidden',
-			{ 'translate-y-[calc(100%_+_theme(spacing.16))]': !expanded }
+			'fixed right-0 bottom-16 left-0 flex w-screen transform flex-col rounded-t-xl border-b-2 border-black bg-neutral-800 transition-transform md:hidden',
+			{ 'translate-y-[calc(100%+(--spacing(16)))]': !expanded }
 		)}
 	>
 		{#each links as { href, label }, index}
 			<NavLink
 				{href}
 				class={cn(
-					'px-4 py-4 hover:bg-neutral-700 focus-visible:rounded-none focus-visible:ring-inset focus-visible:ring-offset-0',
+					'px-4 py-4 hover:bg-neutral-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset',
 					{ 'rounded-t-xl focus-visible:rounded-t-xl': index === 0 }
 				)}
 			>
-				<span class="mx-auto flex max-w-screen-sm px-4">{label}</span>
+				<span class="mx-auto flex max-w-(--breakpoint-sm) px-4">{label}</span>
 			</NavLink>
 		{/each}
 	</ul>

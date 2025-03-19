@@ -16,7 +16,7 @@
 	class={cn(
 		{ 'hover:underline': !unstyled },
 		focusRingClass,
-		'focus-visible:rounded focus-visible:ring-offset-2',
+		'focus-visible:rounded-sm focus-visible:ring-offset-2',
 		classes
 	)}
 >

@@ -29,7 +29,7 @@
 				</ViewTransitionWrapper>
 				<div
 					aria-hidden="true"
-					class="absolute bottom-0 left-0 right-0 top-0 hidden transition-colors duration-300 ease-in-out group-hover:bg-neutral-800/40 group-focus-visible:bg-neutral-800/40 md:block"
+					class="absolute top-0 right-0 bottom-0 left-0 hidden transition-colors duration-300 ease-in-out group-hover:bg-neutral-800/40 group-focus-visible:bg-neutral-800/40 md:block"
 				></div>
 				<div
 					class="absolute bottom-0 left-0 hidden translate-y-full p-3 text-white transition-transform duration-300 ease-in-out group-hover:translate-y-0 group-focus-visible:translate-y-0 md:block md:p-6"
