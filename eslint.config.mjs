@@ -31,6 +31,7 @@ export default ts.config(
 	{
 		plugins: { import: importPlugin },
 		rules: {
+			'svelte/require-each-key': 'off',
 			'import/order': [
 				'error',
 				{

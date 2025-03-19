@@ -68,7 +68,7 @@
 		</Headline>
 		<Description as="div" class="text-xs text-neutral-400">
 			<span>{format(new Date(startDate), DATE_FORMAT)}</span>
-			{' - '}
+			-
 			{endDate ? format(new Date(endDate), DATE_FORMAT) : 'Present'}
 			{duration ? ' · ' + duration : null}
 		</Description>
