@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@poppanator/sveltekit-svg':
-        specifier: 5.0.0
-        version: 5.0.0(rollup@4.36.0)(svelte@5.23.2)(svgo@3.0.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2))
+        specifier: 5.0.1
+        version: 5.0.1(rollup@4.36.0)(svelte@5.23.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2))
       '@sveltejs/adapter-static':
         specifier: 3.0.8
         version: 3.0.8(@sveltejs/kit@2.20.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.23.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.23.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)))
@@ -73,7 +73,7 @@ importers:
         version: 5.23.2
       svelte-check:
         specifier: ^4.1.5
-        version: 4.1.5(svelte@5.23.2)(typescript@5.8.2)
+        version: 4.1.5(picomatch@4.0.2)(svelte@5.23.2)(typescript@5.8.2)
       svelte-transition:
         specifier: ^0.0.17
         version: 0.0.17(svelte@5.23.2)
@@ -357,15 +357,14 @@ packages:
   '@polka/url@1.0.0-next.24':
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
 
-  '@poppanator/sveltekit-svg@5.0.0':
-    resolution: {integrity: sha512-b7hk55SF0HjTS+xFgMG20hy6W0F/m+yRA/ZWcjnsa391rB3Ys3desCiUyIKQYcfvcyuRiQCPedUJMYgu00VdCA==}
+  '@poppanator/sveltekit-svg@5.0.1':
+    resolution: {integrity: sha512-eCOm9Wb1eO9N5N49JNokxgbUZN79QV/fe02cRrrWbDbcAOvGoIFU0YKDZEluIaFTP2zOtOxMeCSSobM4foMShA==}
     peerDependencies:
       svelte: '>=5.x'
-      svgo: '>=3.x'
-      vite: '>=5.x'
+      vite: '>=5.x || >= 6.x'
 
-  '@rollup/pluginutils@5.1.0':
-    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
+  '@rollup/pluginutils@5.1.4':
+    resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -875,15 +874,15 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  domutils@3.0.1:
-    resolution: {integrity: sha512-z08c1l761iKhDFtfXO04C7kTdPBLi41zwOZl00WS8b5eiaebNpY00HKbztwBq+e3vyqWNwWF3mP9YLUeqIrF+Q==}
+  domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
     engines: {node: '>=10.13.0'}
 
-  entities@4.4.0:
-    resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
   es-abstract@1.23.3:
@@ -1502,6 +1501,10 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  picomatch@4.0.2:
+    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
+    engines: {node: '>=12'}
+
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
@@ -1762,8 +1765,8 @@ packages:
     resolution: {integrity: sha512-PHP1o0aYJNMatiZ+0nq1W/Z1W1/l5Z94B9nhMIo7gsuTBbxC454g4O5SQMjQpZBUZi5ANYUrXJOE4gPzcN/VQw==}
     engines: {node: '>=18'}
 
-  svgo@3.0.2:
-    resolution: {integrity: sha512-Z706C1U2pb1+JGP48fbazf3KxHrWOsLme6Rv7imFBn5EnuanDW1GPaA/P1/dvObE670JDePC3mnj0k0B7P0jjQ==}
+  svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2094,20 +2097,20 @@ snapshots:
 
   '@polka/url@1.0.0-next.24': {}
 
-  '@poppanator/sveltekit-svg@5.0.0(rollup@4.36.0)(svelte@5.23.2)(svgo@3.0.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2))':
+  '@poppanator/sveltekit-svg@5.0.1(rollup@4.36.0)(svelte@5.23.2)(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2))':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.36.0)
+      '@rollup/pluginutils': 5.1.4(rollup@4.36.0)
       svelte: 5.23.2
-      svgo: 3.0.2
+      svgo: 3.3.2
       vite: 6.2.2(jiti@2.4.2)(lightningcss@1.29.2)
     transitivePeerDependencies:
       - rollup
 
-  '@rollup/pluginutils@5.1.0(rollup@4.36.0)':
+  '@rollup/pluginutils@5.1.4(rollup@4.36.0)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
-      picomatch: 2.3.1
+      picomatch: 4.0.2
     optionalDependencies:
       rollup: 4.36.0
 
@@ -2525,7 +2528,7 @@ snapshots:
       boolbase: 1.0.0
       css-what: 6.1.0
       domhandler: 5.0.3
-      domutils: 3.0.1
+      domutils: 3.2.2
       nth-check: 2.1.1
 
   css-tree@2.2.1:
@@ -2606,7 +2609,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      entities: 4.4.0
+      entities: 4.5.0
 
   domelementtype@2.3.0: {}
 
@@ -2614,7 +2617,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  domutils@3.0.1:
+  domutils@3.2.2:
     dependencies:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
@@ -2625,7 +2628,7 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.1
 
-  entities@4.4.0: {}
+  entities@4.5.0: {}
 
   es-abstract@1.23.3:
     dependencies:
@@ -2908,7 +2911,9 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  fdir@6.3.0: {}
+  fdir@6.3.0(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -3306,6 +3311,8 @@ snapshots:
 
   picomatch@2.3.1: {}
 
+  picomatch@4.0.2: {}
+
   possible-typed-array-names@1.0.0: {}
 
   postcss-load-config@3.1.4(postcss@8.5.3):
@@ -3503,11 +3510,11 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.1.5(svelte@5.23.2)(typescript@5.8.2):
+  svelte-check@4.1.5(picomatch@4.0.2)(svelte@5.23.2)(typescript@5.8.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.1
-      fdir: 6.3.0
+      fdir: 6.3.0(picomatch@4.0.2)
       picocolors: 1.1.0
       sade: 1.8.1
       svelte: 5.23.2
@@ -3547,14 +3554,15 @@ snapshots:
       magic-string: 0.30.12
       zimmerframe: 1.1.2
 
-  svgo@3.0.2:
+  svgo@3.3.2:
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
       css-select: 5.1.0
       css-tree: 2.3.1
+      css-what: 6.1.0
       csso: 5.0.5
-      picocolors: 1.1.0
+      picocolors: 1.1.1
 
   tailwind-merge@3.0.2: {}
 
