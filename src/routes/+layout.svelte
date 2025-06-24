@@ -10,11 +10,6 @@
 
 <svelte:head>
 	<script async src="https://cdn.splitbee.io/sb.js"></script>
-	<script
-		defer
-		data-domain="jakubh.com"
-		src="https://analytics.jakubh.com/js/script.outbound-links.js"
-	></script>
 </svelte:head>
 
 {@render children?.()}
