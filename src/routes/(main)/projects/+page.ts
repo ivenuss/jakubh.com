@@ -1,8 +1,6 @@
 import type { PageLoad } from './$types';
 import type { Project } from '$lib/types';
 
-export const prerender = true;
-
 const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;
 
 export const load = (async () => {

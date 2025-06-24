@@ -1,15 +1,16 @@
+import { SITE_URL } from '$lib/constants';
+
 export const prerender = true;
 
 const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;
 
 export async function GET() {
-	const DOMAIN = 'https://jakubh.com';
 	const modules = import.meta.glob(`/src/lib/data/projects/*.{md,svx,svelte.md}`);
 
 	const projects = Object.keys(modules).map((path) => `/projects/${getSlugFromPath(path)}`);
 
 	const routes = ['', '/about', '/contact', '/projects', ...projects].map((route) => ({
-		url: `${DOMAIN}${route}`,
+		url: `${SITE_URL}${route}`,
 		lastModified: new Date().toISOString().split('T')[0]
 	}));
 
