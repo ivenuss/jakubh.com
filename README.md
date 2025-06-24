@@ -4,7 +4,7 @@
 
 ## Design
 
-The main goal for me was to make the design as minimalistic as possible, which I think I achieved.
+The main goal for me was to make the design as minimalistic as possible.
 
 ## Technologies
 
@@ -12,9 +12,3 @@ The main goal for me was to make the design as minimalistic as possible, which I
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Bundler**: [Vite](https://vitejs.dev/)
 - **Package manager**: [pnpm](https://pnpm.io/)
-
-## Features
-
-### Projects
-
-Project section is built on [Contentlayer](https://www.contentlayer.dev/) which is a really cool tool for transferring pure MDX to JSON.
