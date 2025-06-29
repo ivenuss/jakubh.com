@@ -38,7 +38,7 @@
 		"svelte-check": "^4.2.2",
 		"svelte-transition": "^0.0.17",
 		"tailwind-merge": "^3.3.1",
-		"tailwindcss": "^4.1.10",
+		"tailwindcss": "^4.1.11",
 		"tslib": "^2.8.1",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.35.0"
