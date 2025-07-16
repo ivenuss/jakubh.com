@@ -2,14 +2,14 @@
 	import { format } from 'date-fns';
 	import { ExternalLinkIcon, GithubIcon } from 'lucide-svelte';
 	import type { PageData } from './$types';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Button from '$lib/components/Button.svelte';
 	import Image from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 	import { cn } from '$lib/utils/cn';
 
-	let { frontmatter, component: Component } = $derived($page.data as PageData);
+	let { frontmatter, component: Component } = $derived(page.data as PageData);
 </script>
 
 <article>

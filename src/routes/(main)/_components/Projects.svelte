@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { ChevronRightIcon } from 'lucide-svelte';
 	import type { PageData } from '../$types';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Box from '$lib/components/Box.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 	import Description from '$lib/components/Description.svelte';
 	import Link from '$lib/components/Link.svelte';
 
-	const data = $page.data as PageData;
+	let data = $derived(page.data as PageData);
 	// Show only first 3 projects
-	const projects = data.projects.slice(0, 3);
+	let projects = $derived(data.projects.slice(0, 3));
 </script>
 
 <section class="flex flex-col gap-4">

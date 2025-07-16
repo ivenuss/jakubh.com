@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Link from '../Link.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { cn } from '$lib/utils/cn';
 
 	interface Props {
@@ -11,7 +11,7 @@
 
 	let { href, class: classes, children }: Props = $props();
 
-	let isActive = $derived($page.url.pathname === href);
+	let isActive = $derived(page.url.pathname === href);
 </script>
 
 <li class="contents">

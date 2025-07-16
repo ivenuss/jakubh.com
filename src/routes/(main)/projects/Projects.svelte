@@ -2,11 +2,11 @@
 	import type { PageData } from './$types';
 	import { cn } from '$lib/utils/cn';
 	import { focusRingClass } from '$lib/constants';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Img from '$lib/components/markdown/img.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 
-	let { projects } = $derived($page.data as PageData);
+	let { projects } = $derived(page.data as PageData);
 </script>
 
 <ul class="flex flex-col gap-3 md:gap-2">
