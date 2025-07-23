@@ -35,6 +35,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(@sveltejs/kit@2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)
+      '@vercel/speed-insights':
+        specifier: ^1.2.0
+        version: 1.2.0(@sveltejs/kit@2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -797,6 +800,29 @@ packages:
     peerDependenciesMeta:
       '@remix-run/react':
         optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+
+  '@vercel/speed-insights@1.2.0':
+    resolution: {integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
       '@sveltejs/kit':
         optional: true
       next:
@@ -2818,6 +2844,11 @@ snapshots:
       eslint-visitor-keys: 4.2.1
 
   '@vercel/analytics@1.5.0(@sveltejs/kit@2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)':
+    optionalDependencies:
+      '@sveltejs/kit': 2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1))
+      svelte: 5.36.4
+
+  '@vercel/speed-insights@1.2.0(@sveltejs/kit@2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)':
     optionalDependencies:
       '@sveltejs/kit': 2.24.0(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)))(svelte@5.36.4)(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1))
       svelte: 5.36.4
