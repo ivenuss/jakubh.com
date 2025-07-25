@@ -3,10 +3,10 @@
 	import Box from '$lib/components/Box.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 
-	interface Props {
+	type Props = {
 		title: string;
 		items: StackItem[];
-	}
+	};
 
 	let { title, items }: Props = $props();
 </script>

@@ -1,9 +1,10 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { onNavigate } from '$app/navigation';
 
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+	type Props = {
+		children?: Snippet;
+	};
 
 	let { children }: Props = $props();
 

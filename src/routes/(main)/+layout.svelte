@@ -1,10 +1,11 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/nav/Nav.svelte';
 
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+	type Props = {
+		children?: Snippet;
+	};
 
 	let { children }: Props = $props();
 </script>

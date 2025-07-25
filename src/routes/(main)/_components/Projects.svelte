@@ -6,6 +6,7 @@
 	import Headline from '$lib/components/nav/Headline.svelte';
 	import Description from '$lib/components/Description.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import { resolve } from '$app/paths';
 
 	let data = $derived(page.data as PageData);
 	// Show only first 3 projects
@@ -21,7 +22,7 @@
 	<ul class="flex flex-col gap-2">
 		{#each projects as project}
 			<li>
-				<Box as="a" href="/projects/{project.slug}" class="group">
+				<Box as="a" href={resolve('/(main)/projects/[slug]', { slug: project.slug })} class="group">
 					<img
 						width="32"
 						height="32"
@@ -41,13 +42,15 @@
 						</Description>
 					</div>
 					<ChevronRightIcon
-						class="ml-auto h-4 w-4 flex-none text-neutral-500 transition-colors group-hover:text-neutral-300"
+						class="ml-auto size-4 flex-none text-neutral-500 transition-colors group-hover:text-neutral-300"
 					/>
 				</Box>
 			</li>
 		{/each}
 	</ul>
 	<div>
-		<Link href="/projects" class="text-sm text-neutral-400 hover:underline">...and much more!</Link>
+		<Link href={resolve('/(main)/projects')} class="text-sm text-neutral-400 hover:underline">
+			…and much more!
+		</Link>
 	</div>
 </section>

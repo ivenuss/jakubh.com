@@ -1,11 +1,12 @@
 <script lang="ts">
 	import '../app.css';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import type { Snippet } from 'svelte';
 	import { dev } from '$app/environment';
 
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+	type Props = {
+		children?: Snippet;
+	};
 
 	let { children }: Props = $props();
 

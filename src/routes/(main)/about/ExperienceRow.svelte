@@ -24,7 +24,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';
 
-	interface Props {
+	type Props = {
 		companyName: string;
 		companyLogo: Component;
 		companyColor: string;
@@ -33,7 +33,7 @@
 		title: string;
 		startDate: string;
 		endDate?: string;
-	}
+	};
 
 	let {
 		companyName,

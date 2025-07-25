@@ -1,15 +1,14 @@
 <script lang="ts">
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import type { ClassValue, HTMLButtonAttributes } from 'svelte/elements';
 	import { focusRingClass } from '$lib/constants';
-	import { cn } from '$lib/utils/cn';
 
-	interface Props extends HTMLButtonAttributes {
+	type Props = HTMLButtonAttributes & {
 		href?: string;
 		disabled?: boolean;
-		class?: string;
-		contentClass?: string;
+		class?: ClassValue;
+		contentClass?: ClassValue;
 		isLoading?: boolean;
-	}
+	};
 
 	let {
 		href,
@@ -27,20 +26,20 @@
 	{...rest}
 	{href}
 	disabled={isLoading || disabled}
-	class={cn(
+	class={[
 		'font-base inline-flex items-center rounded-sm ring-offset-2 transition-colors duration-150',
 		'h-8 min-w-[2rem] items-center justify-center px-3.5 text-sm font-medium',
 		'bg-neutral-100 text-neutral-900 hover:bg-white',
 		focusRingClass,
 		classes
-	)}
+	]}
 >
 	<span
-		class={cn(
+		class={[
 			'flex items-center truncate',
 			{ 'select-none': !href, invisible: isLoading },
 			contentClass
-		)}
+		]}
 	>
 		{@render children?.()}
 	</span>

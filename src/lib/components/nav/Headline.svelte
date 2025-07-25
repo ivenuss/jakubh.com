@@ -20,21 +20,22 @@
 </script>
 
 <script lang="ts">
-	import { cn } from '$lib/utils/cn';
+	import type { Snippet } from 'svelte';
+	import type { ClassValue } from 'svelte/elements';
 
-	interface Props {
+	type Props = {
 		weight?: FontWeight;
 		level: HeadlineLevels | `${HeadlineLevels}`;
-		class?: string;
-		children?: import('svelte').Snippet;
-	}
+		class?: ClassValue;
+		children?: Snippet;
+	};
 
 	let { weight = 'medium', level, class: classes, children }: Props = $props();
 </script>
 
 <svelte:element
 	this={`h${level}` satisfies HeadlineElement}
-	class={cn(headlineSizes[level], headlineWeights[weight], classes)}
+	class={[headlineSizes[level], headlineWeights[weight], classes]}
 >
 	{@render children?.()}
 </svelte:element>
