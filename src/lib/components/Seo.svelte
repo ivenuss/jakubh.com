@@ -2,13 +2,13 @@
 	import { page } from '$app/state';
 	import { SITE_URL } from '$lib/constants';
 
-	interface Props {
+	type Props = {
 		title?: string;
 		description?: string;
 		image?: string;
 		type?: string;
 		date?: string | undefined;
-	}
+	};
 
 	let {
 		title = 'Jakub Habrcetl / Web dev, UI & UX Designer.',

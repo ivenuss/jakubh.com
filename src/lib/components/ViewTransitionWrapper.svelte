@@ -1,11 +1,11 @@
 <script lang="ts">
-	interface Props {
-		/**
-		 * Name has to be unique for each transition
-		 */
+	import type { Snippet } from 'svelte';
+
+	type Props = {
+		/** Name has to be unique for each transition */
 		name: string;
-		children: import('svelte').Snippet;
-	}
+		children: Snippet;
+	};
 
 	let { name, children }: Props = $props();
 </script>
