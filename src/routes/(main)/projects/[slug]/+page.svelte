@@ -7,10 +7,11 @@
 	import Image from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
-	import { cn } from '$lib/utils/cn';
 
 	let { frontmatter, component: Component } = $derived(page.data as PageData);
 </script>
+
+<Seo title="{frontmatter.title} / Jakub Habrcetl" description={frontmatter.description} />
 
 <article>
 	<header class="mb-12">
@@ -73,13 +74,11 @@
 	</header>
 
 	<div
-		class={cn(
+		class={[
 			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-gray-200',
 			'prose-code:bg-neutral-800 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-neutral-800 prose-pre:text-sm'
-		)}
+		]}
 	>
 		<Component />
 	</div>
 </article>
-
-<Seo title="{frontmatter.title} / Jakub Habrcetl" description={frontmatter.description} />

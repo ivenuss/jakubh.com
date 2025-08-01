@@ -1,13 +1,14 @@
 <script lang="ts">
 	import Link from '../Link.svelte';
+	import type { ClassValue } from 'svelte/elements';
+	import type { Snippet } from 'svelte';
 	import { page } from '$app/state';
-	import { cn } from '$lib/utils/cn';
 
-	interface Props {
+	type Props = {
 		href: string;
-		class?: string;
-		children?: import('svelte').Snippet;
-	}
+		class?: ClassValue;
+		children?: Snippet;
+	};
 
 	let { href, class: classes, children }: Props = $props();
 
@@ -18,11 +19,11 @@
 	<Link
 		{href}
 		unstyled
-		class={cn(
+		class={[
 			'relative text-sm font-medium transition-colors focus-visible:ring-offset-0 md:inline-flex',
 			isActive ? 'text-neutral-50 underline' : 'text-neutral-300',
 			classes
-		)}
+		]}
 	>
 		{@render children?.()}
 	</Link>

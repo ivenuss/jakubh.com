@@ -6,8 +6,8 @@
 	import { MenuIcon } from 'lucide-svelte';
 	import { beforeNavigate } from '$app/navigation';
 	import { focusTrap } from '$lib/actions/focusTrap';
-	import { cn } from '$lib/utils/cn';
 	import { removeScroll } from '$lib/actions/removeScroll';
+	import { resolve } from '$app/paths';
 
 	let expanded = $state(false);
 
@@ -16,9 +16,9 @@
 	});
 
 	const links = [
-		{ href: '/', label: 'home' },
-		{ href: '/about', label: 'about' },
-		{ href: '/projects', label: 'projects' }
+		{ href: resolve('/'), label: 'home' },
+		{ href: resolve('/(main)/about'), label: 'about' },
+		{ href: resolve('/(main)/projects'), label: 'projects' }
 	];
 
 	let tooltipTitle = $derived(`${expanded ? 'Close' : 'Open'} sidebar`);
@@ -44,7 +44,7 @@
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
 		>
 			<div class="flex w-full items-center gap-4">
-				<Link unstyled href="/" class="flex items-center text-lg">
+				<Link unstyled href={resolve('/')} class="flex items-center text-lg">
 					<span class="font-bold">Jakub</span>H
 				</Link>
 				<Clock />
@@ -64,25 +64,25 @@
 					expanded = !expanded;
 				}}
 			>
-				<MenuIcon class="h-6 w-6" />
+				<MenuIcon class="size-6" />
 			</Button>
 		</span>
 	</span>
 
 	<ul
 		use:focusTrap={true}
-		class={cn(
+		class={[
 			'fixed right-0 bottom-16 left-0 flex w-screen transform flex-col rounded-t-xl border-b-2 border-black bg-neutral-800 transition-transform md:hidden',
 			{ 'translate-y-[calc(100%+(--spacing(16)))]': !expanded }
-		)}
+		]}
 	>
 		{#each links as { href, label }, index}
 			<NavLink
 				{href}
-				class={cn(
+				class={[
 					'px-4 py-4 hover:bg-neutral-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset',
 					{ 'rounded-t-xl focus-visible:rounded-t-xl': index === 0 }
-				)}
+				]}
 			>
 				<span class="mx-auto flex max-w-(--breakpoint-sm) px-4">{label}</span>
 			</NavLink>

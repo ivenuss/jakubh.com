@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { cn } from '$lib/utils/cn';
 	import { focusRingClass } from '$lib/constants';
 	import { page } from '$app/state';
 	import Img from '$lib/components/markdown/img.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
+	import { resolve } from '$app/paths';
 
 	let { projects } = $derived(page.data as PageData);
 </script>
@@ -13,11 +13,11 @@
 	{#each projects as project}
 		<li class="contents">
 			<a
-				href="/projects/{project.slug}"
-				class={cn(
+				href={resolve('/(main)/projects/[slug]', { slug: project.slug })}
+				class={[
 					'group relative h-36 w-full overflow-hidden rounded-lg transition-all duration-300 ease-in-out focus-visible:ring-offset-2 md:h-28 md:hover:h-52 md:focus-visible:h-52',
 					focusRingClass
-				)}
+				]}
 			>
 				<ViewTransitionWrapper name={project.title}>
 					<Img
