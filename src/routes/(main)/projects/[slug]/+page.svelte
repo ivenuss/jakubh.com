@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { format } from 'date-fns';
 	import { ExternalLinkIcon, GithubIcon } from 'lucide-svelte';
-	import type { PageData } from './$types';
-	import { page } from '$app/state';
 	import Button from '$lib/components/Button.svelte';
 	import Image from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 
-	let { frontmatter, component: Component } = $derived(page.data as PageData);
+	let { data } = $props();
+
+	let project = $derived(data.project);
 </script>
 
-<Seo title="{frontmatter.title} / Jakub Habrcetl" description={frontmatter.description} />
+<Seo title="{project.title} / Jakub Habrcetl" description={project.description} />
 
 <article>
 	<header class="mb-12">
@@ -20,33 +20,33 @@
 				width="48"
 				height="48"
 				loading="eager"
-				alt={frontmatter.title}
-				src="/images/projects/{frontmatter.slug}/icon.png"
+				alt={project.title}
+				src="/images/projects/{project.slug}/icon.png"
 				class="bg-primary-800 mr-3 h-10 w-10 rounded-md"
 			/>
 
 			<div class="flex flex-col">
 				<h1 class="text-xl leading-6 font-medium text-neutral-50">
-					{frontmatter.title}
+					{project.title}
 				</h1>
 
 				<div class="text-xs text-neutral-400">
-					{format(new Date(frontmatter.publishedAt), 'MMMM d, yyyy')}
+					{format(new Date(project.publishedAt), 'MMMM d, yyyy')}
 				</div>
 			</div>
 		</div>
 
-		<ViewTransitionWrapper name={frontmatter.title}>
+		<ViewTransitionWrapper name={project.title}>
 			<Image
 				alt="Thumbnail"
 				loading="eager"
-				src="/images/projects/{frontmatter.slug}/thumbnail.png"
+				src="/images/projects/{project.slug}/thumbnail.png"
 				class="mb-2 h-48 w-full rounded-lg object-cover"
 			/>
 		</ViewTransitionWrapper>
 
 		<div class="flex flex-wrap items-center gap-0.5">
-			{#each frontmatter.stack as tag}
+			{#each project.stack as tag}
 				<span
 					class="inline-flex rounded-sm px-2 py-1 text-xs text-neutral-400 uppercase transition-colors hover:bg-neutral-800 hover:text-neutral-200"
 				>
@@ -56,17 +56,14 @@
 		</div>
 
 		<div class="mt-4 flex flex-row gap-2">
-			{#if frontmatter.owner && frontmatter.repo}
-				<Button
-					contentClass="gap-1.5"
-					href="https://github.com/{frontmatter.owner}/{frontmatter.repo}"
-				>
+			{#if project.owner && project.repo}
+				<Button contentClass="gap-1.5" href="https://github.com/{project.owner}/{project.repo}">
 					<GithubIcon class="h-5 w-5" />View on GitHub
 				</Button>
 			{/if}
 
-			{#if frontmatter.preview}
-				<Button contentClass="gap-1.5" href={frontmatter.preview}>
+			{#if project.preview}
+				<Button contentClass="gap-1.5" href={project.preview}>
 					<ExternalLinkIcon class="h-5 w-5" />View Live
 				</Button>
 			{/if}
@@ -79,6 +76,6 @@
 			'prose-code:bg-neutral-800 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-neutral-800 prose-pre:text-sm'
 		]}
 	>
-		<Component />
+		<project.component />
 	</div>
 </article>

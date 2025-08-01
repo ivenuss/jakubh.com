@@ -9,8 +9,7 @@
 	import { resolve } from '$app/paths';
 
 	let data = $derived(page.data as PageData);
-	// Show only first 3 projects
-	let projects = $derived(data.projects.slice(0, 3));
+	let projects = $derived(data.projects.slice(0, 3)); // Show only first 3 projects
 </script>
 
 <section class="flex flex-col gap-4">

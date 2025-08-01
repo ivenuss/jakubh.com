@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import NavLink from './NavLink.svelte';
 	import Clock from '../Clock.svelte';
 	import Link from '../Link.svelte';

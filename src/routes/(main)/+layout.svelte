@@ -1,13 +1,8 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/nav/Nav.svelte';
 
-	type Props = {
-		children?: Snippet;
-	};
-
-	let { children }: Props = $props();
+	let { children } = $props();
 </script>
 
 <div class="relative flex min-h-screen flex-col">
