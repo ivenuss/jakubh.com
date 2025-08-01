@@ -1,8 +1,6 @@
 <script lang="ts" module>
 	import { intervalToDuration } from 'date-fns';
-
-	const pluralize = (count: number, noun: string, suffix = 's') =>
-		`${noun}${count !== 1 ? suffix : ''}`;
+	import { pluralize } from '$lib/utils/pluralize';
 
 	export const formatDuration = (start: Date, end: Date) => {
 		const { years, months, days } = intervalToDuration({ start, end });

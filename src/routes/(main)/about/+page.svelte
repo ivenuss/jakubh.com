@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Bio from './Bio.svelte';
+	import Bio from './_components/Bio.svelte';
 	import Skills from './Skills.svelte';
 	import WorkExperience from './WorkExperience.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';

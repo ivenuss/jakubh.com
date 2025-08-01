@@ -1,12 +1,7 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
 	import { onNavigate } from '$app/navigation';
 
-	type Props = {
-		children?: Snippet;
-	};
-
-	let { children }: Props = $props();
+	let { children } = $props();
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) {

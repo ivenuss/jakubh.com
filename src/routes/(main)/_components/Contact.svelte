@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Description from '$lib/components/Description.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Headline from '$lib/components/nav/Headline.svelte';

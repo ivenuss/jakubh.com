@@ -1,3 +1,5 @@
+import type { Component } from 'svelte';
+
 /**
  * Projects
  */
@@ -10,4 +12,5 @@ export type Project = {
 	owner: string;
 	repo: string;
 	stack: string[];
+	component: Component;
 };

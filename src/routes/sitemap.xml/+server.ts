@@ -1,15 +1,18 @@
+import { resolve } from '$app/paths';
 import { SITE_URL } from '$lib/constants';
+import { getProjects } from '$lib/utils/getProjects';
 
 export const prerender = true;
 
-const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;
-
 export async function GET() {
-	const modules = import.meta.glob(`/src/lib/data/projects/*.{md,svx,svelte.md}`);
+	const projects = await getProjects();
 
-	const projects = Object.keys(modules).map((path) => `/projects/${getSlugFromPath(path)}`);
-
-	const routes = ['', '/about', '/contact', '/projects', ...projects].map((route) => ({
+	const routes = [
+		resolve('/'),
+		resolve('/about'),
+		resolve('/projects'),
+		...projects.map((project) => resolve('/(main)/projects/[slug]', { slug: project.slug }))
+	].map((route) => ({
 		url: `${SITE_URL}${route}`,
 		lastModified: new Date().toISOString().split('T')[0]
 	}));
@@ -31,10 +34,6 @@ export async function GET() {
 				)
 				.join('')}
     </urlset>`.trim(),
-		{
-			headers: {
-				'Content-Type': 'application/xml'
-			}
-		}
+		{ headers: { 'Content-Type': 'application/xml' } }
 	);
 }

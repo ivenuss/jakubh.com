@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from '../$types';
 	import { focusRingClass } from '$lib/constants';
 	import { page } from '$app/state';
 	import Img from '$lib/components/markdown/img.svelte';
