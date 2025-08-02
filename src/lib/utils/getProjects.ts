@@ -3,7 +3,7 @@ import type { Component } from 'svelte';
 
 const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;
 
-export const getProjects = async () => {
+export const getProjects = async (): Promise<Project[]> => {
 	const modules = import.meta.glob('/src/lib/data/projects/*.{md,svx,svelte.md}');
 
 	const projectPromises = Object.entries(modules).map(([path, resolver]) =>
