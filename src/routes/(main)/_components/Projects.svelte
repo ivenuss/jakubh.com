@@ -29,13 +29,13 @@
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
 					/>
-					<div class="flex max-w-fit items-center gap-3 overflow-hidden">
+					<div class="flex max-w-fit items-center gap-5 overflow-hidden">
 						<Headline level="3" class="text-base! transition-colors">
 							{project.title}
 						</Headline>
 						<Description
 							as="span"
-							class="line-clamp-2 truncate text-xs opacity-0 transition-opacity group-hover:opacity-100"
+							class="line-clamp-2 truncate text-xs opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
 						>
 							{project.description}
 						</Description>

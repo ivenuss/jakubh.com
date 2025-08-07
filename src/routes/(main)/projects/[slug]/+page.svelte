@@ -66,13 +66,13 @@
 		<div class="mt-4 flex flex-row gap-2">
 			{#if project.owner && project.repo}
 				<Button contentClass="gap-1.5" href="https://github.com/{project.owner}/{project.repo}">
-					<GithubIcon class="h-5 w-5" />View on GitHub
+					<GithubIcon class="size-5" />View on GitHub
 				</Button>
 			{/if}
 
 			{#if project.preview}
 				<Button contentClass="gap-1.5" href={project.preview}>
-					<ExternalLinkIcon class="h-5 w-5" />View Live
+					<ExternalLinkIcon class="size-5" />View Live
 				</Button>
 			{/if}
 		</div>
@@ -81,7 +81,9 @@
 	<div
 		class={[
 			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-gray-200',
-			'prose-code:bg-neutral-800 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-neutral-800 prose-pre:text-sm'
+			'prose-a:hover:no-underline',
+			'prose-code:rounded-sm prose-code:bg-neutral-800 prose-code:px-1 prose-code:py-0.5 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:text-sm',
+			'prose-pre:bg-neutral-800! prose-pre:text-sm'
 		]}
 	>
 		<project.component />
