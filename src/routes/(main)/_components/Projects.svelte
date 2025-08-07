@@ -25,7 +25,7 @@
 					<img
 						width="32"
 						height="32"
-						class="h-8 w-8 rounded-sm"
+						class="size-8 rounded-sm"
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
 					/>
