@@ -52,7 +52,7 @@
 <li class="flex flex-col">
 	<div class="mb-3 flex items-center gap-3">
 		<div class="rounded-lg p-2" style="background-color: {companyColor}22;">
-			<CompanyLogo class="h-5 w-5" />
+			<CompanyLogo class="size-5" />
 		</div>
 
 		<Link href={companySite} title={companyName} class="text-base font-medium hover:underline">

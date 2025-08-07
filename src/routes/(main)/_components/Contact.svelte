@@ -11,10 +11,7 @@
 		Do you have a question, problem or idea that I can help you with? Do not hesitate to contact me.
 	</Description>
 	<div class="flex items-center gap-6">
-		<Link
-			href="mailto:{EMAIL}"
-			class="font-medium text-neutral-400 underline hover:text-white hover:underline"
-		>
+		<Link href="mailto:{EMAIL}" class="font-medium">
 			{EMAIL}
 		</Link>
 	</div>

@@ -13,7 +13,7 @@
 			{#each socialMedias as { icon, link, title }}
 				<li>
 					<Box as="a" href={link} class="p-1.5!" aria-label={title} {title}>
-						<svelte:component this={icon} class="h-5 w-5" />
+						<svelte:component this={icon} class="size-5" />
 					</Box>
 				</li>
 			{/each}

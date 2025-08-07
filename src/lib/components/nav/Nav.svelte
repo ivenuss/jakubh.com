@@ -2,7 +2,6 @@
 	import NavLink from './NavLink.svelte';
 	import Clock from '../Clock.svelte';
 	import Link from '../Link.svelte';
-	import Button from '../Button.svelte';
 	import { MenuIcon } from 'lucide-svelte';
 	import { beforeNavigate } from '$app/navigation';
 	import { focusTrap } from '$lib/actions/focusTrap';
@@ -21,7 +20,7 @@
 		{ href: resolve('/(main)/projects'), label: 'projects' }
 	];
 
-	let tooltipTitle = $derived(`${expanded ? 'Close' : 'Open'} sidebar`);
+	let tooltipTitle = $derived(`${expanded ? 'Close' : 'Open'} menu`);
 </script>
 
 {#if expanded}
@@ -36,9 +35,9 @@
 	></div>
 {/if}
 
-<nav class="relative z-10">
+<nav class="relative z-10 mb-2.5">
 	<span
-		class="fixed bottom-0 z-20 mx-auto w-screen bg-neutral-800 md:sticky md:top-0 md:mb-2 md:bg-neutral-900"
+		class="fixed bottom-0 z-20 mx-auto w-screen bg-neutral-800/80 backdrop-blur-md md:sticky md:top-0 md:mb-2 md:bg-neutral-900"
 	>
 		<span
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
@@ -56,16 +55,16 @@
 				{/each}
 			</ul>
 
-			<Button
+			<button
 				title={tooltipTitle}
 				aria-label={tooltipTitle}
-				class="grid h-10 w-10 flex-none place-items-center rounded-full bg-neutral-800 p-1 text-white hover:bg-neutral-700 md:hidden"
+				class="grid aspect-square size-10! flex-none place-items-center rounded-full p-1 text-white hover:bg-neutral-700! md:hidden"
 				onclick={() => {
 					expanded = !expanded;
 				}}
 			>
-				<MenuIcon class="size-6" />
-			</Button>
+				<MenuIcon class="size-7" />
+			</button>
 		</span>
 	</span>
 
@@ -84,7 +83,7 @@
 					{ 'rounded-t-xl focus-visible:rounded-t-xl': index === 0 }
 				]}
 			>
-				<span class="mx-auto flex max-w-(--breakpoint-sm) px-4">{label}</span>
+				<span class="mx-auto flex max-w-(--breakpoint-sm)">{label}</span>
 			</NavLink>
 		{/each}
 	</ul>
