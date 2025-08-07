@@ -35,7 +35,7 @@
 						</Headline>
 						<Description
 							as="span"
-							class="truncate text-xs opacity-0 transition-opacity group-hover:opacity-100"
+							class="line-clamp-2 truncate text-xs opacity-0 transition-opacity group-hover:opacity-100"
 						>
 							{project.description}
 						</Description>
@@ -48,8 +48,6 @@
 		{/each}
 	</ul>
 	<div>
-		<Link href={resolve('/(main)/projects')} class="text-sm text-neutral-400 hover:underline">
-			…and much more!
-		</Link>
+		<Link href={resolve('/(main)/projects')} class="text-sm">…and much more!</Link>
 	</div>
 </section>
