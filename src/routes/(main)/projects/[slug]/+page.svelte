@@ -32,11 +32,11 @@
 			/>
 
 			<div class="flex flex-col">
-				<h1 class="text-xl leading-6 font-medium text-neutral-50">
+				<h1 class="text-xl leading-6 font-medium text-zinc-50">
 					{project.title}
 				</h1>
 
-				<div class="text-xs text-neutral-400">
+				<div class="text-xs text-zinc-400">
 					{format(new Date(project.publishedAt), 'MMMM d, yyyy')}
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 		<div class="flex flex-wrap items-center gap-1">
 			{#each project.stack as tag}
 				<span
-					class="inline-flex rounded-sm bg-neutral-800 px-2 py-1 text-xs text-neutral-300 uppercase transition-colors"
+					class="inline-flex rounded-sm bg-zinc-800 px-2 py-1 text-xs text-zinc-300 uppercase transition-colors"
 				>
 					{tag}
 				</span>
@@ -80,10 +80,10 @@
 
 	<div
 		class={[
-			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-gray-200',
+			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-zinc-200',
 			'prose-a:hover:no-underline',
-			'prose-code:rounded-sm prose-code:bg-neutral-800 prose-code:px-1 prose-code:py-0.5 prose-code:text-neutral-100 prose-code:before:content-none prose-code:after:content-none prose-pre:text-sm',
-			'prose-pre:bg-neutral-800! prose-pre:text-sm'
+			'prose-code:rounded-sm prose-code:bg-zinc-800 prose-code:px-1 prose-code:py-0.5 prose-code:text-zinc-100 prose-code:before:content-none prose-code:after:content-none prose-pre:text-sm',
+			'prose-pre:bg-zinc-800! prose-pre:text-sm'
 		]}
 	>
 		<project.component />

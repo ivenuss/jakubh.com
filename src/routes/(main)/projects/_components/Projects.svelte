@@ -24,12 +24,12 @@
 						loading="eager"
 						alt="{project.title}'s thumbnail"
 						src="/images/projects/{project.slug}/thumbnail.png"
-						class="h-full w-full bg-neutral-900 object-cover"
+						class="h-full w-full bg-zinc-900 object-cover"
 					/>
 				</ViewTransitionWrapper>
 				<div
 					aria-hidden="true"
-					class="absolute top-0 right-0 bottom-0 left-0 hidden transition-colors duration-300 ease-in-out group-hover:bg-neutral-800/40 group-focus-visible:bg-neutral-800/40 md:block"
+					class="absolute top-0 right-0 bottom-0 left-0 hidden transition-colors duration-300 ease-in-out group-hover:bg-zinc-800/40 group-focus-visible:bg-zinc-800/40 md:block"
 				></div>
 				<div
 					class="absolute bottom-0 left-0 hidden translate-y-full p-3 text-white transition-transform duration-300 ease-in-out group-hover:translate-y-0 group-focus-visible:translate-y-0 md:block md:p-6"

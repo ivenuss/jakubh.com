@@ -28,7 +28,7 @@
 						</span>
 					{/if}
 
-					<div class="text-sm text-neutral-300">{name}</div>
+					<div class="text-sm text-zinc-300">{name}</div>
 				</Box>
 			</li>
 		{/each}

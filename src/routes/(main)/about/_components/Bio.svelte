@@ -5,7 +5,7 @@
 <section>
 	<Headline level="2" class="mb-3">Short bio</Headline>
 	<div class="flex flex-row gap-5">
-		<p class="w-full text-sm text-neutral-400">
+		<p class="w-full text-sm text-zinc-400">
 			Hey, my name is Jakub. I love building user interfaces heavily focused on user experience.
 			<br />
 			Besides that, I'm also a graphic designer and UI/UX enthusiast.

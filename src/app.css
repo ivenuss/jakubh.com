@@ -3,6 +3,14 @@
 
 @theme {
 	--font-display: 'Inter', sans-serif;
+	--color-background: #0f0f12;
+}
+
+/* Colors converted to OKLCH format */
+@supports (color: oklch(0 0 0)) {
+	:root {
+		--color-background: oklch(0.1719 0.006 285.885);
+	}
 }
 
 :root {

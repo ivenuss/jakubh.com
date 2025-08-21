@@ -28,7 +28,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div
 		use:removeScroll={{ disable: false }}
-		class="fixed top-0 right-0 bottom-0 left-0 z-10 bg-neutral-900/60 md:hidden"
+		class="fixed top-0 right-0 bottom-0 left-0 z-10 bg-zinc-900/60 md:hidden"
 		onclick={() => {
 			expanded = false;
 		}}
@@ -37,7 +37,7 @@
 
 <nav class="relative z-10 mb-2.5">
 	<span
-		class="fixed bottom-0 z-20 mx-auto w-screen bg-neutral-800/80 backdrop-blur-md md:sticky md:top-0 md:mb-2 md:bg-neutral-900"
+		class="fixed bottom-0 z-20 mx-auto w-screen bg-zinc-800/80 backdrop-blur-md md:sticky md:top-0 md:mb-2 md:bg-zinc-900"
 	>
 		<span
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
@@ -58,7 +58,7 @@
 			<button
 				title={tooltipTitle}
 				aria-label={tooltipTitle}
-				class="grid aspect-square size-10! flex-none place-items-center rounded-full p-1 text-white hover:bg-neutral-700! md:hidden"
+				class="grid aspect-square size-10! flex-none place-items-center rounded-full p-1 text-white hover:bg-zinc-700! md:hidden"
 				onclick={() => {
 					expanded = !expanded;
 				}}
@@ -71,7 +71,7 @@
 	<ul
 		use:focusTrap={true}
 		class={[
-			'fixed right-0 bottom-16 left-0 flex w-screen transform flex-col rounded-t-xl border-b-2 border-black bg-neutral-800 transition-transform md:hidden',
+			'fixed right-0 bottom-16 left-0 flex w-screen transform flex-col rounded-t-xl border-b-2 border-black bg-zinc-800 transition-transform md:hidden',
 			{ 'translate-y-[calc(100%+(--spacing(16)))]': !expanded }
 		]}
 	>
@@ -79,7 +79,7 @@
 			<NavLink
 				{href}
 				class={[
-					'px-4 py-4 hover:bg-neutral-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset',
+					'px-4 py-4 hover:bg-zinc-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset',
 					{ 'rounded-t-xl focus-visible:rounded-t-xl': index === 0 }
 				]}
 			>

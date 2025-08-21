@@ -15,8 +15,8 @@
 	this={as}
 	{...rest}
 	class={[
-		'flex items-center gap-3 rounded-md bg-neutral-800 p-3 shadow-xs',
-		{ 'ring-neutral-700 transition-shadow ring-inset hover:ring-2': as === 'a' },
+		'flex items-center gap-3 rounded-md bg-zinc-800/60 p-3 shadow-xs',
+		{ 'ring-zinc-700 transition-shadow ring-inset hover:ring-2': as === 'a' },
 		focusRingClass,
 		classes
 	]}

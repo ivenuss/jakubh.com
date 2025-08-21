@@ -29,7 +29,7 @@
 	class={[
 		'font-base inline-flex items-center rounded-sm ring-offset-2 transition-colors duration-150',
 		'h-8 min-w-[2rem] items-center justify-center px-3.5 text-sm font-medium',
-		'bg-neutral-100 text-neutral-900 hover:bg-white',
+		'bg-zinc-100 text-zinc-900 hover:bg-white',
 		focusRingClass,
 		classes
 	]}
