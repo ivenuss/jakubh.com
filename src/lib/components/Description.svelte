@@ -11,6 +11,6 @@
 	let { class: classes, as = 'p', children }: Props = $props();
 </script>
 
-<svelte:element this={as} class={['text-sm text-pretty text-zinc-400', classes]}>
+<svelte:element this={as} class={['text-sm text-pretty text-surface-400', classes]}>
 	{@render children()}
 </svelte:element>

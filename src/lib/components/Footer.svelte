@@ -5,7 +5,7 @@
 
 <footer class="mx-auto w-full max-w-(--breakpoint-sm) px-4 pt-16 pb-28 md:pb-12">
 	<div class="mx-auto flex flex-col items-center">
-		<span class="mt-2 mb-4 text-sm text-zinc-400">
+		<span class="mt-2 mb-4 text-sm text-surface-400">
 			© {new Date().getFullYear()} jakubh.com
 		</span>
 
