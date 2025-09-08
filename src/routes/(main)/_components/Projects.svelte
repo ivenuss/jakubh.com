@@ -41,7 +41,7 @@
 						</Description>
 					</div>
 					<ChevronRightIcon
-						class="ml-auto size-4 flex-none text-zinc-500 transition-colors group-hover:text-zinc-300"
+						class="ml-auto size-4 flex-none text-surface-500 transition-colors group-hover:text-surface-300"
 					/>
 				</Box>
 			</li>

@@ -3,7 +3,21 @@
 
 @theme {
 	--font-display: 'Inter', sans-serif;
+
 	--color-background: #0f0f12;
+
+	--color-surface-950: #0c0e12;
+	--color-surface-900: #13161b;
+	--color-surface-800: #22262f;
+	--color-surface-700: #373a41;
+	--color-surface-600: #61656c;
+	--color-surface-500: #85888e;
+	--color-surface-400: #94979c;
+	--color-surface-300: #cecfd2;
+	--color-surface-200: #ececed;
+	--color-surface-100: #f0f0f1;
+	--color-surface-50: #f7f7f7;
+	--color-surface-25: #f9f9f9;
 }
 
 /* Colors converted to OKLCH format */

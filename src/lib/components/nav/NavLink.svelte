@@ -21,7 +21,7 @@
 		unstyled
 		class={[
 			'relative text-sm font-medium transition-colors focus-visible:ring-offset-0 md:inline-flex',
-			isActive ? 'text-zinc-50 underline' : 'text-zinc-300',
+			isActive ? 'text-surface-50 underline' : 'text-surface-300 hover:text-surface-50',
 			classes
 		]}
 	>
