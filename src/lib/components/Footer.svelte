@@ -9,10 +9,10 @@
 			© {new Date().getFullYear()} jakubh.com
 		</span>
 
-		<ul class="mt-3.5 flex items-center gap-1.5">
+		<ul class="mt-3.5 flex items-center gap-2.5 md:gap-2">
 			{#each socialMedias as { icon, link, title }}
 				<li>
-					<Box as="a" href={link} class="p-1.5!" aria-label={title} {title}>
+					<Box as="a" href={link} class="p-3 md:p-1.5!" aria-label={title} {title}>
 						<svelte:component this={icon} class="size-5" />
 					</Box>
 				</li>
