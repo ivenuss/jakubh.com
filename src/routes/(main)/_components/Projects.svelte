@@ -25,7 +25,7 @@
 					<img
 						width="32"
 						height="32"
-						class="size-8 rounded-sm"
+						class="size-8 rounded-md"
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
 					/>
@@ -35,13 +35,13 @@
 						</Headline>
 						<Description
 							as="span"
-							class="line-clamp-2 truncate text-xs opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+							class="truncate! text-xs opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
 						>
 							{project.description}
 						</Description>
 					</div>
 					<ChevronRightIcon
-						class="ml-auto size-4 flex-none text-surface-500 transition-colors group-hover:text-surface-300"
+						class="ml-auto size-5 flex-none text-surface-500 transition-colors group-hover:text-surface-300"
 					/>
 				</Box>
 			</li>

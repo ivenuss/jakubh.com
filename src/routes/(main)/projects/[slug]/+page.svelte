@@ -31,7 +31,8 @@
 				loading="eager"
 				alt={project.title}
 				src="/images/projects/{project.slug}/icon.png"
-				wrapperClass="bg-primary-800 mr-3 inline-flex size-10 rounded-md"
+				class="rounded-xl"
+				wrapperClass="bg-primary-800 mr-3 inline-flex size-10 before:rounded-xl"
 			/>
 
 			<div class="flex flex-col">
@@ -46,12 +47,12 @@
 		</div>
 
 		<ViewTransitionWrapper name={project.title} class="w-full">
-			<div class="mb-2 h-48 w-full overflow-hidden rounded-lg">
+			<div class="mb-2 h-48 w-full overflow-hidden">
 				<Image
 					alt="Thumbnail"
 					loading="eager"
 					src="/images/projects/{project.slug}/thumbnail.png"
-					class="mb-2 h-48 w-full rounded-lg object-cover"
+					class="mb-2 h-48 w-full object-cover"
 				/>
 			</div>
 		</ViewTransitionWrapper>
@@ -59,7 +60,7 @@
 		<div class="flex flex-wrap items-center gap-1">
 			{#each project.stack as tag}
 				<span
-					class="inline-flex rounded-sm bg-surface-800 px-2 py-1 text-xs text-surface-300 uppercase transition-colors"
+					class="inline-flex rounded-md bg-surface-800 px-2 py-1 text-xs font-medium text-surface-300 uppercase transition-colors"
 				>
 					{tag}
 				</span>

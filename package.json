@@ -13,11 +13,11 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.35.0",
-		"@fontsource/inter": "^5.2.6",
+		"@fontsource/inter": "^5.2.7",
 		"@poppanator/sveltekit-svg": "6.0.0",
 		"@sveltejs/adapter-static": "3.0.9",
-		"@sveltejs/kit": "^2.37.1",
-		"@sveltejs/vite-plugin-svelte": "6.1.4",
+		"@sveltejs/kit": "^2.39.1",
+		"@sveltejs/vite-plugin-svelte": "6.2.0",
 		"@tailwindcss/postcss": "^4.1.13",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.13",
@@ -28,16 +28,16 @@
 		"eslint": "^9.35.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-svelte": "^3.12.2",
-		"globals": "^16.3.0",
-		"lucide-svelte": "0.542.0",
+		"eslint-plugin-svelte": "^3.12.3",
+		"globals": "^16.4.0",
+		"lucide-svelte": "0.544.0",
 		"mdsvex": "^0.12.6",
 		"prettier": "^3.6.2",
 		"prettier-plugin-svelte": "^3.4.0",
 		"prettier-plugin-tailwindcss": "^0.6.14",
-		"rolldown-vite": "^7.1.8",
+		"rolldown-vite": "^7.1.9",
 		"shiki": "^3.12.2",
-		"svelte": "5.38.7",
+		"svelte": "5.38.10",
 		"svelte-check": "^4.3.1",
 		"svelte-transition": "^0.0.17",
 		"tailwindcss": "^4.1.13",
@@ -46,5 +46,5 @@
 		"typescript-eslint": "^8.43.0"
 	},
 	"type": "module",
-	"packageManager": "pnpm@10.14.0"
+	"packageManager": "pnpm@10.16.1"
 }
