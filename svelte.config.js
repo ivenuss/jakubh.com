@@ -7,7 +7,15 @@ const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	preprocess: [mdsvex(mdsvexConfig)],
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		experimental: {
+			tracing: {
+				server: true
+			},
+			instrumentation: {
+				server: true
+			}
+		}
 	}
 };
 
