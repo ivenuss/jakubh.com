@@ -9,7 +9,7 @@
 	let { projects } = $derived(page.data as PageData);
 </script>
 
-<ul class="flex flex-col gap-3 md:gap-2">
+<ul class="flex flex-col gap-3">
 	{#each projects as project}
 		<li class="contents">
 			<a

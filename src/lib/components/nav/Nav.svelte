@@ -37,7 +37,7 @@
 
 <nav class="relative z-10 mb-2.5">
 	<span
-		class="fixed inset-4 top-[unset] z-20 mx-auto rounded-lg border border-white/5 bg-surface-800/80 backdrop-blur md:sticky md:top-0 md:mb-2 md:w-screen md:rounded-none md:bg-surface-900"
+		class="fixed inset-4 top-[unset] right-6 left-6 z-100 mx-auto rounded-3xl border border-white/5 bg-surface-800/90 backdrop-blur md:sticky md:top-0 md:mb-2 md:w-screen md:rounded-none md:bg-surface-900"
 	>
 		<span
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
@@ -71,17 +71,14 @@
 	<ul
 		use:focusTrap={true}
 		class={[
-			'fixed right-4 bottom-24 left-4 flex transform flex-col rounded-lg border-b-2 border-black bg-surface-800 transition-transform md:hidden',
+			'fixed right-6 bottom-24 left-6 flex transform flex-col overflow-hidden rounded-2xl border-b-2 border-black bg-surface-800 transition-transform md:hidden',
 			{ 'translate-y-[calc(100%+(--spacing(24)))]': !expanded }
 		]}
 	>
-		{#each links as { href, label }, index}
+		{#each links as { href, label }}
 			<NavLink
 				{href}
-				class={[
-					'px-4 py-4 hover:bg-surface-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset active:bg-surface-700',
-					{ 'rounded-t-lg focus-visible:rounded-t-lg': index === 0 }
-				]}
+				class="px-4 py-4 hover:bg-surface-700 focus-visible:rounded-none focus-visible:ring-offset-0 focus-visible:ring-inset active:bg-surface-700"
 			>
 				<span class="mx-auto flex max-w-(--breakpoint-sm)">{label}</span>
 			</NavLink>

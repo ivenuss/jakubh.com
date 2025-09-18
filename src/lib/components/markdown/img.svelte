@@ -14,9 +14,9 @@
 <div
 	class={[
 		'relative inline',
-		'before:absolute before:inset-0 before:z-100 before:size-full before:rounded-lg before:border before:border-white/15 before:content-[""]',
+		'before:absolute before:inset-0 before:z-100 before:size-full before:rounded-2xl before:border before:border-white/15 before:content-[""]',
 		wrapperClass
 	]}
 >
-	<img {src} {loading} {...rest} class={['rounded-lg', classes]} />
+	<img {src} {loading} {...rest} class={['rounded-2xl', classes]} />
 </div>

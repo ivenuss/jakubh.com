@@ -15,7 +15,7 @@
 	this={as}
 	{...rest}
 	class={[
-		'flex items-center gap-3 rounded-md bg-surface-800/60 p-3 shadow-xs',
+		'flex items-center gap-3 rounded-xl bg-surface-800/60 p-3 shadow-xs',
 		{
 			'ring-surface-700 hover:ring-2 hover:transition-shadow focus-visible:ring-offset-2':
 				as === 'a'
