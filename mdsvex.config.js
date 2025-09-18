@@ -1,7 +1,7 @@
 import { defineMDSveXConfig as defineConfig, escapeSvelte } from 'mdsvex';
+import { createHighlighter } from 'shiki';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { createHighlighter } from 'shiki';
 
 const theme = 'github-dark';
 

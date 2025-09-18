@@ -20,7 +20,7 @@
 		{href}
 		unstyled
 		class={[
-			'relative text-sm font-medium transition-colors focus-visible:ring-offset-0 md:inline-flex',
+			'relative -m-2 rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:bg-surface-800 focus-visible:z-10 focus-visible:ring-offset-0 md:inline-flex',
 			isActive ? 'text-surface-50 underline' : 'text-surface-300 hover:text-surface-50',
 			classes
 		]}

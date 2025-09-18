@@ -22,7 +22,7 @@
 							class="items-center justify-center rounded-lg p-2"
 							style="background-color: {color}26;"
 						>
-							<span class="grid size-4 place-items-center">
+							<span class="grid size-5 place-items-center">
 								<Icon />
 							</span>
 						</span>

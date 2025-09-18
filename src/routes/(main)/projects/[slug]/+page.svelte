@@ -2,7 +2,7 @@
 	import { format } from 'date-fns';
 	import { ChevronLeftIcon, ExternalLinkIcon, GithubIcon } from 'lucide-svelte';
 	import Button from '$lib/components/Button.svelte';
-	import Image from '$lib/components/markdown/img.svelte';
+	import Img from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 	import Link from '$lib/components/Link.svelte';
@@ -25,7 +25,7 @@
 			<span>Back to projects</span>
 		</Link>
 		<div class="mb-3 flex items-center">
-			<Image
+			<Img
 				width="48"
 				height="48"
 				loading="eager"
@@ -48,7 +48,7 @@
 
 		<ViewTransitionWrapper name={project.title} class="w-full">
 			<div class="mb-2 h-48 w-full overflow-hidden">
-				<Image
+				<Img
 					alt="Thumbnail"
 					loading="eager"
 					src="/images/projects/{project.slug}/thumbnail.png"
@@ -84,10 +84,10 @@
 
 	<div
 		class={[
-			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg prose-pre:bg-surface-200',
+			'prose prose-sm prose-neutral prose-invert prose-headings:font-medium prose-h2:text-xl prose-h3:text-lg',
 			'prose-a:hover:no-underline',
 			'prose-code:rounded-sm prose-code:bg-surface-800 prose-code:px-1 prose-code:py-0.5 prose-code:text-surface-100 prose-code:before:content-none prose-code:after:content-none prose-pre:text-sm',
-			'prose-pre:bg-surface-800! prose-pre:text-sm'
+			'prose-pre:rounded-lg prose-pre:bg-surface-800 prose-pre:text-sm'
 		]}
 	>
 		<project.component />
