@@ -78,8 +78,8 @@ importers:
         specifier: ^0.6.14
         version: 0.6.14(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.38.10))(prettier@3.6.2)
       rolldown-vite:
-        specifier: ^7.1.10
-        version: 7.1.10(esbuild@0.25.10)(jiti@2.5.1)
+        specifier: ^7.1.11
+        version: 7.1.11(esbuild@0.25.10)(jiti@2.5.1)
       shiki:
         specifier: ^3.12.2
         version: 3.12.2
@@ -2008,8 +2008,8 @@ packages:
     resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  rolldown-vite@7.1.10:
-    resolution: {integrity: sha512-FjyH+AXrgMkojvHPAQ6mjo/7hwnsC4lz0hUdb9jUl4sPr5BcH2RFmdz6HQjDLoSe1q6j3B+Zze51VRGpc1Rkpw==}
+  rolldown-vite@7.1.11:
+    resolution: {integrity: sha512-33L3z0NvLLyg2avZsEuLrKR33l8+tALVw9tYpSvW/4Zj7tYeRs5O9bodPL/NsmfUzLSjVIoG+GdADVeil0HNiQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -4224,7 +4224,7 @@ snapshots:
 
   reusify@1.1.0: {}
 
-  rolldown-vite@7.1.10(esbuild@0.25.10)(jiti@2.5.1):
+  rolldown-vite@7.1.11(esbuild@0.25.10)(jiti@2.5.1):
     dependencies:
       '@oxc-project/runtime': 0.89.0
       fdir: 6.5.0(picomatch@4.0.3)
