@@ -51,7 +51,7 @@
 
 			<ul class="ml-auto hidden items-center gap-4 md:flex">
 				{#each links as { href, label }}
-					<NavLink {href} class="px-0.5 py-0.5">{label}</NavLink>
+					<NavLink {href} class="lg:-m-2 lg:px-2 lg:py-1">{label}</NavLink>
 				{/each}
 			</ul>
 
