@@ -24,7 +24,7 @@
 						loading="eager"
 						alt="{project.title}'s thumbnail"
 						src="/images/projects/{project.slug}/thumbnail.png"
-						class="h-full w-full bg-surface-900 object-cover"
+						class="size-full bg-surface-900 object-cover"
 					/>
 				</ViewTransitionWrapper>
 				<div

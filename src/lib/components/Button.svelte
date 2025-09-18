@@ -27,7 +27,7 @@
 	{href}
 	disabled={isLoading || disabled}
 	class={[
-		'font-base inline-flex items-center rounded-sm ring-offset-2 transition-colors duration-150',
+		'font-base inline-flex items-center rounded-lg ring-offset-2 transition-colors duration-150',
 		'h-8 min-w-[2rem] items-center justify-center px-3.5 text-sm font-medium',
 		'bg-surface-100 text-surface-900 hover:bg-white',
 		focusRingClass,

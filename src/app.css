@@ -20,6 +20,12 @@
 	--color-surface-25: #f9f9f9;
 }
 
+@custom-variant initial {
+	@layer initial {
+		@slot;
+	}
+}
+
 /* Colors converted to OKLCH format */
 @supports (color: oklch(0 0 0)) {
 	:root {

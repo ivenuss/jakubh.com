@@ -49,7 +49,7 @@
 				<Clock class="hidden md:block" />
 			</div>
 
-			<ul class="ml-auto hidden items-center gap-3 md:flex">
+			<ul class="ml-auto hidden items-center gap-4 md:flex">
 				{#each links as { href, label }}
 					<NavLink {href} class="px-0.5 py-0.5">{label}</NavLink>
 				{/each}
@@ -58,7 +58,7 @@
 			<button
 				title={tooltipTitle}
 				aria-label={tooltipTitle}
-				class="grid aspect-square size-10! flex-none place-items-center rounded-full p-1 text-white hover:bg-surface-700! md:hidden"
+				class="grid aspect-square size-10! flex-none place-items-center rounded-full p-1 text-white hover:bg-surface-700 md:hidden"
 				onclick={() => {
 					expanded = !expanded;
 				}}

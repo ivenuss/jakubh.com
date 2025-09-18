@@ -7,6 +7,7 @@
 	import Description from '$lib/components/Description.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import { resolve } from '$app/paths';
+	import Img from '$lib/components/markdown/img.svelte';
 
 	let data = $derived(page.data as PageData);
 	let projects = $derived(data.projects.slice(0, 3)); // Show only first 3 projects
@@ -22,12 +23,13 @@
 		{#each projects as project}
 			<li>
 				<Box as="a" href={resolve('/(main)/projects/[slug]', { slug: project.slug })} class="group">
-					<img
+					<Img
 						width="32"
 						height="32"
-						class="size-8 rounded-md"
 						alt="{project.title}'s icon"
 						src="/images/projects/{project.slug}/icon.png"
+						wrapperClass="size-8 flex-none before:rounded-lg"
+						class="size-8 rounded-lg"
 					/>
 					<div class="flex max-w-fit items-center gap-5 overflow-hidden">
 						<Headline level="3" class="text-base! transition-colors">
@@ -41,7 +43,7 @@
 						</Description>
 					</div>
 					<ChevronRightIcon
-						class="ml-auto size-5 flex-none text-surface-500 transition-colors group-hover:text-surface-300"
+						class="ml-auto size-5 flex-none text-surface-500 transition-all group-hover:translate-x-1 group-hover:text-surface-300"
 					/>
 				</Box>
 			</li>
