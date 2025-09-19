@@ -37,7 +37,7 @@
 
 <nav class="relative z-10 mb-2.5">
 	<span
-		class="fixed inset-4 top-[unset] right-6 left-6 z-100 mx-auto rounded-3xl border border-white/5 bg-surface-800/90 backdrop-blur md:sticky md:top-0 md:mb-2 md:w-screen md:rounded-none md:bg-surface-900"
+		class="fixed inset-4 top-[unset] right-6 left-6 z-100 mx-auto rounded-3xl border border-white/5 bg-surface-800/90 backdrop-blur md:sticky md:top-0 md:mb-2 md:w-screen md:rounded-none md:border-none md:bg-surface-900"
 	>
 		<span
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
