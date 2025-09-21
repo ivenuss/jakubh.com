@@ -28,7 +28,7 @@
 		"eslint": "^9.35.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-svelte": "^3.12.3",
+		"eslint-plugin-svelte": "^3.12.4",
 		"globals": "^16.4.0",
 		"lucide-svelte": "0.544.0",
 		"mdsvex": "^0.12.6",
