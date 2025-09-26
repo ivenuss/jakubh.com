@@ -14,10 +14,11 @@
 		expanded = false;
 	});
 
+	// FIXME: Temporary static workaround till this issue will be fixed: https://github.com/sveltejs/kit/issues/14537
 	const links = [
-		{ href: resolve('/'), label: 'home' },
-		{ href: resolve('/(main)/about'), label: 'about' },
-		{ href: resolve('/(main)/projects'), label: 'projects' }
+		{ href: '/', label: 'home' },
+		{ href: '/about', label: 'about' },
+		{ href: '/projects', label: 'projects' }
 	];
 
 	let tooltipTitle = $derived(`${expanded ? 'Close' : 'Open'} menu`);
