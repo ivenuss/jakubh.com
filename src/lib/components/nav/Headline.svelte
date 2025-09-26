@@ -35,7 +35,7 @@
 
 <svelte:element
 	this={`h${level}` satisfies HeadlineElement}
-	class={('text-balance', [headlineSizes[level], headlineWeights[weight], classes])}
+	class={['text-balance', headlineSizes[level], headlineWeights[weight], classes]}
 >
 	{@render children?.()}
 </svelte:element>
