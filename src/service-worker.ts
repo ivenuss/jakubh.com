@@ -10,7 +10,7 @@
 // Only necessary if you have an import from `$env/static/public`
 /// <reference types="../.svelte-kit/ambient.d.ts" />
 
-import { build, files, prerendered, version } from '$service-worker';
+import { build, files, version } from '$service-worker';
 
 // This gives `self` the correct types
 const self = globalThis.self as unknown as ServiceWorkerGlobalScope;
@@ -43,8 +43,6 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
 	log('Activate event');
-
-	console.log({ prerendered });
 
 	const deleteOldCaches = async () => {
 		const keys = await caches.keys();
