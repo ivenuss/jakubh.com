@@ -32,7 +32,7 @@ App lets users configure their image card in so many ways, but still keeps it si
 
 They can change the size of the content inside the card, card dimensions, layout they want to use or even theme colors. If this is still not enough they can upload their own background image.
 
-![Tux, the Linux mascot](/images/projects/lyrixfy/blinding_lights_maybe.png)
+![Lyrixfy Blinding Lights card example](/images/projects/lyrixfy/blinding_lights_maybe.png)
 
 ### Intuitive search navigation
 
@@ -52,14 +52,8 @@ Search engine optimalization (SEO) was one of the keys. So users can share links
 
 ### Preview
 
-Home screen
-
 ![Lyrixfy home screen](/images/projects/lyrixfy/showcase.png)
-
-Lines selection
 
 ![Lyrixfy lines selection](/images/projects/lyrixfy/lines_selection.png)
 
-Configurator page
-
-![Lyrixfy site preview capture](/images/projects/lyrixfy/configurator.png)
+![Lyrixfy configurator page](/images/projects/lyrixfy/configurator.png)
