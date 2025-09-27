@@ -11,8 +11,4 @@
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
-<svelte:head>
-	<script async src="https://cdn.splitbee.io/sb.js"></script>
-</svelte:head>
-
 {@render children?.()}
