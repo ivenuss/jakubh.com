@@ -1,9 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import svg from '@poppanator/sveltekit-svg';
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'rolldown-vite';
-import path from 'path';
-import crypto from 'crypto';
+import { defineConfig } from 'vite';
+import path from 'node:path';
+import crypto from 'node:crypto';
 
 export default defineConfig({
 	plugins: [
