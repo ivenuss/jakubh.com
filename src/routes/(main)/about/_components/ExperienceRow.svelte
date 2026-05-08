@@ -46,7 +46,9 @@
 
 	const DATE_FORMAT = 'MMM yyyy';
 
-	const duration = formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date());
+	const duration = $derived(
+		formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date())
+	);
 </script>
 
 <li class="flex flex-col">
