@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { format } from 'date-fns';
-	import { ChevronLeftIcon, ExternalLinkIcon, GithubIcon } from 'lucide-svelte';
+	import { ChevronLeftIcon, ExternalLinkIcon } from 'lucide-svelte';
+	import GithubIcon from '$lib/components/svg/icons/github.svg?component';
 	import Button from '$lib/components/Button.svelte';
 	import Img from '$lib/components/markdown/img.svelte';
 	import Seo from '$lib/components/Seo.svelte';
