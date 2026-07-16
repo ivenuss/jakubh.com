@@ -12,11 +12,6 @@ Feel free to delete this file and the entire sentry route.
 	let hasSentError = false;
 	let isConnected = true;
 
-	onMount(async () => {
-		const result = await Sentry.diagnoseSdkConnectivity();
-		isConnected = result !== 'sentry-unreachable';
-	});
-
 	function getSentryData() {
 		Sentry.startSpan(
 			{
