@@ -5,5 +5,5 @@
 <button
 	onclick={() => {
 		throw new Error('Sentry Example Click Error');
-	}}>Sentry Error</button
+	}}>Sentry Error---</button
 >
