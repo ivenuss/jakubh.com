@@ -1,14 +1,8 @@
 <script>
 	import { testFn } from './testFn';
-
-	const handleOnClick = () => {
-		testFn();
-
-		// alert('test');
-	};
 </script>
 
-<button onclick={handleOnClick}>JS Error</button>
+<button>JS Error</button>
 
 <button
 	onclick={() => {
