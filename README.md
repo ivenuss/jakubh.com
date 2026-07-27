@@ -6,7 +6,7 @@
 
 The main goal for me was to make the design as minimalistic as possible.
 
-## Technologies
+## Technolofawawfawfawfgies
 
 - **Framework**: [SvelteKit](https://kit.svelte.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
