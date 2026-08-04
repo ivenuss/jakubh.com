@@ -40,7 +40,6 @@ Feel free to delete this file and the entire sentry route.
 				fill="currentcolor"
 			/>
 		</svg>
-		<h1>sentry-example-page</h1>
 
 		<p class="description">
 			Click the button below, and view the sample error on the Sentry <a
@@ -70,6 +69,8 @@ Feel free to delete this file and the entire sentry route.
 		{/if}
 		<div class="flex-spacer"></div>
 	</main>
+
+	<h1>sentry-example-page</h1>
 </div>
 
 <style>
