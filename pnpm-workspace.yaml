@@ -1,4 +1,6 @@
 packages:
   - .
+allowBuilds:
+  unrs-resolver: true
 onlyBuiltDependencies:
   - '@vercel/speed-insights'

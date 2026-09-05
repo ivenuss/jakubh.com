@@ -66,7 +66,7 @@ self.addEventListener('install', (event) => {
 					await runtimeCache.put(page, response);
 					log(`Precached page: ${page}`);
 				}
-			} catch (err) {
+			} catch {
 				log(`Failed to precache page: ${page}`);
 			}
 		}
@@ -176,7 +176,7 @@ self.addEventListener('fetch', (event) => {
 					log(`Cached new page: ${url.pathname}`);
 				}
 				return response;
-			} catch (err) {
+			} catch {
 				log(`Page request failed, no cache available: ${url.pathname}`);
 
 				// Return offline fallback page
