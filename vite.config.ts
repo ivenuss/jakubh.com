@@ -18,7 +18,7 @@ export default defineConfig({
 							prefix: (_, info) => {
 								const assetIdentifier = info.path
 									? // use the relative path from repository root as the asset identifier
-										path.relative(__dirname, info.path ?? '')
+										path.relative(import.meta.dirname, info.path ?? '')
 									: // the info.path field is theoretically optional - use a random number as a fallback
 										Math.floor(Math.random() * 1_000).toString();
 
