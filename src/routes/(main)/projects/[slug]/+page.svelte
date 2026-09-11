@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { format } from 'date-fns';
-	import { ChevronLeftIcon, ExternalLinkIcon } from 'lucide-svelte';
+	import { ChevronLeft, ExternalLink } from '@lucide/svelte';
 	import GithubIcon from '$lib/components/svg/icons/github.svg?component';
 	import Button from '$lib/components/Button.svelte';
 	import Img from '$lib/components/markdown/img.svelte';
@@ -22,7 +22,7 @@
 			href={resolve('/projects')}
 			class="group mb-5 flex items-center gap-1.5 text-sm font-medium"
 		>
-			<ChevronLeftIcon class="size-4 transition-transform group-hover:-translate-x-0.5" />
+			<ChevronLeft class="size-4 transition-transform group-hover:-translate-x-0.5" />
 			<span>Back to projects</span>
 		</Link>
 		<div class="mb-3 flex items-center">
@@ -77,7 +77,7 @@
 
 			{#if project.preview}
 				<Button contentClass="gap-1.5" href={project.preview}>
-					<ExternalLinkIcon class="size-5" />View Live
+					<ExternalLink class="size-5" />View Live
 				</Button>
 			{/if}
 		</div>
