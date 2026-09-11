@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronRightIcon } from 'lucide-svelte';
+	import { ChevronRight } from '@lucide/svelte';
 	import type { PageData } from '../$types';
 	import { page } from '$app/state';
 	import Box from '$lib/components/Box.svelte';
@@ -42,7 +42,7 @@
 							{project.description}
 						</Description>
 					</div>
-					<ChevronRightIcon
+					<ChevronRight
 						class="ml-auto size-5 flex-none text-surface-500 transition-all group-hover:translate-x-1 group-hover:text-surface-300"
 					/>
 				</Box>

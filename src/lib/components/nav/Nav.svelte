@@ -2,7 +2,7 @@
 	import NavLink from './NavLink.svelte';
 	import Clock from '../Clock.svelte';
 	import Link from '../Link.svelte';
-	import { MenuIcon } from 'lucide-svelte';
+	import { Menu } from '@lucide/svelte';
 	import { beforeNavigate } from '$app/navigation';
 	import { focusTrap } from '$lib/actions/focusTrap';
 	import { removeScroll } from '$lib/actions/removeScroll';
@@ -63,7 +63,7 @@
 					expanded = !expanded;
 				}}
 			>
-				<MenuIcon class="size-7" />
+				<Menu class="size-7" />
 			</button>
 		</span>
 	</span>
