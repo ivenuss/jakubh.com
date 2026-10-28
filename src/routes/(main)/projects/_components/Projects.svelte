@@ -1,9 +1,9 @@
 <script lang="ts">
+	import Img from '#lib/components/markdown/img.svelte';
+	import ViewTransitionWrapper from '#lib/components/ViewTransitionWrapper.svelte';
 	import type { PageData } from '../$types';
-	import { focusRingClass } from '$lib/constants';
+	import { focusRingClass } from '#lib/constants.js';
 	import { page } from '$app/state';
-	import Img from '$lib/components/markdown/img.svelte';
-	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
 	import { resolve } from '$app/paths';
 
 	let { projects } = $derived(page.data as PageData);

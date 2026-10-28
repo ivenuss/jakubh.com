@@ -1,7 +1,7 @@
 <script lang="ts" generics="Element extends keyof SvelteHTMLElements">
 	import type { SvelteHTMLElements } from 'svelte/elements';
 	import type { Snippet } from 'svelte';
-	import { focusRingClass } from '$lib/constants';
+	import { focusRingClass } from '#lib/constants.js';
 
 	type Props = {
 		as: Element;

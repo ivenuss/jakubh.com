@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ClassValue, HTMLButtonAttributes } from 'svelte/elements';
-	import { focusRingClass } from '$lib/constants';
+	import { focusRingClass } from '#lib/constants.js';
 
 	type Props = HTMLButtonAttributes & {
 		href?: string;

@@ -2,8 +2,8 @@
 	import Bio from './_components/Bio.svelte';
 	import Skills from './_components/Skills.svelte';
 	import WorkExperience from './_components/WorkExperience.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
+	import Seo from '#lib/components/Seo.svelte';
 </script>
 
 <Headline level="1" class="mb-5">About Me</Headline>

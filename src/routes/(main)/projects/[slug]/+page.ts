@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { getProjects } from '$lib/utils/getProjects';
+import { getProjects } from '#lib/utils/getProjects.js';
 
 export const load = (async ({ params }) => {
 	const projects = await getProjects();

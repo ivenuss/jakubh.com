@@ -1,3 +1,6 @@
+import mdsvexConfig from './mdsvex.config.js';
+import adapter from '@sveltejs/adapter-static';
+import { mdsvex } from 'mdsvex';
 import { sveltekit } from '@sveltejs/kit/vite';
 import svg from '@poppanator/sveltekit-svg';
 import tailwindcss from '@tailwindcss/vite';
@@ -7,7 +10,11 @@ import crypto from 'node:crypto';
 
 export default defineConfig({
 	plugins: [
-		sveltekit(),
+		sveltekit({
+			extensions: ['.svelte', ...(mdsvexConfig.extensions ?? [])],
+			preprocess: [mdsvex(mdsvexConfig)],
+			adapter: adapter()
+		}),
 		tailwindcss(),
 		svg({
 			svgoOptions: {

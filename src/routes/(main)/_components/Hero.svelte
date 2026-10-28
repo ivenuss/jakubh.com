@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Description from '$lib/components/Description.svelte';
+	import Description from '#lib/components/Description.svelte';
 </script>
 
 <header class="mt-4 flex flex-col gap-0.5">

@@ -1,12 +1,12 @@
 <script lang="ts">
+	import GithubIcon from '#lib/components/svg/icons/github.svg?component';
+	import Button from '#lib/components/Button.svelte';
+	import Img from '#lib/components/markdown/img.svelte';
+	import Seo from '#lib/components/Seo.svelte';
+	import ViewTransitionWrapper from '#lib/components/ViewTransitionWrapper.svelte';
+	import Link from '#lib/components/Link.svelte';
+	import { ChevronLeftIcon, ExternalLinkIcon } from '@lucide/svelte';
 	import { format } from 'date-fns';
-	import { ChevronLeftIcon, ExternalLinkIcon } from 'lucide-svelte';
-	import GithubIcon from '$lib/components/svg/icons/github.svg?component';
-	import Button from '$lib/components/Button.svelte';
-	import Img from '$lib/components/markdown/img.svelte';
-	import Seo from '$lib/components/Seo.svelte';
-	import ViewTransitionWrapper from '$lib/components/ViewTransitionWrapper.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import { resolve } from '$app/paths';
 
 	let { data } = $props();
@@ -19,7 +19,7 @@
 <article>
 	<header class="mb-12 flex flex-col items-start">
 		<Link
-			href={resolve('/projects')}
+			href={resolve('projects')}
 			class="group mb-5 flex items-center gap-1.5 text-sm font-medium"
 		>
 			<ChevronLeftIcon class="size-4 transition-transform group-hover:-translate-x-0.5" />

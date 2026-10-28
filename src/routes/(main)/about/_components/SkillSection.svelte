@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { StackItem } from '$lib/constants';
-	import Box from '$lib/components/Box.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
+	import Box from '#lib/components/Box.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
+	import type { StackItem } from '#lib/constants.js';
 
 	type Props = {
 		title: string;

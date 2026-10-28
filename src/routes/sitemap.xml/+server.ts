@@ -1,6 +1,6 @@
 import { resolve } from '$app/paths';
-import { SITE_URL } from '$lib/constants';
-import { getProjects } from '$lib/utils/getProjects';
+import { SITE_URL } from '#lib/constants.js';
+import { getProjects } from '#lib/utils/getProjects.js';
 
 export const prerender = true;
 
@@ -8,12 +8,12 @@ export async function GET() {
 	const projects = await getProjects();
 
 	const routes = [
-		resolve('/'),
-		resolve('/about'),
-		resolve('/projects'),
+		resolve('/(main)'),
+		resolve('about'),
+		resolve('projects'),
 		...projects.map((project) => resolve('/(main)/projects/[slug]', { slug: project.slug }))
 	].map((route) => ({
-		url: `${SITE_URL}${route}`,
+		url: new URL(route, SITE_URL).href,
 		lastModified: new Date().toISOString().split('T')[0]
 	}));
 

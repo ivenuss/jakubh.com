@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { ChevronRightIcon } from 'lucide-svelte';
+	import Box from '#lib/components/Box.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
+	import Description from '#lib/components/Description.svelte';
+	import Link from '#lib/components/Link.svelte';
+	import Img from '#lib/components/markdown/img.svelte';
+	import { ChevronRightIcon } from '@lucide/svelte';
 	import type { PageData } from '../$types';
-	import { page } from '$app/state';
-	import Box from '$lib/components/Box.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
-	import Description from '$lib/components/Description.svelte';
-	import Link from '$lib/components/Link.svelte';
 	import { resolve } from '$app/paths';
-	import Img from '$lib/components/markdown/img.svelte';
+	import { page } from '$app/state';
 
 	let data = $derived(page.data as PageData);
 	let projects = $derived(data.projects.slice(0, 3)); // Show only first 3 projects

@@ -2,10 +2,10 @@
 	import NavLink from './NavLink.svelte';
 	import Clock from '../Clock.svelte';
 	import Link from '../Link.svelte';
-	import { MenuIcon } from 'lucide-svelte';
+	import { MenuIcon } from '@lucide/svelte';
 	import { beforeNavigate } from '$app/navigation';
-	import { focusTrap } from '$lib/actions/focusTrap';
-	import { removeScroll } from '$lib/actions/removeScroll';
+	import { focusTrap } from '#lib/actions/focusTrap.js';
+	import { removeScroll } from '#lib/actions/removeScroll.js';
 	import { resolve } from '$app/paths';
 
 	let expanded = $state(false);
@@ -15,7 +15,7 @@
 	});
 
 	const links = [
-		{ href: resolve('/'), label: 'home' },
+		{ href: resolve('/(main)'), label: 'home' },
 		{ href: resolve('/(main)/about'), label: 'about' },
 		{ href: resolve('/(main)/projects'), label: 'projects' }
 	];
@@ -43,7 +43,7 @@
 			class="relative mx-auto flex h-16 w-full max-w-(--breakpoint-sm) items-center justify-between px-4 md:py-4"
 		>
 			<div class="flex w-full items-center gap-4">
-				<Link unstyled href={resolve('/')} class="flex items-center text-lg">
+				<Link unstyled href={resolve('/(main)')} class="flex items-center text-lg">
 					<span class="font-bold">Jakub</span>H
 				</Link>
 				<Clock class="hidden md:block" />

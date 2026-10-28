@@ -1,6 +1,6 @@
 <script lang="ts" module>
 	import { intervalToDuration } from 'date-fns';
-	import { pluralize } from '$lib/utils/pluralize';
+	import { pluralize } from '#lib/utils/pluralize.js';
 
 	export const formatDuration = (start: Date, end: Date) => {
 		const { years, months, days } = intervalToDuration({ start, end });
@@ -16,11 +16,11 @@
 </script>
 
 <script lang="ts">
+	import Description from '#lib/components/Description.svelte';
+	import Link from '#lib/components/Link.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
 	import { format } from 'date-fns';
 	import type { Component } from 'svelte';
-	import Description from '$lib/components/Description.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
 
 	type Props = {
 		companyName: string;
