@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ExperienceRow from './ExperienceRow.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
-	import { workExperiences } from '$lib/constants';
+	import Headline from '#lib/components/nav/Headline.svelte';
+	import { workExperiences } from '#lib/constants.js';
 </script>
 
 <section class="flex flex-col">

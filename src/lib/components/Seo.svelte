@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { SITE_URL } from '$lib/constants';
+	import { SITE_URL } from '#lib/constants.js';
 
 	type Props = {
 		title?: string;

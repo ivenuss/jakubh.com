@@ -1,7 +1,7 @@
 <script lang="ts">
 	/* eslint-disable svelte/no-navigation-without-resolve */
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
-	import { focusRingClass } from '$lib/constants';
+	import { focusRingClass } from '#lib/constants.js';
 
 	type Props = HTMLAnchorAttributes & {
 		unstyled?: boolean;

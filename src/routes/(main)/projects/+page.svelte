@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Projects from './_components/Projects.svelte';
-	import Description from '$lib/components/Description.svelte';
-	import Seo from '$lib/components/Seo.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
+	import Description from '#lib/components/Description.svelte';
+	import Seo from '#lib/components/Seo.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
 </script>
 
 <Seo

@@ -1,4 +1,4 @@
-import type { Project } from '$lib/types';
+import type { Project } from '#lib/types/index.js';
 import type { Component } from 'svelte';
 
 const getSlugFromPath = (path: string) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null;

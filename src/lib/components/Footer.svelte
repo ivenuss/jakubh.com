@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Box from './Box.svelte';
-	import { socialMedias } from '$lib/constants';
+	import { socialMedias } from '#lib/constants.js';
 </script>
 
 <footer class="mx-auto w-full max-w-(--breakpoint-sm) px-4 pt-16 pb-28 md:pb-12">

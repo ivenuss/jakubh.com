@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SkillSection from './SkillSection.svelte';
-	import { techStack } from '$lib/constants';
-	import Headline from '$lib/components/nav/Headline.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
+	import { techStack } from '#lib/constants.js';
 </script>
 
 <section>

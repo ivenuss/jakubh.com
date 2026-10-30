@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Img from '$lib/components/markdown/img.svelte';
-	import Headline from '$lib/components/nav/Headline.svelte';
+	import Img from '#lib/components/markdown/img.svelte';
+	import Headline from '#lib/components/nav/Headline.svelte';
 </script>
 
 <section>

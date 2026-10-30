@@ -16,8 +16,8 @@ const config = defineConfig({
 	extensions: ['.md'],
 	layout: join(__dirname, './src/lib/components/markdown/Layout.svelte'),
 	highlight: {
-		highlighter: async (code, lang = 'text') => {
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
+		highlighter: async (code, lang) => {
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang: lang ?? 'text', theme }));
 
 			return `{@html \`${html}\` }`;
 		}
