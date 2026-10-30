@@ -1,0 +1,26 @@
+{
+	"$schema": "./node_modules/oxfmt/configuration_schema.json",
+	"useTabs": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"printWidth": 100,
+	"sortPackageJson": false,
+	"sortTailwindcss": {
+		"stylesheet": "./src/app.css"
+	},
+	"svelte": {},
+	"ignorePatterns": [
+		".DS_Store",
+		"node_modules",
+		"/build",
+		"/.svelte-kit",
+		"/package",
+		".env",
+		".env.*",
+		"!.env.example",
+		"pnpm-lock.yaml",
+		"package-lock.json",
+		"yarn.lock",
+		"src/app.css"
+	]
+}
