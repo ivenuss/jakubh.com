@@ -8,8 +8,8 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"lint": "oxfmt --check && eslint .",
+		"format": "oxfmt"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
@@ -33,9 +33,7 @@
 		"eslint-plugin-svelte": "^3.23.1",
 		"globals": "^17.13.0",
 		"mdsvex": "^0.12.8",
-		"prettier": "^3.9.10",
-		"prettier-plugin-svelte": "^4.1.1",
-		"prettier-plugin-tailwindcss": "^0.8.1",
+		"oxfmt": "^0.75.0",
 		"shiki": "^4.5.0",
 		"svelte": "^5.57.3",
 		"svelte-check": "^4.7.7",
