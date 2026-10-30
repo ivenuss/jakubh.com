@@ -6,7 +6,7 @@
 	import ViewTransitionWrapper from '#lib/components/ViewTransitionWrapper.svelte';
 	import Link from '#lib/components/Link.svelte';
 	import { ChevronLeftIcon, ExternalLinkIcon } from '@lucide/svelte';
-	import { format } from 'date-fns';
+	import { Temporal } from 'temporal-polyfill';
 	import { resolve } from '$app/paths';
 
 	let { data } = $props();
@@ -42,7 +42,11 @@
 				</h1>
 
 				<div class="text-xs text-surface-400">
-					{format(new Date(project.publishedAt), 'MMMM d, yyyy')}
+					{Temporal.PlainDate.from(project.publishedAt).toLocaleString('en-US', {
+						month: 'long',
+						day: 'numeric',
+						year: 'numeric'
+					})}
 				</div>
 			</div>
 		</div>

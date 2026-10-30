@@ -1,3 +1,4 @@
+import { Temporal } from 'temporal-polyfill';
 import type { Project } from '#lib/types/index.js';
 import type { Component } from 'svelte';
 
@@ -20,7 +21,10 @@ export const getProjects = async (): Promise<Project[]> => {
 
 	const projects = await Promise.all(projectPromises);
 
-	return projects.sort(
-		(a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+	return projects.sort((a, b) =>
+		Temporal.PlainDate.compare(
+			Temporal.PlainDate.from(b.publishedAt),
+			Temporal.PlainDate.from(a.publishedAt)
+		)
 	);
 };

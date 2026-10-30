@@ -1,9 +1,9 @@
 <script lang="ts" module>
-	import { intervalToDuration } from 'date-fns';
+	import { Temporal } from 'temporal-polyfill';
 	import { pluralize } from '#lib/utils/pluralize.js';
 
-	export const formatDuration = (start: Date, end: Date) => {
-		const { years, months, days } = intervalToDuration({ start, end });
+	export const formatDuration = (start: Temporal.PlainDate, end: Temporal.PlainDate) => {
+		const { years, months, days } = start.until(end, { largestUnit: 'years' });
 
 		return [
 			years && `${years} ${pluralize(years, 'yr')}`,
@@ -19,7 +19,6 @@
 	import Description from '#lib/components/Description.svelte';
 	import Link from '#lib/components/Link.svelte';
 	import Headline from '#lib/components/nav/Headline.svelte';
-	import { format } from 'date-fns';
 	import type { Component } from 'svelte';
 
 	type Props = {
@@ -44,10 +43,17 @@
 		endDate
 	}: Props = $props();
 
-	const DATE_FORMAT = 'MMM yyyy';
+	const formatDate = (date: string) =>
+		Temporal.PlainDate.from(date).toLocaleString('en-US', {
+			month: 'short',
+			year: 'numeric'
+		});
 
 	const duration = $derived(
-		formatDuration(new Date(startDate), endDate ? new Date(endDate) : new Date())
+		formatDuration(
+			Temporal.PlainDate.from(startDate),
+			endDate ? Temporal.PlainDate.from(endDate) : Temporal.Now.plainDateISO()
+		)
 	);
 </script>
 
@@ -67,9 +73,9 @@
 			{title} · {employmentType}
 		</Headline>
 		<Description as="div" class="text-xs text-surface-400">
-			<span>{format(new Date(startDate), DATE_FORMAT)}</span>
+			<span>{formatDate(startDate)}</span>
 			-
-			{endDate ? format(new Date(endDate), DATE_FORMAT) : 'Present'}
+			{endDate ? formatDate(endDate) : 'Present'}
 			{duration ? ' · ' + duration : null}
 		</Description>
 	</div>
