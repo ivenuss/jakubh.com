@@ -11,15 +11,22 @@
 	let { children } = $props();
 
 	// The `/sveltekit` entrypoints of both Vercel packages still use the removed `$app/stores`
+	const basePath = import.meta.env.VITE_VERCEL_OBSERVABILITY_BASEPATH;
+	const clientConfig = import.meta.env.VITE_VERCEL_OBSERVABILITY_CLIENT_CONFIG;
+
 	if (browser) {
-		inject({
-			mode: dev ? 'development' : 'production',
-			framework: 'sveltekit',
-			disableAutoTrack: true
-		});
+		inject(
+			{
+				mode: dev ? 'development' : 'production',
+				framework: 'sveltekit',
+				disableAutoTrack: true,
+				basePath
+			},
+			clientConfig
+		);
 	}
 	const speedInsights = browser
-		? injectSpeedInsights({ framework: 'sveltekit', route: page.route.id })
+		? injectSpeedInsights({ framework: 'sveltekit', route: page.route.id, basePath }, clientConfig)
 		: null;
 
 	$effect(() => {
